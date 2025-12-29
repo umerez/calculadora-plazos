@@ -7,8 +7,7 @@ st.set_page_config(page_title="Calculadora de Plazos", page_icon="⚖️")
 
 st.title("⚖️ Calculadora de Plazos Legales")
 st.markdown("""
-Esta herramienta calcula vencimientos procesales y administrativos aplicando 
-las reglas de **días hábiles**, **agosto inhábil** y **periodo navideño**.
+Esta herramienta calcula vencimientos procesales y administrativos, aplicando las reglas de los artículos 30 de la Ley 39/2015, 133 de la LEC y 128 de la LJCA. Por Esteban Umerez, con ayuda de ChatGPT y Gemini.
 """)
 
 # --- BARRA LATERAL (Configuración) ---
