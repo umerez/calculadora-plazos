@@ -3,7 +3,12 @@ from datetime import date
 import plazos  # Importamos tu motor de cálculo plazos.py
 
 # Configuración de la página
-st.set_page_config(page_title="Calculadora de Plazos", page_icon="⚖️")
+st.set_page_config(
+   page_title="Calculadora de Plazos Umerez",
+   page_icon="⚖️",
+   layout="wide",
+   initial_sidebar_state="expanded",
+)
 
 st.title("⚖️ Calculadora de Plazos Legales")
 st.markdown("""
