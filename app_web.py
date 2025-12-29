@@ -65,7 +65,7 @@ with col1:
     unidad = st.radio("Unidad del plazo", ["Días", "Meses"])
 
 with col2:
-    duracion = st.number_input(f"Número de {unidad.lower()}", min_value=1, value=10)
+    duracion = st.number_input(f"Número de días o meses", min_value=1, value=10)
     if unidad == "Días":
         tipo_dia = st.selectbox("Tipo de días", ["Hábiles", "Naturales"])
     else:
