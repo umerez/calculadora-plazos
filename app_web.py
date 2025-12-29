@@ -38,13 +38,12 @@ archivo_seleccionado = archivos_disponibles[seleccion_nombre]
 # Carga de festivos
 festivos = plazos.leer_festivos_csv(archivo_seleccionado)
 
-# Corregido: eliminamos format_func que causaba el crash
 if festivos:
     st.sidebar.success(f"Calendario '{seleccion_nombre}' cargado.", icon="✅")
 else:
     st.sidebar.error(f"Error: No se encuentra el archivo {archivo_seleccionado}", icon="🚨")
 
-# 2. Selección de Modo de Cálculo (¡Ya no desaparecerá!)
+# 2. Selección de Modo de Cálculo
 st.sidebar.divider()
 st.sidebar.header("Reglas de Cómputo")
 modo_key = st.sidebar.selectbox(
@@ -53,6 +52,10 @@ modo_key = st.sidebar.selectbox(
     format_func=lambda x: plazos.MODOS_CALCULO[x]["nombre"]
 )
 config = plazos.MODOS_CALCULO[modo_key]
+
+# --- NUEVO: BOTÓN DE ENLACE EXTERNO ---
+st.sidebar.divider()
+st.sidebar.link_button("Ir a umerez.eu", "https://umerez.eu", use_container_width=True)
 
 # --- CUERPO PRINCIPAL (Entrada de datos) ---
 col1, col2 = st.columns(2)
@@ -66,12 +69,11 @@ with col2:
     if unidad == "Días":
         tipo_dia = st.selectbox("Tipo de días", ["Hábiles", "Naturales"])
     else:
-        tipo_dia = "Meses" # Valor interno para evitar errores
+        tipo_dia = "Meses"
 
 # --- CÁLCULO ---
 if st.button("Calcular Vencimiento"):
     st.divider()
-    
     try:
         if unidad == "Días":
             if tipo_dia == "Hábiles":
@@ -82,7 +84,6 @@ if st.button("Calcular Vencimiento"):
         else:
             vencimiento, logs = plazos.sumar_meses(fecha_inicio, duracion, festivos, config)
 
-        # Resultado
         st.success(f"### El vencimiento es el: {vencimiento.strftime('%d/%m/%Y')}")
         
         with st.expander("Ver detalle del cómputo"):
