@@ -75,7 +75,7 @@ nombre_csv = normalizar_nombre_fichero(provincia_seleccionada)
 festivos = plazos.leer_festivos_csv(nombre_csv)
 
 if festivos:
-    st.sidebar.success(f"Calendario: {nombre_csv}", icon="📅")
+    st.sidebar.success(f"Calendario: {nombre_csv}", icon="✅")
 else:
     st.sidebar.error(f"Falta archivo: {nombre_csv}", icon="❌")
 
@@ -115,3 +115,18 @@ if st.button("Calcular Vencimiento"):
             for linea in logs: st.write(f"- {linea}")
     except Exception as e:
         st.error(f"Error: {e}")
+
+# --- PIE DE PÁGINA Y AVISO LEGAL ---
+st.divider()
+
+st.markdown("""
+### Información sobre la aplicación
+Esta herramienta es un **calendario de plazos procesales y administrativos** diseñado para facilitar el cómputo de vencimientos. 
+Funciona aplicando de forma automatizada las reglas de días hábiles, exclusión de festivos locales/nacionales y periodos de inhabilidad (Agosto y Navidad) según la normativa vigente (Ley 39/2015, LEC y LJCA).
+
+**Créditos:** Creado por **Esteban Umerez**, con la asistencia de **ChatGPT** (OpenAI) y **Gemini** (Google).
+
+---
+**Aviso Legal:**
+Esta aplicación se ofrece "tal cual" (*as is*), con fines puramente informativos y orientativos. El autor no garantiza la ausencia total de errores técnicos o de cálculo y **no se responsabiliza** de los posibles fallos en los resultados obtenidos, ni de las acciones, omisiones o decisiones legales que los usuarios adopten basándose en el cálculo realizado por esta herramienta. Se recomienda encarecidamente contrastar siempre los resultados con los calendarios oficiales de cada sede judicial o administrativa.
+""", help="Información legal y autoría")
