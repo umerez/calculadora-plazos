@@ -12,7 +12,7 @@ st.set_page_config(
     layout="wide"
 )
 
-# --- MAPEO DE SEGURIDAD (Adaptado a tus archivos reales) ---
+# --- MAPEO DE SEGURIDAD ---
 MAPEO_EXCEPCIONES = {
     "Coruña, A": "a-coruna.csv",
     "Araba/Álava": "araba_alava.csv",
@@ -28,13 +28,10 @@ MAPEO_EXCEPCIONES = {
 def normalizar_nombre_fichero(nombre_provincia):
     if nombre_provincia in MAPEO_EXCEPCIONES:
         return MAPEO_EXCEPCIONES[nombre_provincia]
-    
-    # Quitar tildes, minúsculas y sustituir espacios/comas
     s = unicodedata.normalize('NFD', nombre_provincia)
     s = s.encode('ascii', 'ignore').decode("utf-8")
     return f"{s.lower().strip().replace(',', '').replace(' ', '-')}.csv"
 
-# --- CARGA DEL LISTADO DE PROVINCIAS ---
 @st.cache_data(show_spinner=False)
 def obtener_lista_provincias():
     fichero = "codprov.csv"
@@ -49,59 +46,81 @@ def obtener_lista_provincias():
             pass
     return None
 
-# 2. DISEÑO DE LA INTERFAZ
+# --- BARRA LATERAL (DESCRIPCIÓN Y DISCLAIMER) ---
+with st.sidebar:
+    st.header("Sobre esta Aplicación")
+    st.markdown("""
+    Esta herramienta es un **calendario de plazos procesales y administrativos** diseñado para facilitar el cómputo de vencimientos. 
+    
+    Aplica de forma automatizada las reglas de:
+    * Días hábiles e inhábiles.
+    * Exclusión de festivos locales y nacionales.
+    * Periodos de inhabilidad (Agosto y Navidad) según la normativa vigente (Ley 39/2015, LEC y LJCA).
+
+    **Créditos:** Creado por **Esteban Umerez**, con la asistencia de **ChatGPT** (OpenAI) y **Gemini** (Google).
+    """)
+    
+    st.link_button("🌐 Visitar umerez.eu", "https://umerez.eu", use_container_width=True)
+    
+    st.divider()
+    st.caption("⚠️ **Aviso Legal:**")
+    st.caption("""
+    Esta aplicación se ofrece "tal cual" (*as is*), con fines orientativos. El autor no garantiza la ausencia de errores y **no se responsabiliza** de los resultados obtenidos ni de las decisiones legales adoptadas basadas en este cálculo. Se recomienda contrastar los resultados con los calendarios oficiales.
+    """)
+
+# --- INTERFAZ PRINCIPAL ---
 st.title("⚖️ Calculadora de Plazos Legales")
 
-# --- BARRA LATERAL ---
-st.sidebar.header("Configuración")
-
+# 1. Fila de Configuración (Provincia y Tipo de Plazo)
 provincias = obtener_lista_provincias()
-
 if provincias is None:
-    st.sidebar.error("🚨 Error cargando 'codprov.csv'")
+    st.error("🚨 Error cargando 'codprov.csv'")
     provincias = ["Bizkaia", "Madrid", "Barcelona", "Gipuzkoa", "Araba/Álava"]
-else:
-    st.sidebar.success(f"✅ {len(provincias)} provincias disponibles")
 
-provincia_seleccionada = st.sidebar.selectbox(
-    "Selecciona Provincia", 
-    options=provincias,
-    index=provincias.index("Bizkaia") if "Bizkaia" in provincias else 0
-)
+c1, c2 = st.columns(2)
 
-# Carga de festivos
-nombre_csv = normalizar_nombre_fichero(provincia_seleccionada)
-festivos = plazos.leer_festivos_csv(nombre_csv)
+with c1:
+    provincia_seleccionada = st.selectbox(
+        "📍 Selecciona Provincia/Ciudad", 
+        options=provincias,
+        index=provincias.index("Bizkaia") if "Bizkaia" in provincias else 0
+    )
+    # Carga de festivos y aviso inmediato debajo
+    nombre_csv = normalizar_nombre_fichero(provincia_seleccionada)
+    festivos = plazos.leer_festivos_csv(nombre_csv)
+    
+    if festivos:
+        st.success(f"Calendario de {provincia_seleccionada} cargado (archivo: {nombre_csv})", icon="✅")
+    else:
+        st.error(f"No se encontró el archivo: {nombre_csv}", icon="🚨")
 
-if festivos:
-    st.sidebar.success(f"Calendario: {nombre_csv}", icon="📅")
-else:
-    st.sidebar.error(f"Falta archivo: {nombre_csv}", icon="❌")
+with c2:
+    modo_key = st.selectbox(
+        "⚖️ Tipo de Procedimiento / Plazo",
+        options=list(plazos.MODOS_CALCULO.keys()),
+        format_func=lambda x: plazos.MODOS_CALCULO[x]["nombre"]
+    )
+    config = plazos.MODOS_CALCULO[modo_key]
+    st.info(f"**Reglas:** Agosto {'inhábil' if config['agosto_inhabil'] else 'hábil'} | Navidad {'inhábil' if config['navidad_inhabil'] else 'hábil'}")
 
-# Selector de Modo de Plazo
-st.sidebar.divider()
-modo_key = st.sidebar.selectbox(
-    "Tipo de Plazo",
-    options=list(plazos.MODOS_CALCULO.keys()),
-    format_func=lambda x: plazos.MODOS_CALCULO[x]["nombre"]
-)
-config = plazos.MODOS_CALCULO[modo_key]
+st.divider()
 
-# BOTÓN A TU WEB EN LA BARRA LATERAL
-st.sidebar.divider()
-st.sidebar.link_button("🌐 Visitar umerez.eu", "https://umerez.eu", use_container_width=True, type="primary")
+# 2. Fila de Entrada de Datos (Fecha y Cantidad)
+col_a, col_b = st.columns(2)
 
-# --- CUERPO PRINCIPAL ---
-col1, col2 = st.columns(2)
-with col1:
-    fecha_inicio = st.date_input("Fecha de inicio", date.today())
-    unidad = st.radio("Unidad", ["Días", "Meses"])
-with col2:
-    duracion = st.number_input("Plazo", min_value=1, value=10)
-    tipo_dia = st.selectbox("Días", ["Hábiles", "Naturales"]) if unidad == "Días" else "Meses"
+with col_a:
+    fecha_inicio = st.date_input("📅 Fecha de inicio (notificación/publicación)", date.today())
+    unidad = st.radio("📏 Unidad del plazo", ["Días", "Meses"], horizontal=True)
 
-if st.button("Calcular Vencimiento"):
-    st.divider()
+with col_b:
+    duracion = st.number_input("🔢 Duración del plazo", min_value=1, value=10)
+    if unidad == "Días":
+        tipo_dia = st.selectbox("🗓️ Tipo de días", ["Hábiles", "Naturales"])
+    else:
+        tipo_dia = "Meses"
+
+# 3. Botón de Cálculo y Resultados
+if st.button("🚀 Calcular Vencimiento", use_container_width=True, type="primary"):
     try:
         if unidad == "Días":
             if tipo_dia == "Hábiles":
@@ -112,24 +131,9 @@ if st.button("Calcular Vencimiento"):
         else:
             vencimiento, logs = plazos.sumar_meses(fecha_inicio, duracion, festivos, config)
 
-        st.success(f"### Vencimiento: {vencimiento.strftime('%d/%m/%Y')}")
-        with st.expander("Ver detalle del cálculo"):
-            for linea in logs: st.write(f"- {linea}")
+        st.success(f"## Vencimiento: {vencimiento.strftime('%d/%m/%Y')}")
+        with st.expander("🔍 Ver detalle del cómputo paso a paso"):
+            for linea in logs:
+                st.write(f"- {linea}")
     except Exception as e:
-        st.error(f"Error: {e}")
-
-# --- PIE DE PÁGINA Y AVISO LEGAL ---
-st.divider()
-
-st.markdown("""
-### Información sobre la aplicación
-Esta herramienta es un **calendario de plazos procesales y administrativos** diseñado para facilitar el cómputo de vencimientos. 
-Funciona aplicando de forma automatizada las reglas de días hábiles, exclusión de festivos locales/nacionales y periodos de inhabilidad (Agosto y Navidad) según la normativa vigente (Ley 39/2015, LEC y LJCA).
-
-Creado por **Esteban Umerez**, con la asistencia de **ChatGPT** (OpenAI) y **Gemini** (Google). 
-Puedes encontrar más recursos en [umerez.eu](https://umerez.eu).
-
----
-**Aviso Legal:**
-Esta aplicación se ofrece "tal cual" (*as is*), con fines puramente informativos y orientativos. El autor no garantiza la ausencia total de errores técnicos o de cálculo y **no se responsabiliza** de los posibles fallos en los resultados obtenidos, ni de las acciones, omisiones o decisiones legales que los usuarios adopten basándose en el cálculo realizado por esta herramienta. Se recomienda encarecidamente contrastar siempre los resultados con los calendarios oficiales de cada sede judicial o administrativa.
-""")
+        st.error(f"Error en el cálculo: {e}")
