@@ -5,7 +5,7 @@ import plazos
 import unicodedata
 import os
 
-# Configuración de la página
+# 1. CONFIGURACIÓN DE LA PÁGINA
 st.set_page_config(
     page_title="Calculadora de Plazos Umerez",
     page_icon="⚖️",
@@ -29,10 +29,9 @@ def normalizar_nombre_fichero(nombre_provincia):
     if nombre_provincia in MAPEO_EXCEPCIONES:
         return MAPEO_EXCEPCIONES[nombre_provincia]
     
-    # Quitar tildes, minúsculas y espacios por guiones
+    # Quitar tildes, minúsculas y sustituir espacios/comas
     s = unicodedata.normalize('NFD', nombre_provincia)
     s = s.encode('ascii', 'ignore').decode("utf-8")
-    # Limpieza total: minúsculas, sin comas, espacios por guiones
     return f"{s.lower().strip().replace(',', '').replace(' ', '-')}.csv"
 
 # --- CARGA DEL LISTADO DE PROVINCIAS ---
@@ -41,11 +40,8 @@ def obtener_lista_provincias():
     fichero = "codprov.csv"
     if os.path.exists(fichero):
         try:
-            # Leemos el archivo línea por línea para evitar problemas de columnas
             with open(fichero, 'r', encoding='utf-8-sig') as f:
                 lineas = [linea.strip() for linea in f.readlines() if linea.strip()]
-            
-            # Si una línea tiene comas (como la que mencionas), tomamos todo el texto unido
             lista_limpia = [l.replace('"', '') for l in lineas]
             if lista_limpia:
                 return sorted(lista_limpia)
@@ -53,16 +49,19 @@ def obtener_lista_provincias():
             pass
     return None
 
-# --- INTERFAZ ---
+# 2. DISEÑO DE LA INTERFAZ
 st.title("⚖️ Calculadora de Plazos Legales")
+
+# --- BARRA LATERAL ---
+st.sidebar.header("Configuración")
 
 provincias = obtener_lista_provincias()
 
 if provincias is None:
-    st.sidebar.error("🚨 No se pudo leer 'codprov.csv'. Revisa el archivo en GitHub.")
+    st.sidebar.error("🚨 Error cargando 'codprov.csv'")
     provincias = ["Bizkaia", "Madrid", "Barcelona", "Gipuzkoa", "Araba/Álava"]
 else:
-    st.sidebar.success(f"✅ {len(provincias)} provincias cargadas.")
+    st.sidebar.success(f"✅ {len(provincias)} provincias disponibles")
 
 provincia_seleccionada = st.sidebar.selectbox(
     "Selecciona Provincia", 
@@ -70,16 +69,16 @@ provincia_seleccionada = st.sidebar.selectbox(
     index=provincias.index("Bizkaia") if "Bizkaia" in provincias else 0
 )
 
-# Determinar archivo de festivos
+# Carga de festivos
 nombre_csv = normalizar_nombre_fichero(provincia_seleccionada)
 festivos = plazos.leer_festivos_csv(nombre_csv)
 
 if festivos:
-    st.sidebar.success(f"Calendario: {nombre_csv}", icon="✅")
+    st.sidebar.success(f"Calendario: {nombre_csv}", icon="📅")
 else:
     st.sidebar.error(f"Falta archivo: {nombre_csv}", icon="❌")
 
-# --- SELECTOR DE MODO ---
+# Selector de Modo de Plazo
 st.sidebar.divider()
 modo_key = st.sidebar.selectbox(
     "Tipo de Plazo",
@@ -87,9 +86,12 @@ modo_key = st.sidebar.selectbox(
     format_func=lambda x: plazos.MODOS_CALCULO[x]["nombre"]
 )
 config = plazos.MODOS_CALCULO[modo_key]
-st.sidebar.link_button("Ir a umerez.eu", "https://umerez.eu", use_container_width=True)
 
-# --- ENTRADA DE DATOS Y CÁLCULO ---
+# BOTÓN A TU WEB EN LA BARRA LATERAL
+st.sidebar.divider()
+st.sidebar.link_button("🌐 Visitar umerez.eu", "https://umerez.eu", use_container_width=True, type="primary")
+
+# --- CUERPO PRINCIPAL ---
 col1, col2 = st.columns(2)
 with col1:
     fecha_inicio = st.date_input("Fecha de inicio", date.today())
@@ -124,9 +126,10 @@ st.markdown("""
 Esta herramienta es un **calendario de plazos procesales y administrativos** diseñado para facilitar el cómputo de vencimientos. 
 Funciona aplicando de forma automatizada las reglas de días hábiles, exclusión de festivos locales/nacionales y periodos de inhabilidad (Agosto y Navidad) según la normativa vigente (Ley 39/2015, LEC y LJCA).
 
-**Créditos:** Creado por **Esteban Umerez**, con la asistencia de **ChatGPT** (OpenAI) y **Gemini** (Google).
+Creado por **Esteban Umerez**, con la asistencia de **ChatGPT** (OpenAI) y **Gemini** (Google). 
+Puedes encontrar más recursos en [umerez.eu](https://umerez.eu).
 
 ---
 **Aviso Legal:**
 Esta aplicación se ofrece "tal cual" (*as is*), con fines puramente informativos y orientativos. El autor no garantiza la ausencia total de errores técnicos o de cálculo y **no se responsabiliza** de los posibles fallos en los resultados obtenidos, ni de las acciones, omisiones o decisiones legales que los usuarios adopten basándose en el cálculo realizado por esta herramienta. Se recomienda encarecidamente contrastar siempre los resultados con los calendarios oficiales de cada sede judicial o administrativa.
-""", help="Información legal y autoría")
+""")
