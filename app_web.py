@@ -12,8 +12,7 @@ st.set_page_config(
     layout="wide"
 )
 
-# --- MAPEO MANUAL DE SEGURIDAD ---
-# Esto asegura que los archivos con nombres "raros" se encuentren sí o sí
+# --- MAPEO DE SEGURIDAD (Adaptado a tus archivos reales) ---
 MAPEO_EXCEPCIONES = {
     "Coruña, A": "a-coruna.csv",
     "Araba/Álava": "araba_alava.csv",
@@ -27,60 +26,58 @@ MAPEO_EXCEPCIONES = {
 }
 
 def normalizar_nombre_fichero(nombre_provincia):
-    # Si está en el mapa de excepciones, lo devolvemos directamente
     if nombre_provincia in MAPEO_EXCEPCIONES:
         return MAPEO_EXCEPCIONES[nombre_provincia]
     
-    # Para el resto: Quitar tildes, minúsculas y espacios por guiones medios
-    # Ejemplo: "Zaragoza" -> "zaragoza.csv"
+    # Quitar tildes, minúsculas y espacios por guiones
     s = unicodedata.normalize('NFD', nombre_provincia)
     s = s.encode('ascii', 'ignore').decode("utf-8")
-    return f"{s.lower().strip().replace(' ', '-')}.csv"
+    # Limpieza total: minúsculas, sin comas, espacios por guiones
+    return f"{s.lower().strip().replace(',', '').replace(' ', '-')}.csv"
 
 # --- CARGA DEL LISTADO DE PROVINCIAS ---
-@st.cache_data
+@st.cache_data(show_spinner=False)
 def obtener_lista_provincias():
-    # Intentamos leer el archivo con diferentes variantes de nombre
-    posibles_nombres = ["codprov.csv", "Codprov.csv", "CODPROV.CSV"]
-    for nombre in posibles_nombres:
-        if os.path.exists(nombre):
-            try:
-                # 'utf-8-sig' ayuda a leer archivos guardados desde Excel/Windows
-                df = pd.read_csv(nombre, header=None, encoding='utf-8-sig')
-                lista = df[0].dropna().astype(str).tolist()
-                return [p.strip() for p in lista if p.strip()]
-            except:
-                continue
+    fichero = "codprov.csv"
+    if os.path.exists(fichero):
+        try:
+            # Leemos el archivo línea por línea para evitar problemas de columnas
+            with open(fichero, 'r', encoding='utf-8-sig') as f:
+                lineas = [linea.strip() for linea in f.readlines() if linea.strip()]
+            
+            # Si una línea tiene comas (como la que mencionas), tomamos todo el texto unido
+            lista_limpia = [l.replace('"', '') for l in lineas]
+            if lista_limpia:
+                return sorted(lista_limpia)
+        except:
+            pass
     return None
 
-# --- DISEÑO DE LA APLICACIÓN ---
+# --- INTERFAZ ---
 st.title("⚖️ Calculadora de Plazos Legales")
 
-# Intentar cargar provincias
 provincias = obtener_lista_provincias()
 
 if provincias is None:
-    st.sidebar.error("🚨 No se encontró el archivo 'codprov.csv' en GitHub.")
-    # Lista de emergencia por si el archivo falla
+    st.sidebar.error("🚨 No se pudo leer 'codprov.csv'. Revisa el archivo en GitHub.")
     provincias = ["Bizkaia", "Madrid", "Barcelona", "Gipuzkoa", "Araba/Álava"]
 else:
-    st.sidebar.success(f"✅ Se han cargado {len(provincias)} provincias.")
+    st.sidebar.success(f"✅ {len(provincias)} provincias cargadas.")
 
-# Selector de Provincia
 provincia_seleccionada = st.sidebar.selectbox(
     "Selecciona Provincia", 
     options=provincias,
     index=provincias.index("Bizkaia") if "Bizkaia" in provincias else 0
 )
 
-# Determinar y cargar el archivo de festivos
+# Determinar archivo de festivos
 nombre_csv = normalizar_nombre_fichero(provincia_seleccionada)
 festivos = plazos.leer_festivos_csv(nombre_csv)
 
 if festivos:
     st.sidebar.success(f"Calendario: {nombre_csv}", icon="📅")
 else:
-    st.sidebar.error(f"Archivo no encontrado: {nombre_csv}", icon="❌")
+    st.sidebar.error(f"Falta archivo: {nombre_csv}", icon="❌")
 
 # --- SELECTOR DE MODO ---
 st.sidebar.divider()
@@ -118,5 +115,3 @@ if st.button("Calcular Vencimiento"):
             for linea in logs: st.write(f"- {linea}")
     except Exception as e:
         st.error(f"Error: {e}")
-
-st.info(f"**Modo:** {config['nombre']}. Agosto inhábil: {'Sí' if config['agosto_inhabil'] else 'No'}.")
