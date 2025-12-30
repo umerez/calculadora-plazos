@@ -1,49 +1,54 @@
 import streamlit as st
+import pandas as pd
 from datetime import date
-import plazos  # Importamos tu motor de cálculo plazos.py
+import plazos  # Tu motor de cálculo
+import os
 
 # Configuración de la página
-st.set_page_config(
-   page_title="Calculadora de Plazos Umerez",
-   page_icon="⚖️",
-   layout="wide",
-   initial_sidebar_state="expanded",
-)
+st.set_page_config(page_title="Calculadora de Plazos Umerez", page_icon="⚖️", layout="wide")
 
 st.title("⚖️ Calculadora de Plazos Legales")
 st.markdown("""
-Esta herramienta calcula vencimientos procesales y administrativos, aplicando 
-las reglas de los artículos 30 de la Ley 39/2015, 133 de la LEC y 128 de la LJCA. 
-Por Esteban Umerez, con ayuda de ChatGPT y Gemini.
+Calculadora de vencimientos procesales y administrativos (Ley 39/2015, LEC y LJCA).
+Por Esteban Umerez.
 """)
 
-# --- BARRA LATERAL (Configuración) ---
+# --- BARRA LATERAL ---
 st.sidebar.header("Configuración de Calendario")
 
-# 1. Selección del archivo de festivos
-archivos_disponibles = {
-    "Bizkaia y Gipuzkoa": "festivos_bizkaia_gipuzkoa.csv",
-    "Araba": "festivos_araba.csv",
-    "España (Nacionales)": "festivos_españa.csv"
-}
+# 1. Cargar el listado de provincias desde codprov.csv
+@st.cache_data
+def cargar_nombres_provincias():
+    try:
+        # Leemos el archivo que subiste
+        df = pd.read_csv("codprov.csv", header=None)
+        return df[0].tolist()
+    except:
+        return ["Bizkaia", "Gipuzkoa", "Araba/Álava", "Madrid"] # Fallback por si falla
 
-seleccion_nombre = st.sidebar.selectbox(
-    "Selecciona el Calendario de Festivos",
-    options=list(archivos_disponibles.keys()),
-    index=0
+lista_provincias = cargar_nombres_provincias()
+
+# 2. Selector de Provincia
+provincia_seleccionada = st.sidebar.selectbox(
+    "Selecciona la Provincia/Ciudad",
+    options=lista_provincias,
+    index=lista_provincias.index("Bizkaia") if "Bizkaia" in lista_provincias else 0
 )
 
-archivo_seleccionado = archivos_disponibles[seleccion_nombre]
+# 3. Construir el nombre del archivo automáticamente
+# Limpiamos el nombre: minúsculas, quitamos barras y espacios
+nombre_limpio = provincia_seleccionada.lower().replace("/", "_").replace(" ", "_")
+archivo_csv = f"{nombre_limpio}.csv"
 
 # Carga de festivos
-festivos = plazos.leer_festivos_csv(archivo_seleccionado)
+festivos = plazos.leer_festivos_csv(archivo_csv)
 
 if festivos:
-    st.sidebar.success(f"Calendario '{seleccion_nombre}' cargado.", icon="✅")
+    st.sidebar.success(f"Calendario de {provincia_seleccionada} cargado.", icon="✅")
 else:
-    st.sidebar.error(f"Error: No se encuentra el archivo {archivo_seleccionado}", icon="🚨")
+    st.sidebar.warning(f"No se encontró el archivo: {archivo_csv}. Se usará calendario sin festivos locales.", icon="⚠️")
 
-# 2. Selección de Modo de Cálculo
+# 4. Selector de Modo de Cálculo
 st.sidebar.divider()
 st.sidebar.header("Reglas de Cómputo")
 modo_key = st.sidebar.selectbox(
@@ -53,25 +58,23 @@ modo_key = st.sidebar.selectbox(
 )
 config = plazos.MODOS_CALCULO[modo_key]
 
-# --- NUEVO: BOTÓN DE ENLACE EXTERNO ---
 st.sidebar.divider()
 st.sidebar.link_button("Ir a umerez.eu", "https://umerez.eu", use_container_width=True)
 
-# --- CUERPO PRINCIPAL (Entrada de datos) ---
+# --- CUERPO PRINCIPAL ---
 col1, col2 = st.columns(2)
 
 with col1:
-    fecha_inicio = st.date_input("Fecha de inicio (notificación/publicación)", date.today())
+    fecha_inicio = st.date_input("Fecha de inicio", date.today())
     unidad = st.radio("Unidad del plazo", ["Días", "Meses"])
 
 with col2:
-    duracion = st.number_input(f"Número de días o meses", min_value=1, value=10)
+    duracion = st.number_input(f"Número de {unidad.lower()}", min_value=1, value=10)
     if unidad == "Días":
         tipo_dia = st.selectbox("Tipo de días", ["Hábiles", "Naturales"])
     else:
         tipo_dia = "Meses"
 
-# --- CÁLCULO ---
 if st.button("Calcular Vencimiento"):
     st.divider()
     try:
@@ -85,12 +88,8 @@ if st.button("Calcular Vencimiento"):
             vencimiento, logs = plazos.sumar_meses(fecha_inicio, duracion, festivos, config)
 
         st.success(f"### El vencimiento es el: {vencimiento.strftime('%d/%m/%Y')}")
-        
         with st.expander("Ver detalle del cómputo"):
             for linea in logs:
                 st.write(f"- {linea}")
-
     except Exception as e:
         st.error(f"Error en el cálculo: {e}")
-
-st.info(f"**Modo activo:** {config['nombre']}. Agosto inhábil: {'Sí' if config['agosto_inhabil'] else 'No'}.")
