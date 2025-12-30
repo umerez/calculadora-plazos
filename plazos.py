@@ -42,11 +42,9 @@ def leer_festivos_csv(ruta_csv: str) -> Set[date]:
             lineas = f.readlines()
             for linea in lineas:
                 linea = linea.strip()
-                # Salta cabecera o líneas vacías
-                if not linea or "Fecha" in linea:
+                if not linea or "Fecha" in linea: # Salta cabecera o vacíos
                     continue
-                
-                # Extrae la fecha (ej: 2026-01-01)
+                # Toma la parte antes de la primera coma
                 fecha_str = linea.split(',')[0].strip()
                 try:
                     d = datetime.strptime(fecha_str, "%Y-%m-%d").date()
