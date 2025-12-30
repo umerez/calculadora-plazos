@@ -12,7 +12,7 @@ from typing import List, Tuple, Set, Dict
 
 MODOS_CALCULO = {
     "contencioso": {
-        "nombre": "Plazo Procesal Contencioso",
+        "nombre": "Plazo Procesal",
         "agosto_inhabil": True,
         "navidad_inhabil": True,
         "agosto_interposicion": False
