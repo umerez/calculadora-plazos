@@ -96,7 +96,7 @@ with c1:
 
 with c2:
     modo_key = st.selectbox(
-        "⚖️ Tipo de Procedimiento / Plazo",
+        "Tipo de Procedimiento / Plazo",
         options=list(plazos.MODOS_CALCULO.keys()),
         format_func=lambda x: plazos.MODOS_CALCULO[x]["nombre"]
     )
