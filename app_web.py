@@ -81,7 +81,7 @@ c1, c2 = st.columns(2)
 
 with c1:
     provincia_seleccionada = st.selectbox(
-        "📍 Selecciona Provincia/Ciudad", 
+        "Selecciona Provincia", 
         options=provincias,
         index=provincias.index("Bizkaia") if "Bizkaia" in provincias else 0
     )
@@ -109,18 +109,18 @@ st.divider()
 col_a, col_b = st.columns(2)
 
 with col_a:
-    fecha_inicio = st.date_input("📅 Fecha de inicio (notificación/publicación)", date.today())
+    fecha_inicio = st.date_input("Fecha de inicio (notificación/publicación)", date.today())
     unidad = st.radio("📏 Unidad del plazo", ["Días", "Meses"], horizontal=True)
 
 with col_b:
-    duracion = st.number_input("🔢 Duración del plazo", min_value=1, value=10)
+    duracion = st.number_input("Duración del plazo", min_value=1, value=10)
     if unidad == "Días":
-        tipo_dia = st.selectbox("🗓️ Tipo de días", ["Hábiles", "Naturales"])
+        tipo_dia = st.selectbox("Tipo de días", ["Hábiles", "Naturales"])
     else:
         tipo_dia = "Meses"
 
 # 3. Botón de Cálculo y Resultados
-if st.button("🚀 Calcular Vencimiento", use_container_width=True, type="primary"):
+if st.button("Calcular Vencimiento", use_container_width=True, type="primary"):
     try:
         if unidad == "Días":
             if tipo_dia == "Hábiles":
