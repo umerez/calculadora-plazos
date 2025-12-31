@@ -1,122 +1,139 @@
 import streamlit as st
-from datetime import date, timedelta
-import plazos  # Importa el motor de cálculo plazos.py
+import pandas as pd
+from datetime import date
+import plazos 
+import unicodedata
+import os
 
-# Configuración de la página
+# 1. CONFIGURACIÓN DE LA PÁGINA
 st.set_page_config(
     page_title="Calculadora de Plazos Umerez",
     page_icon="⚖️",
-    layout="centered"
+    layout="wide"
 )
 
-# Diccionario de nombres de días en español
-DIAS_SEMANA = [
-    "Lunes", "Martes", "Miércoles", "Jueves", 
-    "Viernes", "Sábado", "Domingo"
-]
-
-# --- TÍTULO Y DESCRIPCIÓN ---
-st.title("⚖️ Calculadora de Plazos Legales Umerez")
-st.markdown("""
-Esta herramienta aplica las reglas de cómputo de la **LEC, LPAC y LJCA**.
-Calcula vencimientos automáticos gestionando periodos inhábiles (Agosto, Navidad) y festivos locales.
-""")
-
-# --- BARRA LATERAL (Configuración) ---
-st.sidebar.header("⚙️ Configuración")
-
-# Mapeo de provincias a sus archivos CSV (asegúrate de que los archivos estén en la misma carpeta)
-provincias = {
-    "A Coruña": "a-coruna.csv",
-    "Albacete": "albacete.csv",
-    "Alicante": "alicante.csv",
-    "Almería": "almeria.csv",
+# --- MAPEO DE SEGURIDAD ---
+MAPEO_EXCEPCIONES = {
+    "Coruña, A": "a-coruna.csv",
     "Araba/Álava": "araba_alava.csv",
-    "Asturias": "asturias.csv",
-    "Ávila": "avila.csv",
-    "Badajoz": "badajoz.csv",
-    "Bizkaia": "bizkaia_2026.csv",
-    "Sevilla": "sevilla.csv",
-    "Soria": "soria.csv",
-    "Toledo": "toledo.csv",
-    "Valladolid": "valladolid.csv",
-    "Zamora": "zamora_2026.csv",
-    "Zaragoza": "zaragoza.csv"
+    "Ciudad Real": "ciudad-real.csv",
+    "Rioja, La": "la-rioja.csv",
+    "Palmas, Las": "las-palmas.csv",
+    "Santa Cruz de Tenerife": "tenerife.csv",
+    "Balears, Illes": "baleares.csv",
+    "Castellón/Castelló": "castellon.csv",
+    "Valencia/València": "valencia.csv"
 }
 
-seleccion_provincia = st.sidebar.selectbox("Selecciona Provincia", list(provincias.keys()))
-archivo_csv = provincias[seleccion_provincia]
+def normalizar_nombre_fichero(nombre_provincia):
+    if nombre_provincia in MAPEO_EXCEPCIONES:
+        return MAPEO_EXCEPCIONES[nombre_provincia]
+    s = unicodedata.normalize('NFD', nombre_provincia)
+    s = s.encode('ascii', 'ignore').decode("utf-8")
+    return f"{s.lower().strip().replace(',', '').replace(' ', '-')}.csv"
 
-# Carga de festivos desde el motor plazos.py
-try:
-    festivos = plazos.leer_festivos_csv(archivo_csv)
-    st.sidebar.success(f"📅 Calendario de {seleccion_provincia} cargado.")
-except Exception:
-    festivos = set()
-    st.sidebar.warning("⚠️ No se encontró el archivo de festivos. Se usarán solo fines de semana.")
+@st.cache_data(show_spinner=False)
+def obtener_lista_provincias():
+    fichero = "codprov.csv"
+    if os.path.exists(fichero):
+        try:
+            with open(fichero, 'r', encoding='utf-8-sig') as f:
+                lineas = [linea.strip() for linea in f.readlines() if linea.strip()]
+            lista_limpia = [l.replace('"', '') for l in lineas]
+            if lista_limpia:
+                return sorted(lista_limpia)
+        except:
+            pass
+    return None
 
-# Selección del Tipo de Procedimiento
-modo_key = st.sidebar.selectbox(
-    "Tipo de Procedimiento",
-    options=list(plazos.MODOS_CALCULO.keys()),
-    format_func=lambda x: plazos.MODOS_CALCULO[x]["nombre"]
-)
-config = plazos.MODOS_CALCULO[modo_key]
+# --- BARRA LATERAL (DESCRIPCIÓN Y DISCLAIMER) ---
+with st.sidebar:
+    st.header("Sobre esta Aplicación")
+    st.markdown("""
+    Esta herramienta es un **calendario de plazos procesales y administrativos** diseñado para facilitar el cómputo de vencimientos. 
+    
+    Aplica de forma automatizada las reglas de:
+    * Días hábiles e inhábiles.
+    * Exclusión de festivos locales y nacionales.
+    * Periodos de inhabilidad (Agosto y Navidad) según la normativa vigente (Ley 39/2015, LEC y LJCA).
 
-# --- CUERPO PRINCIPAL (Entrada de Datos) ---
+    **Créditos:** Creado por **Esteban Umerez**, con la asistencia de **ChatGPT** (OpenAI) y **Gemini** (Google).
+    """)
+    
+    st.link_button("🌐 Visitar umerez.eu", "https://umerez.eu", use_container_width=True)
+    
+    st.divider()
+    st.caption("⚠️ **Aviso Legal:**")
+    st.caption("""
+    Esta aplicación se ofrece "tal cual" (*as is*), con fines orientativos. El autor no garantiza la ausencia de errores y **no se responsabiliza** de los resultados obtenidos ni de las decisiones legales adoptadas basadas en este cálculo. Se recomienda contrastar los resultados con los calendarios oficiales.
+    """)
+
+# --- INTERFAZ PRINCIPAL ---
+st.title("⚖️ Calculadora de Plazos Legales")
+
+# 1. Fila de Configuración (Provincia y Tipo de Plazo)
+provincias = obtener_lista_provincias()
+if provincias is None:
+    st.error("🚨 Error cargando 'codprov.csv'")
+    provincias = ["Bizkaia", "Madrid", "Barcelona", "Gipuzkoa", "Araba/Álava"]
+
+c1, c2 = st.columns(2)
+
+with c1:
+    provincia_seleccionada = st.selectbox(
+        "Selecciona Provincia", 
+        options=provincias,
+        index=provincias.index("Bizkaia") if "Bizkaia" in provincias else 0
+    )
+    # Carga de festivos y aviso inmediato debajo
+    nombre_csv = normalizar_nombre_fichero(provincia_seleccionada)
+    festivos = plazos.leer_festivos_csv(nombre_csv)
+    
+    if festivos:
+        st.success(f"Calendario de {provincia_seleccionada} cargado (archivo: {nombre_csv})", icon="✅")
+    else:
+        st.error(f"No se encontró el archivo: {nombre_csv}", icon="🚨")
+
+with c2:
+    modo_key = st.selectbox(
+        "Tipo de Procedimiento / Plazo",
+        options=list(plazos.MODOS_CALCULO.keys()),
+        format_func=lambda x: plazos.MODOS_CALCULO[x]["nombre"]
+    )
+    config = plazos.MODOS_CALCULO[modo_key]
+    st.info(f"**Reglas:** Agosto {'inhábil' if config['agosto_inhabil'] else 'hábil'} | Navidad {'inhábil' if config['navidad_inhabil'] else 'hábil'}")
+
 st.divider()
 
-col1, col2 = st.columns(2)
+# 2. Fila de Entrada de Datos (Fecha y Cantidad)
+col_a, col_b = st.columns(2)
 
-with col1:
-    fecha_inicio = st.date_input("Fecha de inicio (notificación)", date.today())
-    unidad = st.radio("Cómputo por:", ["Días", "Meses"], horizontal=True)
+with col_a:
+    fecha_inicio = st.date_input("Fecha de inicio (notificación/publicación)", date.today())
+    unidad = st.radio("📏 Unidad del plazo", ["Días", "Meses"], horizontal=True)
 
-with col2:
-    duracion = st.number_input(f"Cantidad de {unidad}", min_value=1, value=10)
+with col_b:
+    duracion = st.number_input("Duración del plazo", min_value=1, value=10)
     if unidad == "Días":
         tipo_dia = st.selectbox("Tipo de días", ["Hábiles", "Naturales"])
     else:
         tipo_dia = "Meses"
 
-st.divider()
-
-# --- ACCIÓN DE CÁLCULO ---
-if st.button("🚀 Calcular Vencimiento", use_container_width=True, type="primary"):
+# 3. Botón de Cálculo y Resultados
+if st.button("Calcular Vencimiento", use_container_width=True, type="primary"):
     try:
         if unidad == "Días":
             if tipo_dia == "Hábiles":
                 vencimiento, logs = plazos.sumar_dias_habiles(fecha_inicio, duracion, festivos, config)
             else:
-                # Días naturales
-                vencimiento = fecha_inicio + timedelta(days=duracion)
+                vencimiento = fecha_inicio + plazos.timedelta(days=duracion)
                 logs = [f"Cómputo por días naturales: {duracion} días."]
-                # Prórroga si el natural cae en inhábil (Regla general administrativa/procesal)
-                while not plazos.es_dia_habil(vencimiento, festivos, config):
-                    vencimiento += timedelta(days=1)
-                    logs.append(f"Prorrogado por vencimiento en día inhábil a: {vencimiento}")
         else:
-            # Cómputo por meses
             vencimiento, logs = plazos.sumar_meses(fecha_inicio, duracion, festivos, config)
 
-        # Mostrar resultado resaltado
-        dia_semana_texto = DIAS_SEMANA[vencimiento.weekday()]
-        st.balloons()
-        
-        st.markdown(f"""
-        ### Resultado del Cómputo:
-        La fecha de vencimiento es el:
-        # {dia_semana_texto}, {vencimiento.strftime('%d/%m/%Y')}
-        """)
-
-        # Desglose de pasos
-        with st.expander("🔍 Ver detalle del cálculo (paso a paso)"):
-            for l in logs:
-                st.write(f"- {l}")
-
+        st.success(f"## Vencimiento: {vencimiento.strftime('%d/%m/%Y')}")
+        with st.expander("🔍 Ver detalle del cómputo paso a paso"):
+            for linea in logs:
+                st.write(f"- {linea}")
     except Exception as e:
-        st.error(f"Se ha producido un error en el cálculo: {e}")
-
-# Pie de página
-st.markdown("---")
-st.caption(f"Configuración actual: {config['nombre']} | Provincia: {seleccion_provincia}")
+        st.error(f"Error en el cálculo: {e}")
