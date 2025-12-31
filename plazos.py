@@ -1,13 +1,11 @@
 #!/usr/bin/env python3
 import csv
 import calendar
-import sys
-from datetime import datetime, date, time, timedelta
-from zoneinfo import ZoneInfo
+from datetime import datetime, date, timedelta
 from typing import List, Tuple, Set, Dict
 
 # =============================================================================
-#  CONFIGURACIÓN DE TIPOS DE PLAZO (Traducción de la lógica Swift)
+#  CONFIGURACIÓN DE TIPOS DE PLAZO
 # =============================================================================
 
 MODOS_CALCULO = {
@@ -27,7 +25,7 @@ MODOS_CALCULO = {
         "nombre": "Interposición Recurso Contencioso (LJCA)",
         "agosto_inhabil": True,
         "navidad_inhabil": True,
-        "agosto_interposicion": True  # Agosto no cuenta en el cómputo de meses
+        "agosto_interposicion": True  # Activa reglas especiales de agosto para meses
     }
 }
 
@@ -42,9 +40,8 @@ def leer_festivos_csv(ruta_csv: str) -> Set[date]:
             lineas = f.readlines()
             for linea in lineas:
                 linea = linea.strip()
-                if not linea or "Fecha" in linea: # Salta cabecera o vacíos
+                if not linea or "Fecha" in linea:
                     continue
-                # Toma la parte antes de la primera coma
                 fecha_str = linea.split(',')[0].strip()
                 try:
                     d = datetime.strptime(fecha_str, "%Y-%m-%d").date()
@@ -61,22 +58,22 @@ def leer_festivos_csv(ruta_csv: str) -> Set[date]:
 
 def es_periodo_navidad(fecha: date, activo: bool) -> bool:
     if not activo: return False
-    # 24 de diciembre al 6 de enero
+    # Periodo inhábil del 24 de diciembre al 6 de enero
     if (fecha.month == 12 and fecha.day >= 24) or (fecha.month == 1 and fecha.day <= 6):
         return True
     return False
 
 def es_dia_habil(fecha: date, festivos: Set[date], config: Dict) -> bool:
-    # 1. Fines de semana (Sábado=5, Domingo=6 en Python)
+    # 1. Fines de semana
     if fecha.weekday() >= 5:
         return False
-    # 2. Festivos CSV
+    # 2. Festivos cargados desde CSV
     if fecha in festivos:
         return False
-    # 3. Agosto
+    # 3. Agosto (si el modo lo marca como inhábil)
     if config['agosto_inhabil'] and fecha.month == 8:
         return False
-    # 4. Navidad (24/12 - 06/01)
+    # 4. Navidad (si el modo lo marca como inhábil)
     if es_periodo_navidad(fecha, config['navidad_inhabil']):
         return False
     return True
@@ -104,60 +101,69 @@ def sumar_dias_habiles(inicio: date, duracion: int, festivos: Set[date], config:
     return fecha_cursor, detalle
 
 # =============================================================================
-#  CÁLCULO POR MESES (Regla especial Swift)
+#  CÁLCULO POR MESES (Regla especial LJCA para Agosto)
 # =============================================================================
 
 def sumar_meses(inicio: date, meses: int, festivos: Set[date], config: Dict) -> Tuple[date, List[str]]:
     detalle = []
-    fecha_cursor = inicio
     
-    # 1. Aplicar salto de agosto si es interposición
-    if config['agosto_interposicion']:
-        meses_restantes = meses
-        while meses_restantes > 0:
-            # Avanzar un mes
-            proximo_mes = fecha_cursor.month + 1
-            proximo_anio = fecha_cursor.year
-            if proximo_mes > 12:
-                proximo_mes = 1
-                proximo_anio += 1
-            
-            fecha_cursor = date(proximo_anio, proximo_mes, 1)
-            if fecha_cursor.month != 8:
-                meses_restantes -= 1
-            else:
-                detalle.append("Regla Agosto-Interposición: Agosto se salta en el cómputo.")
+    # NUEVA REGLA: Si la fecha de inicio es en agosto y es interposición, empieza el 1 de sept.
+    if config['agosto_interposicion'] and inicio.month == 8:
+        f_inicio_calculo = date(inicio.year, 9, 1)
+        detalle.append(f"Inicio en agosto ({inicio}): por regla de interposición, el cómputo comienza el 1 de septiembre.")
     else:
-        # Suma de meses estándar
-        m = inicio.month - 1 + meses
-        anio = inicio.year + (m // 12)
-        mes = (m % 12) + 1
-        fecha_cursor = date(anio, mes, 1)
+        f_inicio_calculo = inicio
 
-    # 2. Ajustar el día (si el mes destino tiene menos días que el de inicio)
-    ultimo_dia_mes = calendar.monthrange(fecha_cursor.year, fecha_cursor.month)[1]
-    dia_final = min(inicio.day, ultimo_dia_mes)
-    vencimiento = date(fecha_cursor.year, fecha_cursor.month, dia_final)
+    anio_cursor = f_inicio_calculo.year
+    mes_cursor = f_inicio_calculo.month
+    meses_contados = 0
+
+    # 1. Avanzar los meses uno a uno para detectar agosto
+    while meses_contados < meses:
+        mes_cursor += 1
+        if mes_cursor > 12:
+            mes_cursor = 1
+            anio_cursor += 1
+        
+        # Si es interposición, agosto no cuenta en el cómputo de meses
+        if config['agosto_interposicion'] and mes_cursor == 8:
+            detalle.append("Regla Agosto-Interposición: Agosto se omite en el cómputo de meses.")
+            continue
+        
+        meses_contados += 1
+
+    # 2. Ajustar el día (regla de fecha a fecha)
+    # Si el mes destino tiene menos días (ej. inicio día 31 y destino es junio), se usa el último día del mes.
+    ultimo_dia_mes_destino = calendar.monthrange(anio_cursor, mes_cursor)[1]
+    dia_final = min(f_inicio_calculo.day, ultimo_dia_mes_destino)
+    vencimiento = date(anio_cursor, mes_cursor, dia_final)
     
-    if dia_final != inicio.day:
-        detalle.append(f"Ajustado al último día del mes: {vencimiento}")
+    if dia_final != f_inicio_calculo.day:
+        detalle.append(f"Día ajustado al último día del mes destino: {vencimiento}")
+    else:
+        detalle.append(f"Vencimiento teórico (fecha a fecha): {vencimiento}")
 
-    # 3. Prórroga si el último día es inhábil
+    # 3. Prórroga si el día final es inhábil (fin de semana, festivo, agosto o navidad)
     while not es_dia_habil(vencimiento, festivos, config):
+        razon = "Fin de semana / Festivo / Periodo Inhábil"
         vencimiento += timedelta(days=1)
-        detalle.append(f"Prorrogado por vencimiento en día inhábil a: {vencimiento}")
+        detalle.append(f"Prorrogado por vencimiento en día inhábil ({razon}) a: {vencimiento}")
 
     return vencimiento, detalle
 
 # =============================================================================
-#  INTERFAZ DE LÍNEA DE COMANDOS (Para probar en local)
+#  TEST LOCAL
 # =============================================================================
 
 if __name__ == "__main__":
-    # Ejemplo rápido de uso si ejecutas: python plazos.py
-    print("--- TEST RÁPIDO ---")
-    festivos_test = leer_festivos_csv("festivos.csv") # Asegúrate de tener este archivo
-    config_test = MODOS_CALCULO["contencioso"]
+    print("--- TEST REGLA AGOSTO (INTERPOSICIÓN) ---")
+    # Simulación: Notificación el 15 de agosto, plazo 2 meses
+    f_test = date(2024, 8, 15)
+    festivos_test = set() # Vacío para el test
+    config_test = MODOS_CALCULO["interposicion"]
     
-    resultado, log = sumar_dias_habiles(date.today(), 10, festivos_test, config_test)
-    print(f"Resultado 10 días hábiles desde hoy: {resultado}")
+    venc, logs = sumar_meses(f_test, 2, festivos_test, config_test)
+    print(f"Inicio: {f_test} | Plazo: 2 meses")
+    print(f"Vencimiento final: {venc}")
+    for log in logs:
+        print(f"  > {log}")
