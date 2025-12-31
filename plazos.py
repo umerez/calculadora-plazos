@@ -3,13 +3,16 @@ import calendar
 from datetime import datetime, date, timedelta
 from typing import List, Tuple, Set, Dict
 
-# Configuración de los modos
+# =============================================================================
+#  CONFIGURACIÓN DE TIPOS DE PLAZO
+# =============================================================================
+
 MODOS_CALCULO = {
     "contencioso": {
         "nombre": "Plazo Procesal (LEC-LJCA)",
         "agosto_inhabil": True,
         "navidad_inhabil": True,
-        "agosto_interposicion": False
+        "agosto_interposicion": False  # En meses, computa desde agosto (fecha a fecha)
     },
     "administrativo": {
         "nombre": "Plazo Administrativo (LPAC)",
@@ -21,9 +24,30 @@ MODOS_CALCULO = {
         "nombre": "Interposición Recurso Contencioso (LJCA)",
         "agosto_inhabil": True,
         "navidad_inhabil": True,
-        "agosto_interposicion": True  
+        "agosto_interposicion": True  # En meses, salta al 1 de septiembre
     }
 }
+
+# =============================================================================
+#  UTILIDADES
+# =============================================================================
+
+def leer_festivos_csv(ruta_csv: str) -> Set[date]:
+    festivos = set()
+    try:
+        with open(ruta_csv, mode='r', encoding='utf-8') as f:
+            lineas = f.readlines()
+            for linea in lineas:
+                linea = linea.strip()
+                if not linea or "Fecha" in linea: continue
+                fecha_str = linea.split(',')[0].strip()
+                try:
+                    d = datetime.strptime(fecha_str, "%Y-%m-%d").date()
+                    festivos.add(d)
+                except ValueError: continue
+    except FileNotFoundError:
+        return set()
+    return festivos
 
 def es_dia_habil(fecha: date, festivos: Set[date], config: Dict) -> bool:
     if fecha.weekday() >= 5: return False
@@ -40,10 +64,14 @@ def obtener_primer_habil_septiembre(anio: int, festivos: Set[date], config: Dict
         fecha += timedelta(days=1)
     return fecha
 
+# =============================================================================
+#  CÁLCULO POR DÍAS
+# =============================================================================
+
 def sumar_dias_habiles(inicio: date, duracion: int, festivos: Set[date], config: Dict) -> Tuple[date, List[str]]:
     detalle = []
     fecha_cursor = inicio
-    # REGLA DÍAS: Si es agosto inhábil, salta a septiembre
+    # REGLA DÍAS: Si agosto es inhábil e inicia en agosto, salta a septiembre
     if config['agosto_inhabil'] and inicio.month == 8:
         primer_habil = obtener_primer_habil_septiembre(inicio.year, festivos, config)
         fecha_cursor = primer_habil - timedelta(days=1)
@@ -59,13 +87,18 @@ def sumar_dias_habiles(inicio: date, duracion: int, festivos: Set[date], config:
             detalle.append(f"Omitido: {fecha_cursor} (Inhábil)")
     return fecha_cursor, detalle
 
+# =============================================================================
+#  CÁLCULO POR MESES
+# =============================================================================
+
 def sumar_meses(inicio: date, meses: int, festivos: Set[date], config: Dict) -> Tuple[date, List[str]]:
     detalle = []
-    # REGLA MESES: Solo Interposición salta al 1 de septiembre si se inicia en agosto
+    # REGLA MESES: Solo Interposición LJCA salta al 1 de septiembre
     if config['agosto_interposicion'] and inicio.month == 8:
         f_inicio_calculo = obtener_primer_habil_septiembre(inicio.year, festivos, config)
         detalle.append(f"Interposición: inicio en agosto traslada el cómputo al {f_inicio_calculo}.")
     else:
+        # El modo Procesal computa de fecha a fecha desde agosto
         f_inicio_calculo = inicio
         detalle.append(f"Cómputo mensual de fecha a fecha desde el {f_inicio_calculo}.")
 
@@ -86,5 +119,5 @@ def sumar_meses(inicio: date, meses: int, festivos: Set[date], config: Dict) -> 
     
     while not es_dia_habil(vencimiento, festivos, config):
         vencimiento += timedelta(days=1)
-        detalle.append(f"Prorrogado por inhabilidad a: {vencimiento}")
+        detalle.append(f"Prorrogado por vencimiento en día inhábil a: {vencimiento}")
     return vencimiento, detalle
