@@ -4,6 +4,8 @@ from datetime import date
 import plazos 
 import unicodedata
 import os
+# Pega esto debajo de los 'import'
+DIAS_SEMANA = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
 
 # 1. CONFIGURACIÓN DE LA PÁGINA
 st.set_page_config(
@@ -131,7 +133,11 @@ if st.button("Calcular Vencimiento", use_container_width=True, type="primary"):
         else:
             vencimiento, logs = plazos.sumar_meses(fecha_inicio, duracion, festivos, config)
 
-        st.success(f"## Vencimiento: {vencimiento.strftime('%d/%m/%Y')}")
+        # Localiza donde se muestra el resultado y sustituye por esto:
+        nombre_dia = DIAS_SEMANA[vencimiento.weekday()]
+        fecha_formateada = vencimiento.strftime('%d/%m/%Y')
+
+        st.success(f"### Vencimiento: {fecha_formateada} ({nombre_dia})")
         with st.expander("🔍 Ver detalle del cómputo paso a paso"):
             for linea in logs:
                 st.write(f"- {linea}")
