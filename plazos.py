@@ -25,7 +25,7 @@ MODOS_CALCULO = {
         "nombre": "Interposición Recurso Contencioso (LJCA)",
         "agosto_inhabil": True,
         "navidad_inhabil": True,
-        "agosto_interposicion": True  # Activa reglas especiales de agosto para meses
+        "agosto_interposicion": True  
     }
 }
 
@@ -58,25 +58,27 @@ def leer_festivos_csv(ruta_csv: str) -> Set[date]:
 
 def es_periodo_navidad(fecha: date, activo: bool) -> bool:
     if not activo: return False
-    # Periodo inhábil del 24 de diciembre al 6 de enero
     if (fecha.month == 12 and fecha.day >= 24) or (fecha.month == 1 and fecha.day <= 6):
         return True
     return False
 
 def es_dia_habil(fecha: date, festivos: Set[date], config: Dict) -> bool:
-    # 1. Fines de semana
-    if fecha.weekday() >= 5:
+    if fecha.weekday() >= 5: # Sábado y Domingo
         return False
-    # 2. Festivos cargados desde CSV
     if fecha in festivos:
         return False
-    # 3. Agosto (si el modo lo marca como inhábil)
     if config['agosto_inhabil'] and fecha.month == 8:
         return False
-    # 4. Navidad (si el modo lo marca como inhábil)
     if es_periodo_navidad(fecha, config['navidad_inhabil']):
         return False
     return True
+
+def obtener_primer_habil_septiembre(anio: int, festivos: Set[date], config: Dict) -> date:
+    """Busca el primer día hábil de septiembre de un año dado."""
+    fecha = date(anio, 9, 1)
+    while not es_dia_habil(fecha, festivos, config):
+        fecha += timedelta(days=1)
+    return fecha
 
 # =============================================================================
 #  CÁLCULO POR DÍAS
@@ -88,8 +90,15 @@ def sumar_dias_habiles(inicio: date, duracion: int, festivos: Set[date], config:
         return inicio, ["Duración 0: el vencimiento es el mismo día."]
     
     fecha_cursor = inicio
-    contador = 0
     
+    # REGLA AGOSTO: Si el inicio es en agosto y el modo es procesal/interposición
+    if config['agosto_inhabil'] and inicio.month == 8:
+        primer_habil_sept = obtener_primer_habil_septiembre(inicio.year, festivos, config)
+        # Ajustamos el cursor al día anterior al primer hábil para que el primer paso del bucle sea dicho día
+        fecha_cursor = primer_habil_sept - timedelta(days=1)
+        detalle.append(f"Notificación en agosto: el cómputo de días hábiles comienza el primer día hábil de septiembre ({primer_habil_sept}).")
+
+    contador = 0
     while contador < duracion:
         fecha_cursor += timedelta(days=1)
         if es_dia_habil(fecha_cursor, festivos, config):
@@ -101,16 +110,16 @@ def sumar_dias_habiles(inicio: date, duracion: int, festivos: Set[date], config:
     return fecha_cursor, detalle
 
 # =============================================================================
-#  CÁLCULO POR MESES (Regla especial LJCA para Agosto)
+#  CÁLCULO POR MESES
 # =============================================================================
 
 def sumar_meses(inicio: date, meses: int, festivos: Set[date], config: Dict) -> Tuple[date, List[str]]:
     detalle = []
     
-    # NUEVA REGLA: Si la fecha de inicio es en agosto y es interposición, empieza el 1 de sept.
-    if config['agosto_interposicion'] and inicio.month == 8:
-        f_inicio_calculo = date(inicio.year, 9, 1)
-        detalle.append(f"Inicio en agosto ({inicio}): por regla de interposición, el cómputo comienza el 1 de septiembre.")
+    # REGLA AGOSTO: Si el inicio es en agosto y el modo es procesal/interposición
+    if config['agosto_inhabil'] and inicio.month == 8:
+        f_inicio_calculo = obtener_primer_habil_septiembre(inicio.year, festivos, config)
+        detalle.append(f"Inicio en agosto: el cómputo de meses comienza el primer día hábil de septiembre ({f_inicio_calculo}).")
     else:
         f_inicio_calculo = inicio
 
@@ -118,22 +127,21 @@ def sumar_meses(inicio: date, meses: int, festivos: Set[date], config: Dict) -> 
     mes_cursor = f_inicio_calculo.month
     meses_contados = 0
 
-    # 1. Avanzar los meses uno a uno para detectar agosto
+    # 1. Avanzar los meses uno a uno
     while meses_contados < meses:
         mes_cursor += 1
         if mes_cursor > 12:
             mes_cursor = 1
             anio_cursor += 1
         
-        # Si es interposición, agosto no cuenta en el cómputo de meses
+        # En modo interposición, agosto no cuenta en el cómputo de meses
         if config['agosto_interposicion'] and mes_cursor == 8:
             detalle.append("Regla Agosto-Interposición: Agosto se omite en el cómputo de meses.")
             continue
         
         meses_contados += 1
 
-    # 2. Ajustar el día (regla de fecha a fecha)
-    # Si el mes destino tiene menos días (ej. inicio día 31 y destino es junio), se usa el último día del mes.
+    # 2. Ajustar el día (fecha a fecha)
     ultimo_dia_mes_destino = calendar.monthrange(anio_cursor, mes_cursor)[1]
     dia_final = min(f_inicio_calculo.day, ultimo_dia_mes_destino)
     vencimiento = date(anio_cursor, mes_cursor, dia_final)
@@ -143,27 +151,29 @@ def sumar_meses(inicio: date, meses: int, festivos: Set[date], config: Dict) -> 
     else:
         detalle.append(f"Vencimiento teórico (fecha a fecha): {vencimiento}")
 
-    # 3. Prórroga si el día final es inhábil (fin de semana, festivo, agosto o navidad)
+    # 3. Prórroga si el día final es inhábil
     while not es_dia_habil(vencimiento, festivos, config):
-        razon = "Fin de semana / Festivo / Periodo Inhábil"
         vencimiento += timedelta(days=1)
-        detalle.append(f"Prorrogado por vencimiento en día inhábil ({razon}) a: {vencimiento}")
+        detalle.append(f"Prorrogado por vencimiento en día inhábil a: {vencimiento}")
 
     return vencimiento, detalle
 
 # =============================================================================
-#  TEST LOCAL
+#  INTERFAZ CLI (TEST)
 # =============================================================================
 
 if __name__ == "__main__":
-    print("--- TEST REGLA AGOSTO (INTERPOSICIÓN) ---")
-    # Simulación: Notificación el 15 de agosto, plazo 2 meses
-    f_test = date(2024, 8, 15)
-    festivos_test = set() # Vacío para el test
-    config_test = MODOS_CALCULO["interposicion"]
+    print("--- TEST INICIO EN AGOSTO ---")
+    f_notificacion = date(2025, 8, 10) # 10 de agosto (domingo)
+    # Imaginemos que el 1 de sept es lunes (hábil)
+    festivos_vacio = set() 
     
-    venc, logs = sumar_meses(f_test, 2, festivos_test, config_test)
-    print(f"Inicio: {f_test} | Plazo: 2 meses")
-    print(f"Vencimiento final: {venc}")
-    for log in logs:
-        print(f"  > {log}")
+    print("\nModo Procesal (10 días hábiles):")
+    v, log = sumar_dias_habiles(f_notificacion, 10, festivos_vacio, MODOS_CALCULO["contencioso"])
+    for l in log[:2]: print(f"  {l}")
+    print(f"  Vencimiento: {v}")
+
+    print("\nModo Interposición (2 meses):")
+    v2, log2 = sumar_meses(f_notificacion, 2, festivos_vacio, MODOS_CALCULO["interposicion"])
+    for l in log2[:2]: print(f"  {l}")
+    print(f"  Vencimiento: {v2}")
