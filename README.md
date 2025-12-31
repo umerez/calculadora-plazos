@@ -44,19 +44,19 @@ En esta modalidad, la aplicación aplica la regla específica para el plazo de *
 
 ---
 
-## 4. Lógica Jurídica Específica de Agosto
+## 4. Lógica de Cómputo en Agosto
 
-La aplicación gestiona de forma diferenciada las notificaciones recibidas en el mes de agosto (periodo inhábil procesal) según el tipo de unidad de tiempo:
+La aplicación distingue automáticamente entre plazos por días y por meses cuando la notificación ocurre en agosto:
 
-### 4.1. Plazo Procesal / Contencioso (Reglas LEC)
-* **Cómputo por DÍAS:** Si la notificación se recibe en cualquier día de agosto, el plazo **comienza a contar el primer día hábil de septiembre**. Agosto actúa como un bloque de tiempo inhábil que retrasa el inicio del contador.
-* **Cómputo por MESES:** El cómputo se realiza de **fecha a fecha**, comenzando desde el día de la notificación en agosto. 
-    * *Ejemplo:* Una notificación del 10 de agosto para un plazo de un mes vencería el 10 de septiembre. Si el 10 de septiembre fuera sábado, domingo o festivo, se prorrogaría al siguiente lunes o día hábil.
+### 4.1. Plazo Procesal Estándar (LEC)
+* **Días Hábiles:** Si se notifica en agosto, el plazo **comienza a contar el primer día hábil de septiembre**.
+* **Meses:** Se computa de **fecha a fecha** desde el día de la notificación en agosto. (Ej: del 10 de agosto al 10 de septiembre). El resultado se traslada al primer hábil posterior si el día de vencimiento es festivo o fin de semana.
 
-### 4.2. Interposición de Recurso Contencioso (Reglas LJCA)
-Para la interposición del recurso (normalmente 2 meses), se aplica una regla más restrictiva:
-* **Agosto no corre:** El mes de agosto se excluye totalmente del cómputo de los meses (Art. 128.2 LJCA).
-* **Inicio en agosto:** Si la notificación es en agosto, el cómputo de los meses comienza a contar desde el **primer día hábil de septiembre**.
+### 4.2. Interposición Contencioso (LJCA)
+* **Regla Especial:** El mes de agosto no corre para el cómputo de meses. Si la notificación es en agosto, el cómputo mensual se inicia el **primer día hábil de septiembre**.
+
+## 📅 Visualización de Resultados
+Para mayor seguridad del usuario, el resultado final indica explícitamente el **día de la semana** (ej: *Lunes, 15/09/2025*), permitiendo verificar visualmente que el sistema ha evitado correctamente los fines de semana e inhábiles.
 
 
 ---
