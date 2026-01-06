@@ -12,7 +12,7 @@ from typing import List, Tuple, Set, Dict
 
 MODOS_CALCULO = {
     "contencioso": {
-        "nombre": "Plazo Procesal Contencioso",
+        "nombre": "Plazo Procesal (LJCA + LEC)",
         "agosto_inhabil": True,
         "navidad_inhabil": True,
         "agosto_interposicion": False
@@ -24,7 +24,7 @@ MODOS_CALCULO = {
         "agosto_interposicion": False
     },
     "interposicion": {
-        "nombre": "Interposición Recurso Contencioso",
+        "nombre": "Interposición Recurso Contencioso (128.2 LJCA)",
         "agosto_inhabil": True,
         "navidad_inhabil": True,
         "agosto_interposicion": True  # Agosto no cuenta en el cómputo de meses
