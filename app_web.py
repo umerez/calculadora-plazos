@@ -67,7 +67,7 @@ with st.sidebar:
     st.divider()
     st.caption("⚠️ **Aviso Legal:**")
     st.caption("""
-    Esta aplicación se ofrece "tal cual" (*as is*), con fines orientativos. El autor no garantiza la ausencia de errores y **no se responsabiliza** de los resultados obtenidos ni de las decisiones legales adoptadas basadas en este cálculo. Se recomienda contrastar los resultados con los calendarios oficiales.
+[(https://umerez.eu/2026/01/06/calculadora-de-plazos-procesales-y.html).
     """)
 
 # --- INTERFAZ PRINCIPAL ---
