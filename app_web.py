@@ -111,7 +111,7 @@ col_a, col_b = st.columns(2)
 
 with col_a:
     fecha_inicio = st.date_input("Fecha de inicio (notificación/publicación)", date.today())
-    unidad = st.radio("📏 Unidad del plazo", ["Días", "Meses"], horizontal=True)
+    unidad = st.radio("Unidad del plazo", ["Días", "Meses"], horizontal=True)
 
 with col_b:
     duracion = st.number_input("Duración del plazo", min_value=1, value=10)
