@@ -110,7 +110,23 @@ def sumar_dias_habiles(inicio: date, duracion: int, festivos: Set[date], config:
 def sumar_meses(inicio: date, meses: int, festivos: Set[date], config: Dict) -> Tuple[date, List[str]]:
     detalle = []
     fecha_cursor = inicio
-    
+
+    # ── Regla STS 1931/2022 ──────────────────────────────────────────────────
+    # Cuando el acto se notifica en agosto y el modo es interposición,
+    # el plazo de 2 meses del art. 46.1 LJCA no arranca desde la notificación
+    # sino desde el 1 de septiembre (art. 128.2 LJCA).
+    # IMPORTANTE: se actualiza también 'inicio' para que el ajuste de día del
+    # paso 2 use el día 1 (de sep.) y no el día original de la notificación.
+    if config['agosto_interposicion'] and fecha_cursor.month == 8:
+        fecha_cursor = date(fecha_cursor.year, 9, 1)
+        inicio = fecha_cursor  # <-- necesario para el cálculo del día en paso 2
+        detalle.append(
+            f"STS 1931/2022: acto notificado en agosto. "
+            f"Plazo inicia el 01/09/{fecha_cursor.year} "
+            f"(art. 128.2 LJCA + art. 46.1 LJCA)."
+        )
+    # ─────────────────────────────────────────────────────────────────────────
+
     # 1. Aplicar salto de agosto si es interposición
     if config['agosto_interposicion']:
         meses_restantes = meses
