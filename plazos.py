@@ -111,7 +111,7 @@ def sumar_meses(inicio: date, meses: int, festivos: Set[date], config: Dict) -> 
     detalle = []
     fecha_cursor = inicio
 
-    # ── Regla STS 1931/2022 ──────────────────────────────────────────────────
+    # ── Regla STS 552/2022 ECLI:ES:TS:2022:1931 ──────────────────────────────────────────────────
     # Cuando el acto se notifica en agosto y el modo es interposición,
     # el plazo de 2 meses del art. 46.1 LJCA no arranca desde la notificación
     # sino desde el 1 de septiembre (art. 128.2 LJCA).
@@ -121,7 +121,7 @@ def sumar_meses(inicio: date, meses: int, festivos: Set[date], config: Dict) -> 
         fecha_cursor = date(fecha_cursor.year, 9, 1)
         inicio = fecha_cursor  # <-- necesario para el cálculo del día en paso 2
         detalle.append(
-            f"STS 1931/2022: acto notificado en agosto. "
+            f"STS 552/2022 ECLI:ES:TS:2022:1931: acto notificado en agosto. "
             f"Plazo inicia el 01/09/{fecha_cursor.year} "
             f"(art. 128.2 LJCA + art. 46.1 LJCA)."
         )
