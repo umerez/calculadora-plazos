@@ -62,7 +62,7 @@ with st.sidebar:
     **Créditos:** Creado por **Esteban Umerez**, con la asistencia de **ChatGPT** (OpenAI) y **Gemini** (Google).
     """)
     
-    st.link_button("🌐 Visitar umerez.eu", "https://umerez.eu", use_container_width=True)
+    st.link_button("🌐 Visitar umerez.eu", "https://umerez.eu/2026/01/06/calculadora-de-plazos-procesales-y.html", use_container_width=True)
     
     st.divider()
     st.caption("⚠️ **Aviso Legal:**")
