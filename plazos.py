@@ -24,7 +24,7 @@ MODOS_CALCULO = {
         "agosto_interposicion": False
     },
     "interposicion": {
-        "nombre": "Interposición Recurso Contencioso (128.2 LJCA)",
+        "nombre": "Interposición Recurso Contencioso (salvo protección DDFF 128.2 LJCA)",
         "agosto_inhabil": True,
         "navidad_inhabil": True,
         "agosto_interposicion": True  # Agosto no cuenta en el cómputo de meses
