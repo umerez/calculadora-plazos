@@ -27,7 +27,6 @@ import os
 import re
 import unicodedata
 from datetime import date
-from functools import lru_cache
 
 RAIZ = os.path.dirname(os.path.abspath(__file__))
 DIR_FESTIVOS = os.path.join(RAIZ, 'festivos')
@@ -39,10 +38,26 @@ def _normalizar(texto: str) -> str:
     return re.sub(r'[^a-z0-9]+', ' ', t).strip()
 
 
-@lru_cache(maxsize=1)
+# Cachés invalidadas por fecha de modificación del fichero: así un despliegue con datos nuevos (Streamlit
+# recarga el script pero conserva este módulo en memoria) o una actualización de los CSV se ven al instante.
+_cache_indice: dict = {}
+_cache_capas: dict = {}
+
+
+def _mtime(ruta: str) -> float:
+    try:
+        return os.path.getmtime(ruta)
+    except OSError:
+        return -1.0
+
+
 def _indice() -> dict:
-    with open(INDICE, encoding='utf-8') as f:
-        return json.load(f)
+    m = _mtime(INDICE)
+    if _cache_indice.get('mtime') != m:
+        with open(INDICE, encoding='utf-8') as f:
+            _cache_indice['datos'] = json.load(f)
+        _cache_indice['mtime'] = m
+    return _cache_indice['datos']
 
 
 def lugares() -> list[dict]:
@@ -113,12 +128,15 @@ def buscar(texto: str) -> dict | None:
     return None
 
 
-@lru_cache(maxsize=None)
 def _leer_capa(capa: str) -> tuple:
     """Devuelve tuplas (date, nombre, fuente) de festivos/<capa>.csv. Capa inexistente → vacío."""
     ruta = os.path.join(DIR_FESTIVOS, *capa.split('/')) + '.csv'
-    if not os.path.exists(ruta):
+    m = _mtime(ruta)
+    if m < 0:
         return tuple()
+    en_cache = _cache_capas.get(capa)
+    if en_cache and en_cache[0] == m:
+        return en_cache[1]
     filas = []
     with open(ruta, newline='', encoding='utf-8-sig') as f:
         for r in csv.reader(f):
@@ -129,7 +147,8 @@ def _leer_capa(capa: str) -> tuple:
             except ValueError:
                 continue
             filas.append((d, r[1].strip() if len(r) > 1 else '', r[2].strip() if len(r) > 2 else ''))
-    return tuple(filas)
+    _cache_capas[capa] = (m, tuple(filas))
+    return _cache_capas[capa][1]
 
 
 def calendario(lugar_id: str) -> dict[date, tuple[str, str, str]]:
