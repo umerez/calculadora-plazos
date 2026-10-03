@@ -40,7 +40,7 @@ with st.sidebar:
     * Exclusión de festivos estatales, autonómicos y locales del lugar elegido.
     * Periodos de inhabilidad (Agosto y Navidad) según la normativa vigente (Ley 39/2015, LEC y LJCA).
 
-    **Lugares:** las 433 cabeceras de partido judicial de España (incluidas las 52 capitales de provincia), según
+    **Lugares:** las 432 cabeceras de partido judicial de España (incluidas las 52 capitales de provincia), según
     el Censo Judicial del Ministerio de Justicia. El calendario correcto para un plazo procesal es el de la localidad
     donde tiene su sede el órgano judicial (art. 182 LOPJ). En Euskadi cada cabecera lleva sus festivos locales
     oficiales; en el resto, de momento, se aplican los de la capital de la provincia.
@@ -72,7 +72,7 @@ with c1:
         options=ids,
         format_func=lambda i: etiquetas[i],
         index=ids.index("bilbao") if "bilbao" in ids else 0,
-        help="Escribe para buscar. Son las 433 cabeceras de partido judicial de España.",
+        help="Escribe para buscar. Son las 432 cabeceras de partido judicial de España.",
     )
     lugar = festivos.lugar(lugar_id)
     calendario = festivos.calendario(lugar_id)
