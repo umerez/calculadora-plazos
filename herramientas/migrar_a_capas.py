@@ -217,6 +217,124 @@ def leer_ics(ruta):
     return eventos
 
 
+CCAA_NOMBRE_A_CODIGO = {
+    'ANDALUCÍA': 'an', 'ARAGÓN': 'ar', 'ASTURIAS': 'as', 'CANARIAS': 'cn', 'CANTABRIA': 'cb', 'CASTILLA Y LEÓN': 'cl',
+    'CASTILLA-LA MANCHA': 'cm', 'CATALUÑA': 'ct', 'CEUTA': 'ce', 'COMUNITAT VALENCIANA': 'vc', 'EXTREMADURA': 'ex',
+    'GALICIA': 'ga', 'ILLES BALEARS': 'ib', 'LA RIOJA': 'ri', 'MADRID': 'md', 'MELILLA': 'ml', 'MURCIA': 'mc',
+    'NAVARRA': 'na', 'PAÍS VASCO': 'pv',
+}
+
+
+def _codigo_ccaa(texto: str) -> str | None:
+    t = unicodedata.normalize('NFKD', texto or '').encode('ascii', 'ignore').decode().upper().strip()
+    for nombre, codigo in CCAA_NOMBRE_A_CODIGO.items():
+        n = unicodedata.normalize('NFKD', nombre).encode('ascii', 'ignore').decode().upper()
+        if t == n or t == codigo.upper():
+            return codigo
+    for nombre, codigo in CCAA_NOMBRE_A_CODIGO.items():
+        n = unicodedata.normalize('NFKD', nombre).encode('ascii', 'ignore').decode().upper()
+        if n in t or t in n:
+            return codigo
+    return None
+
+
+def _fecha_valida(f: str) -> bool:
+    try:
+        date.fromisoformat(f)
+        return True
+    except (ValueError, TypeError):
+        return False
+
+
+def construir_resto_espana(ine_a_slug: dict, partidos: list) -> tuple[dict, dict, list]:
+    """
+    Lee festivos/fuentes/locales/locales_*.csv (ccaa,cpro,ine_municipio,municipio,fecha,festividad,fuente,url,calidad)
+    y ccaa_*.csv (ccaa,fecha,festividad,fuente,url). Devuelve:
+      locales: {slug_cabecera: [(fecha, nombre, fuente)]}   solo cabeceras no vascas
+      ccaa:    {codigo: [(fecha, nombre, fuente)]}          festivos autonómicos (sin los estatales)
+      resumen: líneas informativas
+    La capa autonómica se completa, para los años sin ccaa_*.csv, derivándola de los CSV provinciales planos:
+    intersección de las provincias de la CCAA menos los estatales (en CCAA uniprovinciales, menos además los locales
+    de la capital si se conocen).
+    """
+    carpeta = os.path.join(FUENTES, 'locales')
+    locales = defaultdict(list)
+    ccaa = defaultdict(list)
+    resumen = []
+    if not os.path.isdir(carpeta):
+        return {}, {}, ['(sin carpeta festivos/fuentes/locales)']
+
+    nacional_por_anio = defaultdict(set)
+    for anio, filas in NACIONAL.items():
+        for f, _ in filas:
+            nacional_por_anio[anio].add(f)
+
+    descartadas = 0
+    for nombre in sorted(os.listdir(carpeta)):
+        ruta = os.path.join(carpeta, nombre)
+        if nombre.startswith('locales_') and nombre.endswith('.csv'):
+            with open(ruta, newline='', encoding='utf-8-sig') as f:
+                for r in csv.DictReader(f):
+                    ine = (r.get('ine_municipio') or '').strip().zfill(5)
+                    fecha = (r.get('fecha') or '').strip()
+                    if ine not in ine_a_slug or not _fecha_valida(fecha):
+                        descartadas += 1
+                        continue
+                    s = ine_a_slug[ine]
+                    fuente = (r.get('fuente') or '').strip()
+                    if (r.get('calidad') or '').strip() not in ('', 'oficial'):
+                        fuente = f"{fuente} [{r['calidad'].strip()}]"
+                    locales[s].append((fecha, (r.get('festividad') or '').strip() or 'Fiesta local', fuente))
+        elif nombre.startswith('ccaa_') and nombre.endswith('.csv'):
+            with open(ruta, newline='', encoding='utf-8-sig') as f:
+                for r in csv.DictReader(f):
+                    codigo = _codigo_ccaa(r.get('ccaa', ''))
+                    fecha = (r.get('fecha') or '').strip()
+                    if not codigo or not _fecha_valida(fecha) or codigo == 'pv':
+                        continue
+                    if fecha in nacional_por_anio.get(int(fecha[:4]), set()):
+                        continue  # estatal: ya está en nacional.csv
+                    ccaa[codigo].append((fecha, (r.get('festividad') or '').strip() or 'Festivo autonómico',
+                                         (r.get('fuente') or '').strip()))
+    if descartadas:
+        resumen.append(f"filas de locales descartadas (INE no es cabecera o fecha inválida): {descartadas}")
+
+    # Capitales por CCAA (slug) para limpiar la derivación en CCAA uniprovinciales
+    capitales = {}
+    for p in partidos:
+        if p['es_capital_provincia'] == 'si':
+            capitales.setdefault(PROVINCIAS[CPRO_A_SLUG[p['cpro']]][1], []).append(ine_a_slug[p['ine_cabecera']])
+
+    # Derivación desde los planos para los años que falten en cada CCAA
+    provincias_por_ccaa = defaultdict(list)
+    for slug_prov, (_, codigo) in PROVINCIAS.items():
+        if codigo != 'pv':
+            provincias_por_ccaa[codigo].append(slug_prov)
+    for codigo, provs in provincias_por_ccaa.items():
+        anios_ccaa = {f[:4] for f, _, _ in ccaa.get(codigo, [])}
+        planos = []
+        for sp in provs:
+            ruta = os.path.join(RAIZ, f'{sp}.csv')
+            planos.append({f: n for f, n in leer_plano(ruta)} if os.path.exists(ruta) else {})
+        anios_planos = {f[:4] for pl in planos for f in pl}
+        for anio in sorted(anios_planos - anios_ccaa):
+            comunes = None
+            for pl in planos:
+                fechas = {f for f in pl if f.startswith(anio)}
+                comunes = fechas if comunes is None else comunes & fechas
+            comunes = (comunes or set()) - nacional_por_anio.get(int(anio), set())
+            if len(provs) == 1:
+                for cap in capitales.get(codigo, []):
+                    comunes -= {f for f, _, _ in locales.get(cap, []) if f.startswith(anio)}
+            nombres = planos[0]
+            for f in sorted(comunes):
+                ccaa[codigo].append((f, nombres.get(f, 'Festivo autonómico'),
+                                     f'Derivado de los calendarios provinciales {anio} (calendarioslaborales.com)'))
+            if comunes:
+                resumen.append(f"ccaa/{codigo} {anio}: {len(comunes)} autonómicos derivados de los planos")
+    return dict(locales), dict(ccaa), resumen
+
+
 # ─────────────────────────────────────────────────────────────────────────────
 #  Construcción
 # ─────────────────────────────────────────────────────────────────────────────
@@ -291,18 +409,32 @@ def main():
         escribir_capa(os.path.join(FEST, 'provincia', f'{slug_prov}.csv'), filas)
     print("provincia/: 49 ficheros heredados")
 
+    # 5b. Resto de España: festivos locales de las cabeceras (boletines/datos abiertos de cada CCAA, recogidos en
+    #     festivos/fuentes/locales/locales_*.csv) y capa autonómica (ccaa_*.csv + derivación desde los planos).
+    with open(os.path.join(FUENTES, 'partidos_judiciales_mjusticia.csv'), newline='', encoding='utf-8') as f:
+        partidos = list(csv.DictReader(f))
+    ine_a_slug = {}
+    for p in partidos:
+        s0 = slug(p['cabecera'])
+        ine_a_slug[p['ine_cabecera']] = ALIAS_CABECERAS.get(s0, s0)
+    locales_resto, ccaa_capas, resumen_locales = construir_resto_espana(ine_a_slug, partidos)
+    for s, filas in locales_resto.items():
+        escribir_capa(os.path.join(FEST, 'local', f'{s}.csv'), filas)
+    for codigo, filas in ccaa_capas.items():
+        escribir_capa(os.path.join(FEST, 'ccaa', f'{codigo}.csv'), filas)
+    print(f"resto de España: {len(locales_resto)} cabeceras con festivos locales; capas ccaa/: {sorted(ccaa_capas)}")
+    for linea in resumen_locales:
+        print("  " + linea)
+
     # 6. Índice de lugares: SOLO cabeceras de partido judicial (incluyen las 52 capitales de provincia).
     #    Fuente: Censo Judicial del Ministerio de Justicia (festivos/fuentes/partidos_judiciales_mjusticia.csv).
     lugares = []
     sin_local = []
     pv_terr = {'01': 'araba', '20': 'gipuzkoa', '48': 'bizkaia'}
-    with open(os.path.join(FUENTES, 'partidos_judiciales_mjusticia.csv'), newline='', encoding='utf-8') as f:
-        partidos = list(csv.DictReader(f))
     for p in partidos:
         slug_prov = CPRO_A_SLUG[p['cpro']]
         nombre_prov, ccaa = PROVINCIAS[slug_prov]
-        s = slug(p['cabecera'])
-        s = ALIAS_CABECERAS.get(s, s)
+        s = ine_a_slug[p['ine_cabecera']]
         es_capital = p['es_capital_provincia'] == 'si'
         lugar_ = {
             'id': s, 'nombre': titulo(p['cabecera']), 'tipo': 'partido_judicial',
@@ -317,6 +449,10 @@ def main():
             lugar_['locales_pendientes'] = s not in locales
             if s not in locales:
                 sin_local.append(s)
+        elif s in locales_resto and ccaa in ccaa_capas:
+            # Modelo completo: estatal + autonómico + local propio de la cabecera (fuente oficial de la CCAA)
+            lugar_['capas'] = ['nacional', f'ccaa/{ccaa}', f'local/{s}']
+            lugar_['locales_pendientes'] = False
         else:
             # Capa plana heredada de la provincia (incluye los locales de la capital). Para una cabecera que no es
             # capital, los festivos locales propios aún no están cargados: se avisa en la interfaz.

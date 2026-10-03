@@ -2718,26 +2718,6 @@
    "nota": "Festivos locales de Castuera pendientes; se aplican los de Badajoz capital."
   },
   {
-   "id": "catarro4623548000000ja",
-   "nombre": "Catarro4623548000000ja",
-   "tipo": "partido_judicial",
-   "ine": "46094",
-   "provincia": "Valencia/València",
-   "provincia_slug": "valencia",
-   "cpro": "46",
-   "ccaa": "vc",
-   "ccaa_nombre": "Comunitat Valenciana",
-   "capital": false,
-   "partido_judicial": true,
-   "n_municipios": 1,
-   "poblacion": 22270,
-   "capas": [
-    "provincia/valencia"
-   ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Catarro4623548000000ja pendientes; se aplican los de Valencia/València capital."
-  },
-  {
    "id": "catarroja",
    "nombre": "Catarroja",
    "tipo": "partido_judicial",

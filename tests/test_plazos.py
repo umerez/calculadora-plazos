@@ -58,7 +58,7 @@ def main():
     assert festivos.buscar('Navarra')['id'] == 'pamplona', festivos.buscar('Navarra')
     assert festivos.buscar('Gernika')['id'] == 'gernika-lumo'
     assert festivos.buscar('Castellón')['id'] == 'castello-de-la-plana'
-    assert len(festivos.lugares()) == 432, len(festivos.lugares())
+    assert len(festivos.lugares()) == 431, len(festivos.lugares())
     assert sum(1 for l in festivos.lugares() if l['capital']) == 52
     print(f"\n{'TODO CORRECTO' if not fallos else f'{fallos} FALLO(S)'}")
     sys.exit(1 if fallos else 0)
