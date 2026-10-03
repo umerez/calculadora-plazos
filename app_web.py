@@ -146,10 +146,18 @@ if st.button("Calcular Vencimiento", use_container_width=True, type="primary"):
         with st.expander("🔍 Ver detalle del cómputo paso a paso"):
             for linea in logs:
                 st.write(f"- {linea}")
-        with st.expander("📅 Festivos aplicados en este lugar"):
+        with st.expander("📅 Festivos aplicados en este lugar, con su fuente oficial"):
+            st.caption("Cada festivo indica la capa de la que procede (estatal, autonómica, insular, territorial o local) "
+                       "y el boletín oficial o conjunto de datos abiertos del que se ha tomado.")
+            filas = []
             for d in sorted(calendario):
                 if fecha_inicio.year <= d.year <= vencimiento.year:
                     nombre, capa, fuente = calendario[d]
-                    st.write(f"- {d.strftime('%d/%m/%Y')} — {nombre} *({capa})*")
+                    filas.append({"Fecha": d.strftime('%d/%m/%Y'), "Festividad": nombre,
+                                  "Ámbito": capa.split('/')[0], "Fuente": fuente or "—"})
+            if filas:
+                st.dataframe(filas, use_container_width=True, hide_index=True)
+            else:
+                st.write("No hay festivos cargados en el intervalo del cómputo.")
     except Exception as e:
         st.error(f"Error en el cálculo: {e}")

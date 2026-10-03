@@ -1,6 +1,6 @@
 # Cobertura de festivos por cabecera de partido judicial
 
-Generado el 2026-10-03 con `herramientas/informe_cobertura.py`. 431 cabeceras. Para cada año se indica cuántas cabeceras tienen festivos LOCALES cargados; «provisional» = fuente no oficial (acuerdo municipal o prensa) pendiente de boletín.
+Generado el 2026-10-04 con `herramientas/informe_cobertura.py`. 431 cabeceras. Para cada año se indica cuántas cabeceras tienen festivos LOCALES cargados; «provisional» = fuente no oficial (acuerdo municipal o prensa) pendiente de boletín.
 
 | Comunidad | Cabeceras | Local 2025 | Local 2026 | Local 2027 | CCAA 2027 |
 |---|---:|---:|---:|---:|---:|

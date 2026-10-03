@@ -117,6 +117,11 @@ def main() -> None:
         print("\n--- DETALLE ---")
         for linea in detalle:
             print(linea)
+        print("\n--- FESTIVOS APLICADOS (con fuente) ---")
+        for d in sorted(calendario):
+            if inicio <= d <= venc:
+                nombre, capa, fuente = calendario[d]
+                print(f"{d.isoformat()}  {nombre}  [{capa}]  {fuente}")
 
 
 if __name__ == "__main__":

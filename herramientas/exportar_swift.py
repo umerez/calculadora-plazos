@@ -22,10 +22,19 @@ def construir() -> dict:
     lugares = festivos.lugares()
     capas_usadas = sorted({c for l in lugares for c in l['capas']})
     capas = {}
+    fuentes: list[str] = []
+    indice_fuente: dict[str, int] = {}
     for c in capas_usadas:
         filas = festivos._leer_capa(c)
-        capas[c] = [{'f': d.isoformat(), 'n': nombre} for d, nombre, _ in sorted(filas)]
+        lista = []
+        for d, nombre, fuente in sorted(filas):
+            if fuente not in indice_fuente:
+                indice_fuente[fuente] = len(fuentes)
+                fuentes.append(fuente)
+            lista.append({'f': d.isoformat(), 'n': nombre, 's': indice_fuente[fuente]})
+        capas[c] = lista
     return {
+        'fuentes': fuentes,
         'version': date.today().isoformat(),
         'fuente_partidos': festivos._indice().get('fuente_partidos', ''),
         'lugares': [{
