@@ -26,6 +26,11 @@ CASOS = [
     ("Donostia 2027: 3 días administrativos desde 18/01 saltan el 20/01 (San Sebastián)", 'donostia-san-sebastian', 'administrativo', date(2027, 1, 18), 3, None, date(2027, 1, 22)),
     ("Getxo 2027 (partido judicial): 3 días administrativos desde 22/09 saltan el 24/09 (Las Mercedes)", 'getxo', 'administrativo', date(2027, 9, 22), 3, None, date(2027, 9, 28)),
     ("Vitoria 2026: 2 días administrativos desde 27/04 saltan San Prudencio 28/04", 'vitoria-gasteiz', 'administrativo', date(2026, 4, 27), 2, None, date(2026, 4, 30)),
+    ("Madrid 2026: 2 días administrativos desde 13/05 saltan San Isidro 15/05 → lunes 18/05", 'madrid', 'administrativo', date(2026, 5, 13), 2, None, date(2026, 5, 18)),
+    ("Arrecife 2026: 1 día desde 14/09 salta el insular de Lanzarote (15/09) → 16/09", 'arrecife', 'administrativo', date(2026, 9, 14), 1, None, date(2026, 9, 16)),
+    ("Vielha 2026: 1 día desde 16/06 salta la Festa d'Aran (17/06) → 18/06", 'vielha-e-mijaran', 'administrativo', date(2026, 6, 16), 1, None, date(2026, 6, 18)),
+    ("Barcelona 2026: mismo caso, la Festa d'Aran no aplica → 17/06", 'barcelona', 'administrativo', date(2026, 6, 16), 1, None, date(2026, 6, 17)),
+    ("Alcalá de Henares 2026: 1 día desde 08/10 salta el local 09/10 → lunes 12/10 es festivo → 13/10", 'alcala-de-henares', 'administrativo', date(2026, 10, 8), 1, None, date(2026, 10, 13)),
 ]
 
 
@@ -59,6 +64,15 @@ def main():
     assert festivos.buscar('Gernika')['id'] == 'gernika-lumo'
     assert festivos.buscar('Castellón')['id'] == 'castello-de-la-plana'
     assert len(festivos.lugares()) == 431, len(festivos.lugares())
+    # Todas las cabeceras tienen capa local; en 2026 solo faltan las que el boletín dejó sin propuesta
+    sin_local = [l['id'] for l in festivos.lugares() if not any(c.startswith('local/') for c in l['capas'])]
+    assert not sin_local, sin_local
+    sin_2026 = sorted(l['id'] for l in festivos.lugares() if 2026 not in festivos.anios_cubiertos(l['id'])[[c for c in l['capas'] if c.startswith('local/')][0]])
+    assert sin_2026 == ['cerdanyola-del-valles', 'haro', 'sahagun'], sin_2026
+    for l in festivos.lugares():
+        assert 2027 in festivos.anios_cubiertos(l['id'])['nacional']
+        capa_ccaa = next((c for c in l['capas'] if c.startswith('ccaa/')), None)
+        assert capa_ccaa and 2027 in festivos.anios_cubiertos(l['id'])[capa_ccaa], (l['id'], capa_ccaa)
     assert sum(1 for l in festivos.lugares() if l['capital']) == 52
     print(f"\n{'TODO CORRECTO' if not fallos else f'{fallos} FALLO(S)'}")
     sys.exit(1 if fallos else 0)

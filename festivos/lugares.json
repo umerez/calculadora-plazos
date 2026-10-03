@@ -17,7 +17,9 @@
    "n_municipios": 7,
    "poblacion": 392714,
    "capas": [
-    "provincia/a-coruna"
+    "nacional",
+    "ccaa/ga",
+    "local/a-coruna"
    ],
    "locales_pendientes": false
   },
@@ -36,7 +38,9 @@
    "n_municipios": 16,
    "poblacion": 198668,
    "capas": [
-    "provincia/albacete"
+    "nacional",
+    "ccaa/cm",
+    "local/albacete"
    ],
    "locales_pendientes": false
   },
@@ -55,7 +59,9 @@
    "n_municipios": 3,
    "poblacion": 424474,
    "capas": [
-    "provincia/alicante"
+    "nacional",
+    "ccaa/vc",
+    "local/alicante-alacant"
    ],
    "locales_pendientes": false
   },
@@ -74,7 +80,9 @@
    "n_municipios": 48,
    "poblacion": 336603,
    "capas": [
-    "provincia/almeria"
+    "nacional",
+    "ccaa/an",
+    "local/almeria"
    ],
    "locales_pendientes": false
   },
@@ -93,7 +101,9 @@
    "n_municipios": 10,
    "poblacion": 178836,
    "capas": [
-    "provincia/badajoz"
+    "nacional",
+    "ccaa/ex",
+    "local/badajoz"
    ],
    "locales_pendientes": false
   },
@@ -112,7 +122,9 @@
    "n_municipios": 1,
    "poblacion": 1731649,
    "capas": [
-    "provincia/barcelona"
+    "nacional",
+    "ccaa/ct",
+    "local/barcelona"
    ],
    "locales_pendientes": false
   },
@@ -154,7 +166,9 @@
    "n_municipios": 108,
    "poblacion": 215351,
    "capas": [
-    "provincia/burgos"
+    "nacional",
+    "ccaa/cl",
+    "local/burgos"
    ],
    "locales_pendientes": false
   },
@@ -173,7 +187,9 @@
    "n_municipios": 37,
    "poblacion": 298948,
    "capas": [
-    "provincia/castellon"
+    "nacional",
+    "ccaa/vc",
+    "local/castello-de-la-plana"
    ],
    "locales_pendientes": false
   },
@@ -192,7 +208,9 @@
    "n_municipios": 1,
    "poblacion": 83595,
    "capas": [
-    "provincia/ceuta"
+    "nacional",
+    "ccaa/ce",
+    "local/ceuta"
    ],
    "locales_pendientes": false
   },
@@ -211,7 +229,9 @@
    "n_municipios": 25,
    "poblacion": 126455,
    "capas": [
-    "provincia/ciudad-real"
+    "nacional",
+    "ccaa/cm",
+    "local/ciudad-real"
    ],
    "locales_pendientes": false
   },
@@ -230,7 +250,9 @@
    "n_municipios": 118,
    "poblacion": 82424,
    "capas": [
-    "provincia/cuenca"
+    "nacional",
+    "ccaa/cm",
+    "local/cuenca"
    ],
    "locales_pendientes": false
   },
@@ -249,7 +271,9 @@
    "n_municipios": 41,
    "poblacion": 142883,
    "capas": [
-    "provincia/caceres"
+    "nacional",
+    "ccaa/ex",
+    "local/caceres"
    ],
    "locales_pendientes": false
   },
@@ -268,7 +292,9 @@
    "n_municipios": 1,
    "poblacion": 109950,
    "capas": [
-    "provincia/cadiz"
+    "nacional",
+    "ccaa/an",
+    "local/cadiz"
    ],
    "locales_pendientes": false
   },
@@ -287,7 +313,9 @@
    "n_municipios": 6,
    "poblacion": 339808,
    "capas": [
-    "provincia/cordoba"
+    "nacional",
+    "ccaa/an",
+    "local/cordoba"
    ],
    "locales_pendientes": false
   },
@@ -329,7 +357,9 @@
    "n_municipios": 38,
    "poblacion": 243014,
    "capas": [
-    "provincia/girona"
+    "nacional",
+    "ccaa/ct",
+    "local/girona"
    ],
    "locales_pendientes": false
   },
@@ -348,7 +378,9 @@
    "n_municipios": 52,
    "poblacion": 521203,
    "capas": [
-    "provincia/granada"
+    "nacional",
+    "ccaa/an",
+    "local/granada"
    ],
    "locales_pendientes": false
   },
@@ -367,7 +399,9 @@
    "n_municipios": 154,
    "poblacion": 267195,
    "capas": [
-    "provincia/guadalajara"
+    "nacional",
+    "ccaa/cm",
+    "local/guadalajara"
    ],
    "locales_pendientes": false
   },
@@ -386,7 +420,9 @@
    "n_municipios": 8,
    "poblacion": 222108,
    "capas": [
-    "provincia/huelva"
+    "nacional",
+    "ccaa/an",
+    "local/huelva"
    ],
    "locales_pendientes": false
   },
@@ -405,7 +441,9 @@
    "n_municipios": 61,
    "poblacion": 84646,
    "capas": [
-    "provincia/huesca"
+    "nacional",
+    "ccaa/ar",
+    "local/huesca"
    ],
    "locales_pendientes": false
   },
@@ -424,7 +462,9 @@
    "n_municipios": 23,
    "poblacion": 194463,
    "capas": [
-    "provincia/jaen"
+    "nacional",
+    "ccaa/an",
+    "local/jaen"
    ],
    "locales_pendientes": false
   },
@@ -442,8 +482,12 @@
    "partido_judicial": true,
    "n_municipios": 3,
    "poblacion": 408533,
+   "isla": "gran-canaria",
    "capas": [
-    "provincia/las-palmas"
+    "nacional",
+    "ccaa/cn",
+    "insular/gran-canaria",
+    "local/las-palmas-de-gran-canaria"
    ],
    "locales_pendientes": false
   },
@@ -462,7 +506,9 @@
    "n_municipios": 74,
    "poblacion": 242040,
    "capas": [
-    "provincia/leon"
+    "nacional",
+    "ccaa/cl",
+    "local/leon"
    ],
    "locales_pendientes": false
   },
@@ -481,7 +527,9 @@
    "n_municipios": 65,
    "poblacion": 255664,
    "capas": [
-    "provincia/lleida"
+    "nacional",
+    "ccaa/ct",
+    "local/lleida"
    ],
    "locales_pendientes": false
   },
@@ -500,7 +548,9 @@
    "n_municipios": 91,
    "poblacion": 218801,
    "capas": [
-    "provincia/la-rioja"
+    "nacional",
+    "ccaa/ri",
+    "local/logrono"
    ],
    "locales_pendientes": false
   },
@@ -519,7 +569,9 @@
    "n_municipios": 10,
    "poblacion": 127354,
    "capas": [
-    "provincia/lugo"
+    "nacional",
+    "ccaa/ga",
+    "local/lugo"
    ],
    "locales_pendientes": false
   },
@@ -538,7 +590,9 @@
    "n_municipios": 1,
    "poblacion": 3506730,
    "capas": [
-    "provincia/madrid"
+    "nacional",
+    "ccaa/md",
+    "local/madrid"
    ],
    "locales_pendientes": false
   },
@@ -557,7 +611,9 @@
    "n_municipios": 1,
    "poblacion": 86780,
    "capas": [
-    "provincia/melilla"
+    "nacional",
+    "ccaa/ml",
+    "local/melilla"
    ],
    "locales_pendientes": false
   },
@@ -576,7 +632,9 @@
    "n_municipios": 4,
    "poblacion": 551306,
    "capas": [
-    "provincia/murcia"
+    "nacional",
+    "ccaa/mc",
+    "local/murcia"
    ],
    "locales_pendientes": false
   },
@@ -595,7 +653,9 @@
    "n_municipios": 18,
    "poblacion": 778117,
    "capas": [
-    "provincia/malaga"
+    "nacional",
+    "ccaa/an",
+    "local/malaga"
    ],
    "locales_pendientes": false
   },
@@ -614,7 +674,9 @@
    "n_municipios": 19,
    "poblacion": 160529,
    "capas": [
-    "provincia/ourense"
+    "nacional",
+    "ccaa/ga",
+    "local/ourense"
    ],
    "locales_pendientes": false
   },
@@ -633,7 +695,9 @@
    "n_municipios": 5,
    "poblacion": 242013,
    "capas": [
-    "provincia/asturias"
+    "nacional",
+    "ccaa/as",
+    "local/oviedo"
    ],
    "locales_pendientes": false
   },
@@ -652,7 +716,9 @@
    "n_municipios": 97,
    "poblacion": 120653,
    "capas": [
-    "provincia/palencia"
+    "nacional",
+    "ccaa/cl",
+    "local/palencia"
    ],
    "locales_pendientes": false
   },
@@ -671,7 +737,9 @@
    "n_municipios": 17,
    "poblacion": 631002,
    "capas": [
-    "provincia/baleares"
+    "nacional",
+    "ccaa/ib",
+    "local/palma"
    ],
    "locales_pendientes": false
   },
@@ -690,7 +758,9 @@
    "n_municipios": 86,
    "poblacion": 389990,
    "capas": [
-    "provincia/navarra"
+    "nacional",
+    "ccaa/na",
+    "local/pamplona"
    ],
    "locales_pendientes": false
   },
@@ -709,7 +779,9 @@
    "n_municipios": 5,
    "poblacion": 114467,
    "capas": [
-    "provincia/pontevedra"
+    "nacional",
+    "ccaa/ga",
+    "local/pontevedra"
    ],
    "locales_pendientes": false
   },
@@ -728,7 +800,9 @@
    "n_municipios": 142,
    "poblacion": 241921,
    "capas": [
-    "provincia/salamanca"
+    "nacional",
+    "ccaa/cl",
+    "local/salamanca"
    ],
    "locales_pendientes": false
   },
@@ -746,8 +820,12 @@
    "partido_judicial": true,
    "n_municipios": 2,
    "poblacion": 229915,
+   "isla": "tenerife",
    "capas": [
-    "provincia/tenerife"
+    "nacional",
+    "ccaa/cn",
+    "insular/tenerife",
+    "local/santa-cruz-de-tenerife"
    ],
    "locales_pendientes": false
   },
@@ -766,7 +844,9 @@
    "n_municipios": 6,
    "poblacion": 269225,
    "capas": [
-    "provincia/cantabria"
+    "nacional",
+    "ccaa/cb",
+    "local/santander"
    ],
    "locales_pendientes": false
   },
@@ -785,7 +865,9 @@
    "n_municipios": 52,
    "poblacion": 103068,
    "capas": [
-    "provincia/segovia"
+    "nacional",
+    "ccaa/cl",
+    "local/segovia"
    ],
    "locales_pendientes": false
   },
@@ -804,7 +886,9 @@
    "n_municipios": 23,
    "poblacion": 1007949,
    "capas": [
-    "provincia/sevilla"
+    "nacional",
+    "ccaa/an",
+    "local/sevilla"
    ],
    "locales_pendientes": false
   },
@@ -823,7 +907,9 @@
    "n_municipios": 102,
    "poblacion": 65587,
    "capas": [
-    "provincia/soria"
+    "nacional",
+    "ccaa/cl",
+    "local/soria"
    ],
    "locales_pendientes": false
   },
@@ -842,7 +928,9 @@
    "n_municipios": 13,
    "poblacion": 234292,
    "capas": [
-    "provincia/tarragona"
+    "nacional",
+    "ccaa/ct",
+    "local/tarragona"
    ],
    "locales_pendientes": false
   },
@@ -861,7 +949,9 @@
    "n_municipios": 115,
    "poblacion": 62707,
    "capas": [
-    "provincia/teruel"
+    "nacional",
+    "ccaa/ar",
+    "local/teruel"
    ],
    "locales_pendientes": false
   },
@@ -880,7 +970,9 @@
    "n_municipios": 24,
    "poblacion": 161960,
    "capas": [
-    "provincia/toledo"
+    "nacional",
+    "ccaa/cm",
+    "local/toledo"
    ],
    "locales_pendientes": false
   },
@@ -899,7 +991,9 @@
    "n_municipios": 114,
    "poblacion": 465297,
    "capas": [
-    "provincia/valladolid"
+    "nacional",
+    "ccaa/cl",
+    "local/valladolid"
    ],
    "locales_pendientes": false
   },
@@ -918,7 +1012,9 @@
    "n_municipios": 1,
    "poblacion": 840792,
    "capas": [
-    "provincia/valencia"
+    "nacional",
+    "ccaa/vc",
+    "local/valencia"
    ],
    "locales_pendientes": false
   },
@@ -960,7 +1056,9 @@
    "n_municipios": 110,
    "poblacion": 101029,
    "capas": [
-    "provincia/zamora"
+    "nacional",
+    "ccaa/cl",
+    "local/zamora"
    ],
    "locales_pendientes": false
   },
@@ -979,7 +1077,9 @@
    "n_municipios": 69,
    "poblacion": 827753,
    "capas": [
-    "provincia/zaragoza"
+    "nacional",
+    "ccaa/ar",
+    "local/zaragoza"
    ],
    "locales_pendientes": false
   },
@@ -998,7 +1098,9 @@
    "n_municipios": 107,
    "poblacion": 99013,
    "capas": [
-    "provincia/avila"
+    "nacional",
+    "ccaa/cl",
+    "local/avila"
    ],
    "locales_pendientes": false
   },
@@ -1017,10 +1119,11 @@
    "n_municipios": 2,
    "poblacion": 23179,
    "capas": [
-    "provincia/pontevedra"
+    "nacional",
+    "ccaa/ga",
+    "local/a-estrada"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de A Estrada pendientes; se aplican los de Pontevedra capital."
+   "locales_pendientes": false
   },
   {
    "id": "a-fonsagrada",
@@ -1037,10 +1140,11 @@
    "n_municipios": 5,
    "poblacion": 5922,
    "capas": [
-    "provincia/lugo"
+    "nacional",
+    "ccaa/ga",
+    "local/a-fonsagrada"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de A Fonsagrada pendientes; se aplican los de Lugo capital."
+   "locales_pendientes": false
   },
   {
    "id": "a-pobra-de-trives",
@@ -1057,10 +1161,11 @@
    "n_municipios": 11,
    "poblacion": 10394,
    "capas": [
-    "provincia/ourense"
+    "nacional",
+    "ccaa/ga",
+    "local/a-pobra-de-trives"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de A Pobra de Trives pendientes; se aplican los de Ourense capital."
+   "locales_pendientes": false
   },
   {
    "id": "aguilar-de-la-frontera",
@@ -1077,10 +1182,11 @@
    "n_municipios": 3,
    "poblacion": 18726,
    "capas": [
-    "provincia/cordoba"
+    "nacional",
+    "ccaa/an",
+    "local/aguilar-de-la-frontera"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Aguilar de la Frontera pendientes; se aplican los de Córdoba capital."
+   "locales_pendientes": false
   },
   {
    "id": "alcala-de-guadaira",
@@ -1097,10 +1203,11 @@
    "n_municipios": 1,
    "poblacion": 77474,
    "capas": [
-    "provincia/sevilla"
+    "nacional",
+    "ccaa/an",
+    "local/alcala-de-guadaira"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Alcalá de Guadaíra pendientes; se aplican los de Sevilla capital."
+   "locales_pendientes": false
   },
   {
    "id": "alcala-de-henares",
@@ -1117,10 +1224,11 @@
    "n_municipios": 11,
    "poblacion": 255741,
    "capas": [
-    "provincia/madrid"
+    "nacional",
+    "ccaa/md",
+    "local/alcala-de-henares"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Alcalá de Henares pendientes; se aplican los de Madrid capital."
+   "locales_pendientes": false
   },
   {
    "id": "alcala-la-real",
@@ -1137,10 +1245,11 @@
    "n_municipios": 4,
    "poblacion": 36995,
    "capas": [
-    "provincia/jaen"
+    "nacional",
+    "ccaa/an",
+    "local/alcala-la-real"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Alcalá la Real pendientes; se aplican los de Jaén capital."
+   "locales_pendientes": false
   },
   {
    "id": "alcaraz",
@@ -1157,10 +1266,11 @@
    "n_municipios": 17,
    "poblacion": 8180,
    "capas": [
-    "provincia/albacete"
+    "nacional",
+    "ccaa/cm",
+    "local/alcaraz"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Alcaraz pendientes; se aplican los de Albacete capital."
+   "locales_pendientes": false
   },
   {
    "id": "alcaniz",
@@ -1177,10 +1287,11 @@
    "n_municipios": 59,
    "poblacion": 54589,
    "capas": [
-    "provincia/teruel"
+    "nacional",
+    "ccaa/ar",
+    "local/alcaniz"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Alcañiz pendientes; se aplican los de Teruel capital."
+   "locales_pendientes": false
   },
   {
    "id": "alcobendas",
@@ -1197,10 +1308,11 @@
    "n_municipios": 7,
    "poblacion": 255983,
    "capas": [
-    "provincia/madrid"
+    "nacional",
+    "ccaa/md",
+    "local/alcobendas"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Alcobendas pendientes; se aplican los de Madrid capital."
+   "locales_pendientes": false
   },
   {
    "id": "alcorcon",
@@ -1217,10 +1329,11 @@
    "n_municipios": 1,
    "poblacion": 175719,
    "capas": [
-    "provincia/madrid"
+    "nacional",
+    "ccaa/md",
+    "local/alcorcon"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Alcorcón pendientes; se aplican los de Madrid capital."
+   "locales_pendientes": false
   },
   {
    "id": "alcoy-alcoi",
@@ -1237,10 +1350,11 @@
    "n_municipios": 28,
    "poblacion": 97803,
    "capas": [
-    "provincia/alicante"
+    "nacional",
+    "ccaa/vc",
+    "local/alcoy-alcoi"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Alcoy/Alcoi pendientes; se aplican los de Alicante/Alacant capital."
+   "locales_pendientes": false
   },
   {
    "id": "alcazar-de-san-juan",
@@ -1257,10 +1371,11 @@
    "n_municipios": 6,
    "poblacion": 62478,
    "capas": [
-    "provincia/ciudad-real"
+    "nacional",
+    "ccaa/cm",
+    "local/alcazar-de-san-juan"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Alcázar de San Juan pendientes; se aplican los de Ciudad Real capital."
+   "locales_pendientes": false
   },
   {
    "id": "algeciras",
@@ -1277,10 +1392,11 @@
    "n_municipios": 3,
    "poblacion": 169651,
    "capas": [
-    "provincia/cadiz"
+    "nacional",
+    "ccaa/an",
+    "local/algeciras"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Algeciras pendientes; se aplican los de Cádiz capital."
+   "locales_pendientes": false
   },
   {
    "id": "almaden",
@@ -1297,10 +1413,11 @@
    "n_municipios": 9,
    "poblacion": 11580,
    "capas": [
-    "provincia/ciudad-real"
+    "nacional",
+    "ccaa/cm",
+    "local/almaden"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Almadén pendientes; se aplican los de Ciudad Real capital."
+   "locales_pendientes": false
   },
   {
    "id": "almagro",
@@ -1317,10 +1434,11 @@
    "n_municipios": 6,
    "poblacion": 30387,
    "capas": [
-    "provincia/ciudad-real"
+    "nacional",
+    "ccaa/cm",
+    "local/almagro"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Almagro pendientes; se aplican los de Ciudad Real capital."
+   "locales_pendientes": false
   },
   {
    "id": "almansa",
@@ -1337,10 +1455,11 @@
    "n_municipios": 9,
    "poblacion": 44875,
    "capas": [
-    "provincia/albacete"
+    "nacional",
+    "ccaa/cm",
+    "local/almansa"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Almansa pendientes; se aplican los de Albacete capital."
+   "locales_pendientes": false
   },
   {
    "id": "almazan",
@@ -1357,10 +1476,11 @@
    "n_municipios": 47,
    "poblacion": 11546,
    "capas": [
-    "provincia/soria"
+    "nacional",
+    "ccaa/cl",
+    "local/almazan"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Almazán pendientes; se aplican los de Soria capital."
+   "locales_pendientes": false
   },
   {
    "id": "almendralejo",
@@ -1377,10 +1497,11 @@
    "n_municipios": 8,
    "poblacion": 50379,
    "capas": [
-    "provincia/badajoz"
+    "nacional",
+    "ccaa/ex",
+    "local/almendralejo"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Almendralejo pendientes; se aplican los de Badajoz capital."
+   "locales_pendientes": false
   },
   {
    "id": "almunecar",
@@ -1397,10 +1518,11 @@
    "n_municipios": 4,
    "poblacion": 29913,
    "capas": [
-    "provincia/granada"
+    "nacional",
+    "ccaa/an",
+    "local/almunecar"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Almuñécar pendientes; se aplican los de Granada capital."
+   "locales_pendientes": false
   },
   {
    "id": "alzira",
@@ -1417,10 +1539,11 @@
    "n_municipios": 23,
    "poblacion": 146517,
    "capas": [
-    "provincia/valencia"
+    "nacional",
+    "ccaa/vc",
+    "local/alzira"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Alzira pendientes; se aplican los de Valencia/València capital."
+   "locales_pendientes": false
   },
   {
    "id": "amposta",
@@ -1437,10 +1560,11 @@
    "n_municipios": 12,
    "poblacion": 72582,
    "capas": [
-    "provincia/tarragona"
+    "nacional",
+    "ccaa/ct",
+    "local/amposta"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Amposta pendientes; se aplican los de Tarragona capital."
+   "locales_pendientes": false
   },
   {
    "id": "amurrio",
@@ -1480,10 +1604,11 @@
    "n_municipios": 8,
    "poblacion": 59777,
    "capas": [
-    "provincia/jaen"
+    "nacional",
+    "ccaa/an",
+    "local/andujar"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Andújar pendientes; se aplican los de Jaén capital."
+   "locales_pendientes": false
   },
   {
    "id": "antequera",
@@ -1500,10 +1625,11 @@
    "n_municipios": 12,
    "poblacion": 84088,
    "capas": [
-    "provincia/malaga"
+    "nacional",
+    "ccaa/an",
+    "local/antequera"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Antequera pendientes; se aplican los de Málaga capital."
+   "locales_pendientes": false
   },
   {
    "id": "aoiz-agoitz",
@@ -1520,10 +1646,11 @@
    "n_municipios": 64,
    "poblacion": 76387,
    "capas": [
-    "provincia/navarra"
+    "nacional",
+    "ccaa/na",
+    "local/aoiz-agoitz"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Aoiz/Agoitz pendientes; se aplican los de Navarra capital."
+   "locales_pendientes": false
   },
   {
    "id": "aracena",
@@ -1540,10 +1667,11 @@
    "n_municipios": 31,
    "poblacion": 38775,
    "capas": [
-    "provincia/huelva"
+    "nacional",
+    "ccaa/an",
+    "local/aracena"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Aracena pendientes; se aplican los de Huelva capital."
+   "locales_pendientes": false
   },
   {
    "id": "aranda-de-duero",
@@ -1560,10 +1688,11 @@
    "n_municipios": 64,
    "poblacion": 50495,
    "capas": [
-    "provincia/burgos"
+    "nacional",
+    "ccaa/cl",
+    "local/aranda-de-duero"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Aranda de Duero pendientes; se aplican los de Burgos capital."
+   "locales_pendientes": false
   },
   {
    "id": "aranjuez",
@@ -1580,10 +1709,11 @@
    "n_municipios": 4,
    "poblacion": 77691,
    "capas": [
-    "provincia/madrid"
+    "nacional",
+    "ccaa/md",
+    "local/aranjuez"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Aranjuez pendientes; se aplican los de Madrid capital."
+   "locales_pendientes": false
   },
   {
    "id": "archidona",
@@ -1600,10 +1730,11 @@
    "n_municipios": 7,
    "poblacion": 27559,
    "capas": [
-    "provincia/malaga"
+    "nacional",
+    "ccaa/an",
+    "local/archidona"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Archidona pendientes; se aplican los de Málaga capital."
+   "locales_pendientes": false
   },
   {
    "id": "arcos-de-la-frontera",
@@ -1620,10 +1751,11 @@
    "n_municipios": 12,
    "poblacion": 86266,
    "capas": [
-    "provincia/cadiz"
+    "nacional",
+    "ccaa/an",
+    "local/arcos-de-la-frontera"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Arcos de la Frontera pendientes; se aplican los de Cádiz capital."
+   "locales_pendientes": false
   },
   {
    "id": "arenas-de-san-pedro",
@@ -1640,10 +1772,11 @@
    "n_municipios": 24,
    "poblacion": 32595,
    "capas": [
-    "provincia/avila"
+    "nacional",
+    "ccaa/cl",
+    "local/arenas-de-san-pedro"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Arenas de San Pedro pendientes; se aplican los de Ávila capital."
+   "locales_pendientes": false
   },
   {
    "id": "arenys-de-mar",
@@ -1660,10 +1793,11 @@
    "n_municipios": 13,
    "poblacion": 158506,
    "capas": [
-    "provincia/barcelona"
+    "nacional",
+    "ccaa/ct",
+    "local/arenys-de-mar"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Arenys de Mar pendientes; se aplican los de Barcelona capital."
+   "locales_pendientes": false
   },
   {
    "id": "arganda-del-rey",
@@ -1680,10 +1814,11 @@
    "n_municipios": 22,
    "poblacion": 235732,
    "capas": [
-    "provincia/madrid"
+    "nacional",
+    "ccaa/md",
+    "local/arganda-del-rey"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Arganda del Rey pendientes; se aplican los de Madrid capital."
+   "locales_pendientes": false
   },
   {
    "id": "arona",
@@ -1699,11 +1834,14 @@
    "partido_judicial": true,
    "n_municipios": 4,
    "poblacion": 173050,
+   "isla": "tenerife",
    "capas": [
-    "provincia/tenerife"
+    "nacional",
+    "ccaa/cn",
+    "insular/tenerife",
+    "local/arona"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Arona pendientes; se aplican los de Santa Cruz de Tenerife capital."
+   "locales_pendientes": false
   },
   {
    "id": "arrecife",
@@ -1719,11 +1857,14 @@
    "partido_judicial": true,
    "n_municipios": 7,
    "poblacion": 167406,
+   "isla": "lanzarote",
    "capas": [
-    "provincia/las-palmas"
+    "nacional",
+    "ccaa/cn",
+    "insular/lanzarote",
+    "local/arrecife"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Arrecife pendientes; se aplican los de Las Palmas capital."
+   "locales_pendientes": false
   },
   {
    "id": "arucas",
@@ -1739,11 +1880,14 @@
    "partido_judicial": true,
    "n_municipios": 6,
    "poblacion": 66776,
+   "isla": "gran-canaria",
    "capas": [
-    "provincia/las-palmas"
+    "nacional",
+    "ccaa/cn",
+    "insular/gran-canaria",
+    "local/arucas"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Arucas pendientes; se aplican los de Las Palmas capital."
+   "locales_pendientes": false
   },
   {
    "id": "arzua",
@@ -1760,10 +1904,11 @@
    "n_municipios": 7,
    "poblacion": 25953,
    "capas": [
-    "provincia/a-coruna"
+    "nacional",
+    "ccaa/ga",
+    "local/arzua"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Arzúa pendientes; se aplican los de A Coruña capital."
+   "locales_pendientes": false
   },
   {
    "id": "arevalo",
@@ -1780,10 +1925,11 @@
    "n_municipios": 53,
    "poblacion": 17830,
    "capas": [
-    "provincia/avila"
+    "nacional",
+    "ccaa/cl",
+    "local/arevalo"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Arévalo pendientes; se aplican los de Ávila capital."
+   "locales_pendientes": false
   },
   {
    "id": "astorga",
@@ -1800,10 +1946,11 @@
    "n_municipios": 26,
    "poblacion": 32352,
    "capas": [
-    "provincia/leon"
+    "nacional",
+    "ccaa/cl",
+    "local/astorga"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Astorga pendientes; se aplican los de León capital."
+   "locales_pendientes": false
   },
   {
    "id": "aviles",
@@ -1820,10 +1967,11 @@
    "n_municipios": 5,
    "poblacion": 124755,
    "capas": [
-    "provincia/asturias"
+    "nacional",
+    "ccaa/as",
+    "local/aviles"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Avilés pendientes; se aplican los de Asturias capital."
+   "locales_pendientes": false
   },
   {
    "id": "ayamonte",
@@ -1840,10 +1988,11 @@
    "n_municipios": 7,
    "poblacion": 98680,
    "capas": [
-    "provincia/huelva"
+    "nacional",
+    "ccaa/an",
+    "local/ayamonte"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Ayamonte pendientes; se aplican los de Huelva capital."
+   "locales_pendientes": false
   },
   {
    "id": "azpeitia",
@@ -1883,10 +2032,11 @@
    "n_municipios": 3,
    "poblacion": 283744,
    "capas": [
-    "provincia/barcelona"
+    "nacional",
+    "ccaa/ct",
+    "local/badalona"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Badalona pendientes; se aplican los de Barcelona capital."
+   "locales_pendientes": false
   },
   {
    "id": "baena",
@@ -1903,10 +2053,11 @@
    "n_municipios": 3,
    "poblacion": 22212,
    "capas": [
-    "provincia/cordoba"
+    "nacional",
+    "ccaa/an",
+    "local/baena"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Baena pendientes; se aplican los de Córdoba capital."
+   "locales_pendientes": false
   },
   {
    "id": "baeza",
@@ -1923,10 +2074,11 @@
    "n_municipios": 4,
    "poblacion": 22057,
    "capas": [
-    "provincia/jaen"
+    "nacional",
+    "ccaa/an",
+    "local/baeza"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Baeza pendientes; se aplican los de Jaén capital."
+   "locales_pendientes": false
   },
   {
    "id": "balaguer",
@@ -1943,10 +2095,11 @@
    "n_municipios": 41,
    "poblacion": 65023,
    "capas": [
-    "provincia/lleida"
+    "nacional",
+    "ccaa/ct",
+    "local/balaguer"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Balaguer pendientes; se aplican los de Lleida capital."
+   "locales_pendientes": false
   },
   {
    "id": "balmaseda",
@@ -1986,10 +2139,11 @@
    "n_municipios": 8,
    "poblacion": 9596,
    "capas": [
-    "provincia/ourense"
+    "nacional",
+    "ccaa/ga",
+    "local/bande"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Bande pendientes; se aplican los de Ourense capital."
+   "locales_pendientes": false
   },
   {
    "id": "barakaldo",
@@ -2029,10 +2183,11 @@
    "n_municipios": 41,
    "poblacion": 29337,
    "capas": [
-    "provincia/huesca"
+    "nacional",
+    "ccaa/ar",
+    "local/barbastro"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Barbastro pendientes; se aplican los de Huesca capital."
+   "locales_pendientes": false
   },
   {
    "id": "barbate",
@@ -2049,10 +2204,11 @@
    "n_municipios": 2,
    "poblacion": 35766,
    "capas": [
-    "provincia/cadiz"
+    "nacional",
+    "ccaa/an",
+    "local/barbate"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Barbate pendientes; se aplican los de Cádiz capital."
+   "locales_pendientes": false
   },
   {
    "id": "baza",
@@ -2069,10 +2225,11 @@
    "n_municipios": 8,
    "poblacion": 37954,
    "capas": [
-    "provincia/granada"
+    "nacional",
+    "ccaa/an",
+    "local/baza"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Baza pendientes; se aplican los de Granada capital."
+   "locales_pendientes": false
   },
   {
    "id": "becerrea",
@@ -2089,10 +2246,11 @@
    "n_municipios": 6,
    "poblacion": 8745,
    "capas": [
-    "provincia/lugo"
+    "nacional",
+    "ccaa/ga",
+    "local/becerrea"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Becerreá pendientes; se aplican los de Lugo capital."
+   "locales_pendientes": false
   },
   {
    "id": "benavente",
@@ -2109,10 +2267,11 @@
    "n_municipios": 56,
    "poblacion": 32960,
    "capas": [
-    "provincia/zamora"
+    "nacional",
+    "ccaa/cl",
+    "local/benavente"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Benavente pendientes; se aplican los de Zamora capital."
+   "locales_pendientes": false
   },
   {
    "id": "benidorm",
@@ -2129,10 +2288,11 @@
    "n_municipios": 4,
    "poblacion": 132918,
    "capas": [
-    "provincia/alicante"
+    "nacional",
+    "ccaa/vc",
+    "local/benidorm"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Benidorm pendientes; se aplican los de Alicante/Alacant capital."
+   "locales_pendientes": false
   },
   {
    "id": "berga",
@@ -2149,10 +2309,11 @@
    "n_municipios": 30,
    "poblacion": 41250,
    "capas": [
-    "provincia/barcelona"
+    "nacional",
+    "ccaa/ct",
+    "local/berga"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Berga pendientes; se aplican los de Barcelona capital."
+   "locales_pendientes": false
   },
   {
    "id": "bergara",
@@ -2192,10 +2353,11 @@
    "n_municipios": 9,
    "poblacion": 50220,
    "capas": [
-    "provincia/almeria"
+    "nacional",
+    "ccaa/an",
+    "local/berja"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Berja pendientes; se aplican los de Almería capital."
+   "locales_pendientes": false
   },
   {
    "id": "betanzos",
@@ -2212,10 +2374,11 @@
    "n_municipios": 16,
    "poblacion": 81312,
    "capas": [
-    "provincia/a-coruna"
+    "nacional",
+    "ccaa/ga",
+    "local/betanzos"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Betanzos pendientes; se aplican los de A Coruña capital."
+   "locales_pendientes": false
   },
   {
    "id": "blanes",
@@ -2232,10 +2395,11 @@
    "n_municipios": 3,
    "poblacion": 92046,
    "capas": [
-    "provincia/girona"
+    "nacional",
+    "ccaa/ct",
+    "local/blanes"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Blanes pendientes; se aplican los de Girona capital."
+   "locales_pendientes": false
   },
   {
    "id": "boltana",
@@ -2252,10 +2416,11 @@
    "n_municipios": 31,
    "poblacion": 12814,
    "capas": [
-    "provincia/huesca"
+    "nacional",
+    "ccaa/ar",
+    "local/boltana"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Boltaña pendientes; se aplican los de Huesca capital."
+   "locales_pendientes": false
   },
   {
    "id": "briviesca",
@@ -2272,10 +2437,11 @@
    "n_municipios": 67,
    "poblacion": 14919,
    "capas": [
-    "provincia/burgos"
+    "nacional",
+    "ccaa/cl",
+    "local/briviesca"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Briviesca pendientes; se aplican los de Burgos capital."
+   "locales_pendientes": false
   },
   {
    "id": "burgo-de-osma-ciudad-de-osma",
@@ -2292,10 +2458,11 @@
    "n_municipios": 34,
    "poblacion": 13101,
    "capas": [
-    "provincia/soria"
+    "nacional",
+    "ccaa/cl",
+    "local/burgo-de-osma-ciudad-de-osma"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Burgo de Osma - Ciudad de Osma pendientes; se aplican los de Soria capital."
+   "locales_pendientes": false
   },
   {
    "id": "bejar",
@@ -2312,10 +2479,11 @@
    "n_municipios": 73,
    "poblacion": 31330,
    "capas": [
-    "provincia/salamanca"
+    "nacional",
+    "ccaa/cl",
+    "local/bejar"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Béjar pendientes; se aplican los de Salamanca capital."
+   "locales_pendientes": false
   },
   {
    "id": "cabra",
@@ -2332,10 +2500,11 @@
    "n_municipios": 4,
    "poblacion": 30291,
    "capas": [
-    "provincia/cordoba"
+    "nacional",
+    "ccaa/an",
+    "local/cabra"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Cabra pendientes; se aplican los de Córdoba capital."
+   "locales_pendientes": false
   },
   {
    "id": "calahorra",
@@ -2352,10 +2521,11 @@
    "n_municipios": 34,
    "poblacion": 77113,
    "capas": [
-    "provincia/la-rioja"
+    "nacional",
+    "ccaa/ri",
+    "local/calahorra"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Calahorra pendientes; se aplican los de La Rioja capital."
+   "locales_pendientes": false
   },
   {
    "id": "calamocha",
@@ -2372,10 +2542,11 @@
    "n_municipios": 62,
    "poblacion": 18901,
    "capas": [
-    "provincia/teruel"
+    "nacional",
+    "ccaa/ar",
+    "local/calamocha"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Calamocha pendientes; se aplican los de Teruel capital."
+   "locales_pendientes": false
   },
   {
    "id": "calatayud",
@@ -2392,10 +2563,11 @@
    "n_municipios": 54,
    "poblacion": 33235,
    "capas": [
-    "provincia/zaragoza"
+    "nacional",
+    "ccaa/ar",
+    "local/calatayud"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Calatayud pendientes; se aplican los de Zaragoza capital."
+   "locales_pendientes": false
   },
   {
    "id": "caldas-de-reis",
@@ -2412,10 +2584,11 @@
    "n_municipios": 8,
    "poblacion": 35159,
    "capas": [
-    "provincia/pontevedra"
+    "nacional",
+    "ccaa/ga",
+    "local/caldas-de-reis"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Caldas de Reis pendientes; se aplican los de Pontevedra capital."
+   "locales_pendientes": false
   },
   {
    "id": "cambados",
@@ -2432,10 +2605,11 @@
    "n_municipios": 6,
    "poblacion": 57707,
    "capas": [
-    "provincia/pontevedra"
+    "nacional",
+    "ccaa/ga",
+    "local/cambados"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Cambados pendientes; se aplican los de Pontevedra capital."
+   "locales_pendientes": false
   },
   {
    "id": "cangas",
@@ -2452,10 +2626,11 @@
    "n_municipios": 3,
    "poblacion": 51887,
    "capas": [
-    "provincia/pontevedra"
+    "nacional",
+    "ccaa/ga",
+    "local/cangas"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Cangas pendientes; se aplican los de Pontevedra capital."
+   "locales_pendientes": false
   },
   {
    "id": "cangas-de-onis",
@@ -2472,10 +2647,11 @@
    "n_municipios": 6,
    "poblacion": 18991,
    "capas": [
-    "provincia/asturias"
+    "nacional",
+    "ccaa/as",
+    "local/cangas-de-onis"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Cangas de Onís pendientes; se aplican los de Asturias capital."
+   "locales_pendientes": false
   },
   {
    "id": "cangas-del-narcea",
@@ -2492,10 +2668,11 @@
    "n_municipios": 3,
    "poblacion": 13134,
    "capas": [
-    "provincia/asturias"
+    "nacional",
+    "ccaa/as",
+    "local/cangas-del-narcea"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Cangas del Narcea pendientes; se aplican los de Asturias capital."
+   "locales_pendientes": false
   },
   {
    "id": "caravaca-de-la-cruz",
@@ -2512,10 +2689,11 @@
    "n_municipios": 4,
    "poblacion": 58541,
    "capas": [
-    "provincia/murcia"
+    "nacional",
+    "ccaa/mc",
+    "local/caravaca-de-la-cruz"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Caravaca de la Cruz pendientes; se aplican los de Murcia capital."
+   "locales_pendientes": false
   },
   {
    "id": "carballo",
@@ -2532,10 +2710,11 @@
    "n_municipios": 7,
    "poblacion": 67061,
    "capas": [
-    "provincia/a-coruna"
+    "nacional",
+    "ccaa/ga",
+    "local/carballo"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Carballo pendientes; se aplican los de A Coruña capital."
+   "locales_pendientes": false
   },
   {
    "id": "carlet",
@@ -2552,10 +2731,11 @@
    "n_municipios": 7,
    "poblacion": 88434,
    "capas": [
-    "provincia/valencia"
+    "nacional",
+    "ccaa/vc",
+    "local/carlet"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Carlet pendientes; se aplican los de Valencia/València capital."
+   "locales_pendientes": false
   },
   {
    "id": "carmona",
@@ -2572,10 +2752,11 @@
    "n_municipios": 3,
    "poblacion": 74037,
    "capas": [
-    "provincia/sevilla"
+    "nacional",
+    "ccaa/an",
+    "local/carmona"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Carmona pendientes; se aplican los de Sevilla capital."
+   "locales_pendientes": false
   },
   {
    "id": "carrion-de-los-condes",
@@ -2592,10 +2773,11 @@
    "n_municipios": 65,
    "poblacion": 15773,
    "capas": [
-    "provincia/palencia"
+    "nacional",
+    "ccaa/cl",
+    "local/carrion-de-los-condes"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Carrión de los Condes pendientes; se aplican los de Palencia capital."
+   "locales_pendientes": false
   },
   {
    "id": "cartagena",
@@ -2612,10 +2794,11 @@
    "n_municipios": 3,
    "poblacion": 261255,
    "capas": [
-    "provincia/murcia"
+    "nacional",
+    "ccaa/mc",
+    "local/cartagena"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Cartagena pendientes; se aplican los de Murcia capital."
+   "locales_pendientes": false
   },
   {
    "id": "casas-ibanez",
@@ -2632,10 +2815,11 @@
    "n_municipios": 20,
    "poblacion": 20332,
    "capas": [
-    "provincia/albacete"
+    "nacional",
+    "ccaa/cm",
+    "local/casas-ibanez"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Casas-Ibáñez pendientes; se aplican los de Albacete capital."
+   "locales_pendientes": false
   },
   {
    "id": "caspe",
@@ -2652,10 +2836,11 @@
    "n_municipios": 16,
    "poblacion": 22377,
    "capas": [
-    "provincia/zaragoza"
+    "nacional",
+    "ccaa/ar",
+    "local/caspe"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Caspe pendientes; se aplican los de Zaragoza capital."
+   "locales_pendientes": false
   },
   {
    "id": "castro-urdiales",
@@ -2672,10 +2857,11 @@
    "n_municipios": 3,
    "poblacion": 36195,
    "capas": [
-    "provincia/cantabria"
+    "nacional",
+    "ccaa/cb",
+    "local/castro-urdiales"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Castro-Urdiales pendientes; se aplican los de Cantabria capital."
+   "locales_pendientes": false
   },
   {
    "id": "castropol",
@@ -2692,10 +2878,11 @@
    "n_municipios": 11,
    "poblacion": 17239,
    "capas": [
-    "provincia/asturias"
+    "nacional",
+    "ccaa/as",
+    "local/castropol"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Castropol pendientes; se aplican los de Asturias capital."
+   "locales_pendientes": false
   },
   {
    "id": "castuera",
@@ -2712,10 +2899,11 @@
    "n_municipios": 14,
    "poblacion": 25757,
    "capas": [
-    "provincia/badajoz"
+    "nacional",
+    "ccaa/ex",
+    "local/castuera"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Castuera pendientes; se aplican los de Badajoz capital."
+   "locales_pendientes": false
   },
   {
    "id": "catarroja",
@@ -2732,10 +2920,11 @@
    "n_municipios": 6,
    "poblacion": 86279,
    "capas": [
-    "provincia/valencia"
+    "nacional",
+    "ccaa/vc",
+    "local/catarroja"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Catarroja pendientes; se aplican los de Valencia/València capital."
+   "locales_pendientes": false
   },
   {
    "id": "cazalla-de-la-sierra",
@@ -2752,10 +2941,11 @@
    "n_municipios": 9,
    "poblacion": 21565,
    "capas": [
-    "provincia/sevilla"
+    "nacional",
+    "ccaa/an",
+    "local/cazalla-de-la-sierra"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Cazalla de la Sierra pendientes; se aplican los de Sevilla capital."
+   "locales_pendientes": false
   },
   {
    "id": "cazorla",
@@ -2772,10 +2962,11 @@
    "n_municipios": 10,
    "poblacion": 29973,
    "capas": [
-    "provincia/jaen"
+    "nacional",
+    "ccaa/an",
+    "local/cazorla"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Cazorla pendientes; se aplican los de Jaén capital."
+   "locales_pendientes": false
   },
   {
    "id": "celanova",
@@ -2792,10 +2983,11 @@
    "n_municipios": 7,
    "poblacion": 14008,
    "capas": [
-    "provincia/ourense"
+    "nacional",
+    "ccaa/ga",
+    "local/celanova"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Celanova pendientes; se aplican los de Ourense capital."
+   "locales_pendientes": false
   },
   {
    "id": "cerdanyola-del-valles",
@@ -2812,10 +3004,11 @@
    "n_municipios": 5,
    "poblacion": 182932,
    "capas": [
-    "provincia/barcelona"
+    "nacional",
+    "ccaa/ct",
+    "local/cerdanyola-del-valles"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Cerdanyola del Vallès pendientes; se aplican los de Barcelona capital."
+   "locales_pendientes": false
   },
   {
    "id": "cervera",
@@ -2832,10 +3025,11 @@
    "n_municipios": 36,
    "poblacion": 55470,
    "capas": [
-    "provincia/lleida"
+    "nacional",
+    "ccaa/ct",
+    "local/cervera"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Cervera pendientes; se aplican los de Lleida capital."
+   "locales_pendientes": false
   },
   {
    "id": "cervera-de-pisuerga",
@@ -2852,10 +3046,11 @@
    "n_municipios": 29,
    "poblacion": 22261,
    "capas": [
-    "provincia/palencia"
+    "nacional",
+    "ccaa/cl",
+    "local/cervera-de-pisuerga"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Cervera de Pisuerga pendientes; se aplican los de Palencia capital."
+   "locales_pendientes": false
   },
   {
    "id": "chantada",
@@ -2872,10 +3067,11 @@
    "n_municipios": 7,
    "poblacion": 22845,
    "capas": [
-    "provincia/lugo"
+    "nacional",
+    "ccaa/ga",
+    "local/chantada"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Chantada pendientes; se aplican los de Lugo capital."
+   "locales_pendientes": false
   },
   {
    "id": "chiclana-de-la-frontera",
@@ -2892,10 +3088,11 @@
    "n_municipios": 6,
    "poblacion": 144809,
    "capas": [
-    "provincia/cadiz"
+    "nacional",
+    "ccaa/an",
+    "local/chiclana-de-la-frontera"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Chiclana de la Frontera pendientes; se aplican los de Cádiz capital."
+   "locales_pendientes": false
   },
   {
    "id": "cieza",
@@ -2912,10 +3109,11 @@
    "n_municipios": 9,
    "poblacion": 80162,
    "capas": [
-    "provincia/murcia"
+    "nacional",
+    "ccaa/mc",
+    "local/cieza"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Cieza pendientes; se aplican los de Murcia capital."
+   "locales_pendientes": false
   },
   {
    "id": "cistierna",
@@ -2932,10 +3130,11 @@
    "n_municipios": 16,
    "poblacion": 8872,
    "capas": [
-    "provincia/leon"
+    "nacional",
+    "ccaa/cl",
+    "local/cistierna"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Cistierna pendientes; se aplican los de León capital."
+   "locales_pendientes": false
   },
   {
    "id": "ciudad-rodrigo",
@@ -2952,10 +3151,11 @@
    "n_municipios": 58,
    "poblacion": 24156,
    "capas": [
-    "provincia/salamanca"
+    "nacional",
+    "ccaa/cl",
+    "local/ciudad-rodrigo"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Ciudad Rodrigo pendientes; se aplican los de Salamanca capital."
+   "locales_pendientes": false
   },
   {
    "id": "ciutadella-de-menorca",
@@ -2972,10 +3172,11 @@
    "n_municipios": 4,
    "poblacion": 45825,
    "capas": [
-    "provincia/baleares"
+    "nacional",
+    "ccaa/ib",
+    "local/ciutadella-de-menorca"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Ciutadella de Menorca pendientes; se aplican los de Illes Balears capital."
+   "locales_pendientes": false
   },
   {
    "id": "collado-villalba",
@@ -2992,10 +3193,11 @@
    "n_municipios": 8,
    "poblacion": 182973,
    "capas": [
-    "provincia/madrid"
+    "nacional",
+    "ccaa/md",
+    "local/collado-villalba"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Collado Villalba pendientes; se aplican los de Madrid capital."
+   "locales_pendientes": false
   },
   {
    "id": "colmenar-viejo",
@@ -3012,10 +3214,11 @@
    "n_municipios": 11,
    "poblacion": 189613,
    "capas": [
-    "provincia/madrid"
+    "nacional",
+    "ccaa/md",
+    "local/colmenar-viejo"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Colmenar Viejo pendientes; se aplican los de Madrid capital."
+   "locales_pendientes": false
   },
   {
    "id": "corcubion",
@@ -3032,10 +3235,11 @@
    "n_municipios": 8,
    "poblacion": 37140,
    "capas": [
-    "provincia/a-coruna"
+    "nacional",
+    "ccaa/ga",
+    "local/corcubion"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Corcubión pendientes; se aplican los de A Coruña capital."
+   "locales_pendientes": false
   },
   {
    "id": "coria",
@@ -3052,10 +3256,11 @@
    "n_municipios": 36,
    "poblacion": 41420,
    "capas": [
-    "provincia/caceres"
+    "nacional",
+    "ccaa/ex",
+    "local/coria"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Coria pendientes; se aplican los de Cáceres capital."
+   "locales_pendientes": false
   },
   {
    "id": "coria-del-rio",
@@ -3072,10 +3277,11 @@
    "n_municipios": 5,
    "poblacion": 64996,
    "capas": [
-    "provincia/sevilla"
+    "nacional",
+    "ccaa/an",
+    "local/coria-del-rio"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Coria del Río pendientes; se aplican los de Sevilla capital."
+   "locales_pendientes": false
   },
   {
    "id": "cornella-de-llobregat",
@@ -3092,10 +3298,11 @@
    "n_municipios": 1,
    "poblacion": 92237,
    "capas": [
-    "provincia/barcelona"
+    "nacional",
+    "ccaa/ct",
+    "local/cornella-de-llobregat"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Cornellà de Llobregat pendientes; se aplican los de Barcelona capital."
+   "locales_pendientes": false
   },
   {
    "id": "coslada",
@@ -3112,10 +3319,11 @@
    "n_municipios": 4,
    "poblacion": 159088,
    "capas": [
-    "provincia/madrid"
+    "nacional",
+    "ccaa/md",
+    "local/coslada"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Coslada pendientes; se aplican los de Madrid capital."
+   "locales_pendientes": false
   },
   {
    "id": "coin",
@@ -3132,10 +3340,11 @@
    "n_municipios": 5,
    "poblacion": 62216,
    "capas": [
-    "provincia/malaga"
+    "nacional",
+    "ccaa/an",
+    "local/coin"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Coín pendientes; se aplican los de Málaga capital."
+   "locales_pendientes": false
   },
   {
    "id": "cuellar",
@@ -3152,10 +3361,11 @@
    "n_municipios": 31,
    "poblacion": 20351,
    "capas": [
-    "provincia/segovia"
+    "nacional",
+    "ccaa/cl",
+    "local/cuellar"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Cuéllar pendientes; se aplican los de Segovia capital."
+   "locales_pendientes": false
   },
   {
    "id": "daimiel",
@@ -3172,10 +3382,11 @@
    "n_municipios": 5,
    "poblacion": 31808,
    "capas": [
-    "provincia/ciudad-real"
+    "nacional",
+    "ccaa/cm",
+    "local/daimiel"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Daimiel pendientes; se aplican los de Ciudad Real capital."
+   "locales_pendientes": false
   },
   {
    "id": "daroca",
@@ -3192,10 +3403,11 @@
    "n_municipios": 46,
    "poblacion": 11484,
    "capas": [
-    "provincia/zaragoza"
+    "nacional",
+    "ccaa/ar",
+    "local/daroca"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Daroca pendientes; se aplican los de Zaragoza capital."
+   "locales_pendientes": false
   },
   {
    "id": "don-benito",
@@ -3212,10 +3424,11 @@
    "n_municipios": 9,
    "poblacion": 54277,
    "capas": [
-    "provincia/badajoz"
+    "nacional",
+    "ccaa/ex",
+    "local/don-benito"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Don Benito pendientes; se aplican los de Badajoz capital."
+   "locales_pendientes": false
   },
   {
    "id": "dos-hermanas",
@@ -3232,10 +3445,11 @@
    "n_municipios": 1,
    "poblacion": 142519,
    "capas": [
-    "provincia/sevilla"
+    "nacional",
+    "ccaa/an",
+    "local/dos-hermanas"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Dos Hermanas pendientes; se aplican los de Sevilla capital."
+   "locales_pendientes": false
   },
   {
    "id": "durango",
@@ -3275,10 +3489,11 @@
    "n_municipios": 33,
    "poblacion": 198258,
    "capas": [
-    "provincia/alicante"
+    "nacional",
+    "ccaa/vc",
+    "local/denia"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Dénia pendientes; se aplican los de Alicante/Alacant capital."
+   "locales_pendientes": false
   },
   {
    "id": "eibar",
@@ -3318,10 +3533,11 @@
    "n_municipios": 6,
    "poblacion": 175416,
    "capas": [
-    "provincia/baleares"
+    "nacional",
+    "ccaa/ib",
+    "local/eivissa"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Eivissa pendientes; se aplican los de Illes Balears capital."
+   "locales_pendientes": false
   },
   {
    "id": "ejea-de-los-caballeros",
@@ -3338,10 +3554,11 @@
    "n_municipios": 39,
    "poblacion": 32935,
    "capas": [
-    "provincia/zaragoza"
+    "nacional",
+    "ccaa/ar",
+    "local/ejea-de-los-caballeros"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Ejea de los Caballeros pendientes; se aplican los de Zaragoza capital."
+   "locales_pendientes": false
   },
   {
    "id": "el-ejido",
@@ -3358,10 +3575,11 @@
    "n_municipios": 2,
    "poblacion": 100233,
    "capas": [
-    "provincia/almeria"
+    "nacional",
+    "ccaa/an",
+    "local/el-ejido"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de El Ejido pendientes; se aplican los de Almería capital."
+   "locales_pendientes": false
   },
   {
    "id": "el-prat-de-llobregat",
@@ -3378,10 +3596,11 @@
    "n_municipios": 1,
    "poblacion": 66338,
    "capas": [
-    "provincia/barcelona"
+    "nacional",
+    "ccaa/ct",
+    "local/el-prat-de-llobregat"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de El Prat de Llobregat pendientes; se aplican los de Barcelona capital."
+   "locales_pendientes": false
   },
   {
    "id": "el-puerto-de-santa-maria",
@@ -3398,10 +3617,11 @@
    "n_municipios": 1,
    "poblacion": 89983,
    "capas": [
-    "provincia/cadiz"
+    "nacional",
+    "ccaa/an",
+    "local/el-puerto-de-santa-maria"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de El Puerto de Santa María pendientes; se aplican los de Cádiz capital."
+   "locales_pendientes": false
   },
   {
    "id": "el-vendrell",
@@ -3418,10 +3638,11 @@
    "n_municipios": 25,
    "poblacion": 165992,
    "capas": [
-    "provincia/tarragona"
+    "nacional",
+    "ccaa/ct",
+    "local/el-vendrell"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de El Vendrell pendientes; se aplican los de Tarragona capital."
+   "locales_pendientes": false
   },
   {
    "id": "elche-elx",
@@ -3438,10 +3659,11 @@
    "n_municipios": 3,
    "poblacion": 316187,
    "capas": [
-    "provincia/alicante"
+    "nacional",
+    "ccaa/vc",
+    "local/elche-elx"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Elche/Elx pendientes; se aplican los de Alicante/Alacant capital."
+   "locales_pendientes": false
   },
   {
    "id": "elda",
@@ -3458,10 +3680,11 @@
    "n_municipios": 2,
    "poblacion": 89244,
    "capas": [
-    "provincia/alicante"
+    "nacional",
+    "ccaa/vc",
+    "local/elda"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Elda pendientes; se aplican los de Alicante/Alacant capital."
+   "locales_pendientes": false
   },
   {
    "id": "esplugues-de-llobregat",
@@ -3478,10 +3701,11 @@
    "n_municipios": 2,
    "poblacion": 69258,
    "capas": [
-    "provincia/barcelona"
+    "nacional",
+    "ccaa/ct",
+    "local/esplugues-de-llobregat"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Esplugues de Llobregat pendientes; se aplican los de Barcelona capital."
+   "locales_pendientes": false
   },
   {
    "id": "estella-lizarra",
@@ -3498,10 +3722,11 @@
    "n_municipios": 72,
    "poblacion": 65885,
    "capas": [
-    "provincia/navarra"
+    "nacional",
+    "ccaa/na",
+    "local/estella-lizarra"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Estella-Lizarra pendientes; se aplican los de Navarra capital."
+   "locales_pendientes": false
   },
   {
    "id": "estepa",
@@ -3518,10 +3743,11 @@
    "n_municipios": 10,
    "poblacion": 45787,
    "capas": [
-    "provincia/sevilla"
+    "nacional",
+    "ccaa/an",
+    "local/estepa"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Estepa pendientes; se aplican los de Sevilla capital."
+   "locales_pendientes": false
   },
   {
    "id": "estepona",
@@ -3538,10 +3764,11 @@
    "n_municipios": 3,
    "poblacion": 106795,
    "capas": [
-    "provincia/malaga"
+    "nacional",
+    "ccaa/an",
+    "local/estepona"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Estepona pendientes; se aplican los de Málaga capital."
+   "locales_pendientes": false
   },
   {
    "id": "falset",
@@ -3558,10 +3785,11 @@
    "n_municipios": 31,
    "poblacion": 20808,
    "capas": [
-    "provincia/tarragona"
+    "nacional",
+    "ccaa/ct",
+    "local/falset"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Falset pendientes; se aplican los de Tarragona capital."
+   "locales_pendientes": false
   },
   {
    "id": "ferrol",
@@ -3578,10 +3806,11 @@
    "n_municipios": 12,
    "poblacion": 158036,
    "capas": [
-    "provincia/a-coruna"
+    "nacional",
+    "ccaa/ga",
+    "local/ferrol"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Ferrol pendientes; se aplican los de A Coruña capital."
+   "locales_pendientes": false
   },
   {
    "id": "figueres",
@@ -3598,10 +3827,11 @@
    "n_municipios": 68,
    "poblacion": 149894,
    "capas": [
-    "provincia/girona"
+    "nacional",
+    "ccaa/ct",
+    "local/figueres"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Figueres pendientes; se aplican los de Girona capital."
+   "locales_pendientes": false
   },
   {
    "id": "fraga",
@@ -3618,10 +3848,11 @@
    "n_municipios": 16,
    "poblacion": 26825,
    "capas": [
-    "provincia/huesca"
+    "nacional",
+    "ccaa/ar",
+    "local/fraga"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Fraga pendientes; se aplican los de Huesca capital."
+   "locales_pendientes": false
   },
   {
    "id": "fregenal-de-la-sierra",
@@ -3638,10 +3869,11 @@
    "n_municipios": 7,
    "poblacion": 13276,
    "capas": [
-    "provincia/badajoz"
+    "nacional",
+    "ccaa/ex",
+    "local/fregenal-de-la-sierra"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Fregenal de la Sierra pendientes; se aplican los de Badajoz capital."
+   "locales_pendientes": false
   },
   {
    "id": "fuengirola",
@@ -3658,10 +3890,11 @@
    "n_municipios": 2,
    "poblacion": 180315,
    "capas": [
-    "provincia/malaga"
+    "nacional",
+    "ccaa/an",
+    "local/fuengirola"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Fuengirola pendientes; se aplican los de Málaga capital."
+   "locales_pendientes": false
   },
   {
    "id": "fuenlabrada",
@@ -3678,10 +3911,11 @@
    "n_municipios": 2,
    "poblacion": 210576,
    "capas": [
-    "provincia/madrid"
+    "nacional",
+    "ccaa/md",
+    "local/fuenlabrada"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Fuenlabrada pendientes; se aplican los de Madrid capital."
+   "locales_pendientes": false
   },
   {
    "id": "gandesa",
@@ -3698,10 +3932,11 @@
    "n_municipios": 18,
    "poblacion": 22249,
    "capas": [
-    "provincia/tarragona"
+    "nacional",
+    "ccaa/ct",
+    "local/gandesa"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Gandesa pendientes; se aplican los de Tarragona capital."
+   "locales_pendientes": false
   },
   {
    "id": "gandia",
@@ -3718,10 +3953,11 @@
    "n_municipios": 28,
    "poblacion": 165414,
    "capas": [
-    "provincia/valencia"
+    "nacional",
+    "ccaa/vc",
+    "local/gandia"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Gandia pendientes; se aplican los de Valencia/València capital."
+   "locales_pendientes": false
   },
   {
    "id": "gava",
@@ -3738,10 +3974,11 @@
    "n_municipios": 4,
    "poblacion": 193448,
    "capas": [
-    "provincia/barcelona"
+    "nacional",
+    "ccaa/ct",
+    "local/gava"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Gavà pendientes; se aplican los de Barcelona capital."
+   "locales_pendientes": false
   },
   {
    "id": "gernika-lumo",
@@ -3781,10 +4018,11 @@
    "n_municipios": 1,
    "poblacion": 193238,
    "capas": [
-    "provincia/madrid"
+    "nacional",
+    "ccaa/md",
+    "local/getafe"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Getafe pendientes; se aplican los de Madrid capital."
+   "locales_pendientes": false
   },
   {
    "id": "getxo",
@@ -3824,10 +4062,11 @@
    "n_municipios": 2,
    "poblacion": 280186,
    "capas": [
-    "provincia/asturias"
+    "nacional",
+    "ccaa/as",
+    "local/gijon"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Gijón pendientes; se aplican los de Asturias capital."
+   "locales_pendientes": false
   },
   {
    "id": "grado",
@@ -3844,10 +4083,11 @@
    "n_municipios": 7,
    "poblacion": 19164,
    "capas": [
-    "provincia/asturias"
+    "nacional",
+    "ccaa/as",
+    "local/grado"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Grado pendientes; se aplican los de Asturias capital."
+   "locales_pendientes": false
   },
   {
    "id": "granadilla-de-abona",
@@ -3863,11 +4103,14 @@
    "partido_judicial": true,
    "n_municipios": 4,
    "poblacion": 94147,
+   "isla": "tenerife",
    "capas": [
-    "provincia/tenerife"
+    "nacional",
+    "ccaa/cn",
+    "insular/tenerife",
+    "local/granadilla-de-abona"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Granadilla de Abona pendientes; se aplican los de Santa Cruz de Tenerife capital."
+   "locales_pendientes": false
   },
   {
    "id": "granollers",
@@ -3884,10 +4127,11 @@
    "n_municipios": 35,
    "poblacion": 326348,
    "capas": [
-    "provincia/barcelona"
+    "nacional",
+    "ccaa/ct",
+    "local/granollers"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Granollers pendientes; se aplican los de Barcelona capital."
+   "locales_pendientes": false
   },
   {
    "id": "guadix",
@@ -3904,10 +4148,11 @@
    "n_municipios": 33,
    "poblacion": 45394,
    "capas": [
-    "provincia/granada"
+    "nacional",
+    "ccaa/an",
+    "local/guadix"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Guadix pendientes; se aplican los de Granada capital."
+   "locales_pendientes": false
   },
   {
    "id": "guimar",
@@ -3923,11 +4168,14 @@
    "partido_judicial": true,
    "n_municipios": 4,
    "poblacion": 60122,
+   "isla": "tenerife",
    "capas": [
-    "provincia/tenerife"
+    "nacional",
+    "ccaa/cn",
+    "insular/tenerife",
+    "local/guimar"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Güímar pendientes; se aplican los de Santa Cruz de Tenerife capital."
+   "locales_pendientes": false
   },
   {
    "id": "haro",
@@ -3944,10 +4192,11 @@
    "n_municipios": 49,
    "poblacion": 31372,
    "capas": [
-    "provincia/la-rioja"
+    "nacional",
+    "ccaa/ri",
+    "local/haro"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Haro pendientes; se aplican los de La Rioja capital."
+   "locales_pendientes": false
   },
   {
    "id": "hellin",
@@ -3964,10 +4213,11 @@
    "n_municipios": 13,
    "poblacion": 54132,
    "capas": [
-    "provincia/albacete"
+    "nacional",
+    "ccaa/cm",
+    "local/hellin"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Hellín pendientes; se aplican los de Albacete capital."
+   "locales_pendientes": false
   },
   {
    "id": "herrera-del-duque",
@@ -3984,10 +4234,11 @@
    "n_municipios": 17,
    "poblacion": 17835,
    "capas": [
-    "provincia/badajoz"
+    "nacional",
+    "ccaa/ex",
+    "local/herrera-del-duque"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Herrera del Duque pendientes; se aplican los de Badajoz capital."
+   "locales_pendientes": false
   },
   {
    "id": "huercal-overa",
@@ -4004,10 +4255,11 @@
    "n_municipios": 8,
    "poblacion": 58530,
    "capas": [
-    "provincia/almeria"
+    "nacional",
+    "ccaa/an",
+    "local/huercal-overa"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Huércal-Overa pendientes; se aplican los de Almería capital."
+   "locales_pendientes": false
   },
   {
    "id": "huescar",
@@ -4024,10 +4276,11 @@
    "n_municipios": 6,
    "poblacion": 14902,
    "capas": [
-    "provincia/granada"
+    "nacional",
+    "ccaa/an",
+    "local/huescar"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Huéscar pendientes; se aplican los de Granada capital."
+   "locales_pendientes": false
   },
   {
    "id": "ibi",
@@ -4044,10 +4297,11 @@
    "n_municipios": 4,
    "poblacion": 46279,
    "capas": [
-    "provincia/alicante"
+    "nacional",
+    "ccaa/vc",
+    "local/ibi"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Ibi pendientes; se aplican los de Alicante/Alacant capital."
+   "locales_pendientes": false
   },
   {
    "id": "icod-de-los-vinos",
@@ -4063,11 +4317,14 @@
    "partido_judicial": true,
    "n_municipios": 6,
    "poblacion": 47478,
+   "isla": "tenerife",
    "capas": [
-    "provincia/tenerife"
+    "nacional",
+    "ccaa/cn",
+    "insular/tenerife",
+    "local/icod-de-los-vinos"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Icod de los Vinos pendientes; se aplican los de Santa Cruz de Tenerife capital."
+   "locales_pendientes": false
   },
   {
    "id": "igualada",
@@ -4084,10 +4341,11 @@
    "n_municipios": 32,
    "poblacion": 119569,
    "capas": [
-    "provincia/barcelona"
+    "nacional",
+    "ccaa/ct",
+    "local/igualada"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Igualada pendientes; se aplican los de Barcelona capital."
+   "locales_pendientes": false
   },
   {
    "id": "illescas",
@@ -4104,10 +4362,11 @@
    "n_municipios": 27,
    "poblacion": 183445,
    "capas": [
-    "provincia/toledo"
+    "nacional",
+    "ccaa/cm",
+    "local/illescas"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Illescas pendientes; se aplican los de Toledo capital."
+   "locales_pendientes": false
   },
   {
    "id": "inca",
@@ -4124,10 +4383,11 @@
    "n_municipios": 21,
    "poblacion": 167008,
    "capas": [
-    "provincia/baleares"
+    "nacional",
+    "ccaa/ib",
+    "local/inca"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Inca pendientes; se aplican los de Illes Balears capital."
+   "locales_pendientes": false
   },
   {
    "id": "irun",
@@ -4167,10 +4427,11 @@
    "n_municipios": 26,
    "poblacion": 33312,
    "capas": [
-    "provincia/huesca"
+    "nacional",
+    "ccaa/ar",
+    "local/jaca"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Jaca pendientes; se aplican los de Huesca capital."
+   "locales_pendientes": false
   },
   {
    "id": "jerez-de-la-frontera",
@@ -4187,10 +4448,11 @@
    "n_municipios": 2,
    "poblacion": 218053,
    "capas": [
-    "provincia/cadiz"
+    "nacional",
+    "ccaa/an",
+    "local/jerez-de-la-frontera"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Jerez de la Frontera pendientes; se aplican los de Cádiz capital."
+   "locales_pendientes": false
   },
   {
    "id": "jerez-de-los-caballeros",
@@ -4207,10 +4469,11 @@
    "n_municipios": 9,
    "poblacion": 25545,
    "capas": [
-    "provincia/badajoz"
+    "nacional",
+    "ccaa/ex",
+    "local/jerez-de-los-caballeros"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Jerez de los Caballeros pendientes; se aplican los de Badajoz capital."
+   "locales_pendientes": false
   },
   {
    "id": "jumilla",
@@ -4227,10 +4490,11 @@
    "n_municipios": 1,
    "poblacion": 27574,
    "capas": [
-    "provincia/murcia"
+    "nacional",
+    "ccaa/mc",
+    "local/jumilla"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Jumilla pendientes; se aplican los de Murcia capital."
+   "locales_pendientes": false
   },
   {
    "id": "l-hospitalet-de-llobregat",
@@ -4247,10 +4511,11 @@
    "n_municipios": 1,
    "poblacion": 289510,
    "capas": [
-    "provincia/barcelona"
+    "nacional",
+    "ccaa/ct",
+    "local/l-hospitalet-de-llobregat"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de L'Hospitalet de Llobregat pendientes; se aplican los de Barcelona capital."
+   "locales_pendientes": false
   },
   {
    "id": "la-almunia-de-dona-godina",
@@ -4267,10 +4532,11 @@
    "n_municipios": 38,
    "poblacion": 40651,
    "capas": [
-    "provincia/zaragoza"
+    "nacional",
+    "ccaa/ar",
+    "local/la-almunia-de-dona-godina"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de La Almunia de Doña Godina pendientes; se aplican los de Zaragoza capital."
+   "locales_pendientes": false
   },
   {
    "id": "la-baneza",
@@ -4287,10 +4553,11 @@
    "n_municipios": 33,
    "poblacion": 29348,
    "capas": [
-    "provincia/leon"
+    "nacional",
+    "ccaa/cl",
+    "local/la-baneza"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de La Bañeza pendientes; se aplican los de León capital."
+   "locales_pendientes": false
   },
   {
    "id": "la-bisbal-d-emporda",
@@ -4307,10 +4574,11 @@
    "n_municipios": 32,
    "poblacion": 90686,
    "capas": [
-    "provincia/girona"
+    "nacional",
+    "ccaa/ct",
+    "local/la-bisbal-d-emporda"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de La Bisbal D'Empordà pendientes; se aplican los de Girona capital."
+   "locales_pendientes": false
   },
   {
    "id": "la-carolina",
@@ -4327,10 +4595,11 @@
    "n_municipios": 9,
    "poblacion": 32073,
    "capas": [
-    "provincia/jaen"
+    "nacional",
+    "ccaa/an",
+    "local/la-carolina"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de La Carolina pendientes; se aplican los de Jaén capital."
+   "locales_pendientes": false
   },
   {
    "id": "la-linea-de-la-concepcion",
@@ -4347,10 +4616,11 @@
    "n_municipios": 1,
    "poblacion": 64499,
    "capas": [
-    "provincia/cadiz"
+    "nacional",
+    "ccaa/an",
+    "local/la-linea-de-la-concepcion"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de La Línea de la Concepción pendientes; se aplican los de Cádiz capital."
+   "locales_pendientes": false
   },
   {
    "id": "la-orotava",
@@ -4366,11 +4636,14 @@
    "partido_judicial": true,
    "n_municipios": 6,
    "poblacion": 119334,
+   "isla": "tenerife",
    "capas": [
-    "provincia/tenerife"
+    "nacional",
+    "ccaa/cn",
+    "insular/tenerife",
+    "local/la-orotava"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de La Orotava pendientes; se aplican los de Santa Cruz de Tenerife capital."
+   "locales_pendientes": false
   },
   {
    "id": "la-palma-del-condado",
@@ -4387,10 +4660,11 @@
    "n_municipios": 11,
    "poblacion": 77775,
    "capas": [
-    "provincia/huelva"
+    "nacional",
+    "ccaa/an",
+    "local/la-palma-del-condado"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de La Palma del Condado pendientes; se aplican los de Huelva capital."
+   "locales_pendientes": false
   },
   {
    "id": "la-roda",
@@ -4407,10 +4681,11 @@
    "n_municipios": 8,
    "poblacion": 30590,
    "capas": [
-    "provincia/albacete"
+    "nacional",
+    "ccaa/cm",
+    "local/la-roda"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de La Roda pendientes; se aplican los de Albacete capital."
+   "locales_pendientes": false
   },
   {
    "id": "la-seu-d-urgell",
@@ -4427,10 +4702,11 @@
    "n_municipios": 22,
    "poblacion": 22848,
    "capas": [
-    "provincia/lleida"
+    "nacional",
+    "ccaa/ct",
+    "local/la-seu-d-urgell"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de La Seu D'Urgell pendientes; se aplican los de Lleida capital."
+   "locales_pendientes": false
   },
   {
    "id": "lalin",
@@ -4447,10 +4723,11 @@
    "n_municipios": 6,
    "poblacion": 39594,
    "capas": [
-    "provincia/pontevedra"
+    "nacional",
+    "ccaa/ga",
+    "local/lalin"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Lalín pendientes; se aplican los de Pontevedra capital."
+   "locales_pendientes": false
   },
   {
    "id": "langreo",
@@ -4467,10 +4744,11 @@
    "n_municipios": 1,
    "poblacion": 38612,
    "capas": [
-    "provincia/asturias"
+    "nacional",
+    "ccaa/as",
+    "local/langreo"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Langreo pendientes; se aplican los de Asturias capital."
+   "locales_pendientes": false
   },
   {
    "id": "laredo",
@@ -4487,10 +4765,11 @@
    "n_municipios": 11,
    "poblacion": 36382,
    "capas": [
-    "provincia/cantabria"
+    "nacional",
+    "ccaa/cb",
+    "local/laredo"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Laredo pendientes; se aplican los de Cantabria capital."
+   "locales_pendientes": false
   },
   {
    "id": "laviana",
@@ -4507,10 +4786,11 @@
    "n_municipios": 4,
    "poblacion": 30158,
    "capas": [
-    "provincia/asturias"
+    "nacional",
+    "ccaa/as",
+    "local/laviana"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Laviana pendientes; se aplican los de Asturias capital."
+   "locales_pendientes": false
   },
   {
    "id": "lebrija",
@@ -4527,10 +4807,11 @@
    "n_municipios": 3,
    "poblacion": 52959,
    "capas": [
-    "provincia/sevilla"
+    "nacional",
+    "ccaa/an",
+    "local/lebrija"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Lebrija pendientes; se aplican los de Sevilla capital."
+   "locales_pendientes": false
   },
   {
    "id": "leganes",
@@ -4547,10 +4828,11 @@
    "n_municipios": 1,
    "poblacion": 195734,
    "capas": [
-    "provincia/madrid"
+    "nacional",
+    "ccaa/md",
+    "local/leganes"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Leganés pendientes; se aplican los de Madrid capital."
+   "locales_pendientes": false
   },
   {
    "id": "lena",
@@ -4567,10 +4849,11 @@
    "n_municipios": 3,
    "poblacion": 21535,
    "capas": [
-    "provincia/asturias"
+    "nacional",
+    "ccaa/as",
+    "local/lena"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Lena pendientes; se aplican los de Asturias capital."
+   "locales_pendientes": false
   },
   {
    "id": "lerma",
@@ -4587,10 +4870,11 @@
    "n_municipios": 44,
    "poblacion": 8736,
    "capas": [
-    "provincia/burgos"
+    "nacional",
+    "ccaa/cl",
+    "local/lerma"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Lerma pendientes; se aplican los de Burgos capital."
+   "locales_pendientes": false
   },
   {
    "id": "linares",
@@ -4607,10 +4891,11 @@
    "n_municipios": 4,
    "poblacion": 77073,
    "capas": [
-    "provincia/jaen"
+    "nacional",
+    "ccaa/an",
+    "local/linares"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Linares pendientes; se aplican los de Jaén capital."
+   "locales_pendientes": false
   },
   {
    "id": "llanes",
@@ -4627,10 +4912,11 @@
    "n_municipios": 5,
    "poblacion": 18757,
    "capas": [
-    "provincia/asturias"
+    "nacional",
+    "ccaa/as",
+    "local/llanes"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Llanes pendientes; se aplican los de Asturias capital."
+   "locales_pendientes": false
   },
   {
    "id": "llerena",
@@ -4647,10 +4933,11 @@
    "n_municipios": 20,
    "poblacion": 28129,
    "capas": [
-    "provincia/badajoz"
+    "nacional",
+    "ccaa/ex",
+    "local/llerena"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Llerena pendientes; se aplican los de Badajoz capital."
+   "locales_pendientes": false
   },
   {
    "id": "lliria",
@@ -4667,10 +4954,11 @@
    "n_municipios": 41,
    "poblacion": 195198,
    "capas": [
-    "provincia/valencia"
+    "nacional",
+    "ccaa/vc",
+    "local/lliria"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Lliria pendientes; se aplican los de Valencia/València capital."
+   "locales_pendientes": false
   },
   {
    "id": "logrosan",
@@ -4687,10 +4975,11 @@
    "n_municipios": 12,
    "poblacion": 11667,
    "capas": [
-    "provincia/caceres"
+    "nacional",
+    "ccaa/ex",
+    "local/logrosan"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Logrosán pendientes; se aplican los de Cáceres capital."
+   "locales_pendientes": false
   },
   {
    "id": "loja",
@@ -4707,10 +4996,11 @@
    "n_municipios": 19,
    "poblacion": 70365,
    "capas": [
-    "provincia/granada"
+    "nacional",
+    "ccaa/an",
+    "local/loja"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Loja pendientes; se aplican los de Granada capital."
+   "locales_pendientes": false
   },
   {
    "id": "lora-del-rio",
@@ -4727,10 +5017,11 @@
    "n_municipios": 10,
    "poblacion": 79230,
    "capas": [
-    "provincia/sevilla"
+    "nacional",
+    "ccaa/an",
+    "local/lora-del-rio"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Lora del Rio pendientes; se aplican los de Sevilla capital."
+   "locales_pendientes": false
   },
   {
    "id": "lorca",
@@ -4747,10 +5038,11 @@
    "n_municipios": 3,
    "poblacion": 154786,
    "capas": [
-    "provincia/murcia"
+    "nacional",
+    "ccaa/mc",
+    "local/lorca"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Lorca pendientes; se aplican los de Murcia capital."
+   "locales_pendientes": false
   },
   {
    "id": "los-llanos-de-aridane",
@@ -4766,11 +5058,14 @@
    "partido_judicial": true,
    "n_municipios": 7,
    "poblacion": 42479,
+   "isla": "la-palma",
    "capas": [
-    "provincia/tenerife"
+    "nacional",
+    "ccaa/cn",
+    "insular/la-palma",
+    "local/los-llanos-de-aridane"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Los Llanos de Aridane pendientes; se aplican los de Santa Cruz de Tenerife capital."
+   "locales_pendientes": false
   },
   {
    "id": "lucena",
@@ -4787,10 +5082,11 @@
    "n_municipios": 6,
    "poblacion": 65442,
    "capas": [
-    "provincia/cordoba"
+    "nacional",
+    "ccaa/an",
+    "local/lucena"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Lucena pendientes; se aplican los de Córdoba capital."
+   "locales_pendientes": false
   },
   {
    "id": "majadahonda",
@@ -4807,10 +5103,11 @@
    "n_municipios": 2,
    "poblacion": 172662,
    "capas": [
-    "provincia/madrid"
+    "nacional",
+    "ccaa/md",
+    "local/majadahonda"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Majadahonda pendientes; se aplican los de Madrid capital."
+   "locales_pendientes": false
   },
   {
    "id": "manacor",
@@ -4827,10 +5124,11 @@
    "n_municipios": 15,
    "poblacion": 162260,
    "capas": [
-    "provincia/baleares"
+    "nacional",
+    "ccaa/ib",
+    "local/manacor"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Manacor pendientes; se aplican los de Illes Balears capital."
+   "locales_pendientes": false
   },
   {
    "id": "manresa",
@@ -4847,10 +5145,11 @@
    "n_municipios": 35,
    "poblacion": 198180,
    "capas": [
-    "provincia/barcelona"
+    "nacional",
+    "ccaa/ct",
+    "local/manresa"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Manresa pendientes; se aplican los de Barcelona capital."
+   "locales_pendientes": false
   },
   {
    "id": "manzanares",
@@ -4867,10 +5166,11 @@
    "n_municipios": 6,
    "poblacion": 43150,
    "capas": [
-    "provincia/ciudad-real"
+    "nacional",
+    "ccaa/cm",
+    "local/manzanares"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Manzanares pendientes; se aplican los de Ciudad Real capital."
+   "locales_pendientes": false
   },
   {
    "id": "marbella",
@@ -4887,10 +5187,11 @@
    "n_municipios": 4,
    "poblacion": 175720,
    "capas": [
-    "provincia/malaga"
+    "nacional",
+    "ccaa/an",
+    "local/marbella"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Marbella pendientes; se aplican los de Málaga capital."
+   "locales_pendientes": false
   },
   {
    "id": "marchena",
@@ -4907,10 +5208,11 @@
    "n_municipios": 3,
    "poblacion": 45713,
    "capas": [
-    "provincia/sevilla"
+    "nacional",
+    "ccaa/an",
+    "local/marchena"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Marchena pendientes; se aplican los de Sevilla capital."
+   "locales_pendientes": false
   },
   {
    "id": "martorell",
@@ -4927,10 +5229,11 @@
    "n_municipios": 9,
    "poblacion": 142367,
    "capas": [
-    "provincia/barcelona"
+    "nacional",
+    "ccaa/ct",
+    "local/martorell"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Martorell pendientes; se aplican los de Barcelona capital."
+   "locales_pendientes": false
   },
   {
    "id": "martos",
@@ -4947,10 +5250,11 @@
    "n_municipios": 8,
    "poblacion": 52103,
    "capas": [
-    "provincia/jaen"
+    "nacional",
+    "ccaa/an",
+    "local/martos"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Martos pendientes; se aplican los de Jaén capital."
+   "locales_pendientes": false
   },
   {
    "id": "marin",
@@ -4967,10 +5271,11 @@
    "n_municipios": 2,
    "poblacion": 35827,
    "capas": [
-    "provincia/pontevedra"
+    "nacional",
+    "ccaa/ga",
+    "local/marin"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Marín pendientes; se aplican los de Pontevedra capital."
+   "locales_pendientes": false
   },
   {
    "id": "massamagrell",
@@ -4987,10 +5292,11 @@
    "n_municipios": 8,
    "poblacion": 82013,
    "capas": [
-    "provincia/valencia"
+    "nacional",
+    "ccaa/vc",
+    "local/massamagrell"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Massamagrell pendientes; se aplican los de Valencia/València capital."
+   "locales_pendientes": false
   },
   {
    "id": "mataro",
@@ -5007,10 +5313,11 @@
    "n_municipios": 17,
    "poblacion": 308525,
    "capas": [
-    "provincia/barcelona"
+    "nacional",
+    "ccaa/ct",
+    "local/mataro"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Mataró pendientes; se aplican los de Barcelona capital."
+   "locales_pendientes": false
   },
   {
    "id": "mao",
@@ -5027,10 +5334,11 @@
    "n_municipios": 4,
    "poblacion": 55969,
    "capas": [
-    "provincia/baleares"
+    "nacional",
+    "ccaa/ib",
+    "local/mao"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Maó pendientes; se aplican los de Illes Balears capital."
+   "locales_pendientes": false
   },
   {
    "id": "medina-de-rioseco",
@@ -5047,10 +5355,11 @@
    "n_municipios": 64,
    "poblacion": 16735,
    "capas": [
-    "provincia/valladolid"
+    "nacional",
+    "ccaa/cl",
+    "local/medina-de-rioseco"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Medina de Rioseco pendientes; se aplican los de Valladolid capital."
+   "locales_pendientes": false
   },
   {
    "id": "medina-del-campo",
@@ -5067,10 +5376,11 @@
    "n_municipios": 47,
    "poblacion": 46809,
    "capas": [
-    "provincia/valladolid"
+    "nacional",
+    "ccaa/cl",
+    "local/medina-del-campo"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Medina del Campo pendientes; se aplican los de Valladolid capital."
+   "locales_pendientes": false
   },
   {
    "id": "medio-cudeyo",
@@ -5087,10 +5397,11 @@
    "n_municipios": 20,
    "poblacion": 52218,
    "capas": [
-    "provincia/cantabria"
+    "nacional",
+    "ccaa/cb",
+    "local/medio-cudeyo"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Medio Cudeyo pendientes; se aplican los de Cantabria capital."
+   "locales_pendientes": false
   },
   {
    "id": "mieres",
@@ -5107,10 +5418,11 @@
    "n_municipios": 3,
    "poblacion": 40519,
    "capas": [
-    "provincia/asturias"
+    "nacional",
+    "ccaa/as",
+    "local/mieres"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Mieres pendientes; se aplican los de Asturias capital."
+   "locales_pendientes": false
   },
   {
    "id": "miranda-de-ebro",
@@ -5127,10 +5439,11 @@
    "n_municipios": 14,
    "poblacion": 40050,
    "capas": [
-    "provincia/burgos"
+    "nacional",
+    "ccaa/cl",
+    "local/miranda-de-ebro"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Miranda de Ebro pendientes; se aplican los de Burgos capital."
+   "locales_pendientes": false
   },
   {
    "id": "mislata",
@@ -5147,10 +5460,11 @@
    "n_municipios": 2,
    "poblacion": 79172,
    "capas": [
-    "provincia/valencia"
+    "nacional",
+    "ccaa/vc",
+    "local/mislata"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Mislata pendientes; se aplican los de Valencia/València capital."
+   "locales_pendientes": false
   },
   {
    "id": "moguer",
@@ -5167,10 +5481,11 @@
    "n_municipios": 5,
    "poblacion": 50804,
    "capas": [
-    "provincia/huelva"
+    "nacional",
+    "ccaa/an",
+    "local/moguer"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Moguer pendientes; se aplican los de Huelva capital."
+   "locales_pendientes": false
   },
   {
    "id": "molina-de-aragon",
@@ -5187,10 +5502,11 @@
    "n_municipios": 63,
    "poblacion": 7506,
    "capas": [
-    "provincia/guadalajara"
+    "nacional",
+    "ccaa/cm",
+    "local/molina-de-aragon"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Molina de Aragón pendientes; se aplican los de Guadalajara capital."
+   "locales_pendientes": false
   },
   {
    "id": "molina-de-segura",
@@ -5207,10 +5523,11 @@
    "n_municipios": 6,
    "poblacion": 153508,
    "capas": [
-    "provincia/murcia"
+    "nacional",
+    "ccaa/mc",
+    "local/molina-de-segura"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Molina de Segura pendientes; se aplican los de Murcia capital."
+   "locales_pendientes": false
   },
   {
    "id": "mollet-del-valles",
@@ -5227,10 +5544,11 @@
    "n_municipios": 7,
    "poblacion": 109320,
    "capas": [
-    "provincia/barcelona"
+    "nacional",
+    "ccaa/ct",
+    "local/mollet-del-valles"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Mollet del Vallès pendientes; se aplican los de Barcelona capital."
+   "locales_pendientes": false
   },
   {
    "id": "mondonedo",
@@ -5247,10 +5565,11 @@
    "n_municipios": 11,
    "poblacion": 31173,
    "capas": [
-    "provincia/lugo"
+    "nacional",
+    "ccaa/ga",
+    "local/mondonedo"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Mondoñedo pendientes; se aplican los de Lugo capital."
+   "locales_pendientes": false
   },
   {
    "id": "monforte-de-lemos",
@@ -5267,10 +5586,11 @@
    "n_municipios": 9,
    "poblacion": 34677,
    "capas": [
-    "provincia/lugo"
+    "nacional",
+    "ccaa/ga",
+    "local/monforte-de-lemos"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Monforte de Lemos pendientes; se aplican los de Lugo capital."
+   "locales_pendientes": false
   },
   {
    "id": "montcada-moncada",
@@ -5287,10 +5607,11 @@
    "n_municipios": 12,
    "poblacion": 109493,
    "capas": [
-    "provincia/valencia"
+    "nacional",
+    "ccaa/vc",
+    "local/montcada-moncada"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Montcada/Moncada pendientes; se aplican los de Valencia/València capital."
+   "locales_pendientes": false
   },
   {
    "id": "montijo",
@@ -5307,10 +5628,11 @@
    "n_municipios": 10,
    "poblacion": 36064,
    "capas": [
-    "provincia/badajoz"
+    "nacional",
+    "ccaa/ex",
+    "local/montijo"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Montijo pendientes; se aplican los de Badajoz capital."
+   "locales_pendientes": false
   },
   {
    "id": "montilla",
@@ -5327,10 +5649,11 @@
    "n_municipios": 9,
    "poblacion": 56831,
    "capas": [
-    "provincia/cordoba"
+    "nacional",
+    "ccaa/an",
+    "local/montilla"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Montilla pendientes; se aplican los de Córdoba capital."
+   "locales_pendientes": false
   },
   {
    "id": "montoro",
@@ -5347,10 +5670,11 @@
    "n_municipios": 9,
    "poblacion": 43190,
    "capas": [
-    "provincia/cordoba"
+    "nacional",
+    "ccaa/an",
+    "local/montoro"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Montoro pendientes; se aplican los de Córdoba capital."
+   "locales_pendientes": false
   },
   {
    "id": "monzon",
@@ -5367,10 +5691,11 @@
    "n_municipios": 27,
    "poblacion": 43690,
    "capas": [
-    "provincia/huesca"
+    "nacional",
+    "ccaa/ar",
+    "local/monzon"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Monzón pendientes; se aplican los de Huesca capital."
+   "locales_pendientes": false
   },
   {
    "id": "moron-de-la-frontera",
@@ -5387,10 +5712,11 @@
    "n_municipios": 5,
    "poblacion": 48751,
    "capas": [
-    "provincia/sevilla"
+    "nacional",
+    "ccaa/an",
+    "local/moron-de-la-frontera"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Morón de la Frontera pendientes; se aplican los de Sevilla capital."
+   "locales_pendientes": false
   },
   {
    "id": "motilla-del-palancar",
@@ -5407,10 +5733,11 @@
    "n_municipios": 36,
    "poblacion": 37752,
    "capas": [
-    "provincia/cuenca"
+    "nacional",
+    "ccaa/cm",
+    "local/motilla-del-palancar"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Motilla del Palancar pendientes; se aplican los de Cuenca capital."
+   "locales_pendientes": false
   },
   {
    "id": "motril",
@@ -5427,10 +5754,11 @@
    "n_municipios": 14,
    "poblacion": 100217,
    "capas": [
-    "provincia/granada"
+    "nacional",
+    "ccaa/an",
+    "local/motril"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Motril pendientes; se aplican los de Granada capital."
+   "locales_pendientes": false
   },
   {
    "id": "mula",
@@ -5447,10 +5775,11 @@
    "n_municipios": 5,
    "poblacion": 37521,
    "capas": [
-    "provincia/murcia"
+    "nacional",
+    "ccaa/mc",
+    "local/mula"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Mula pendientes; se aplican los de Murcia capital."
+   "locales_pendientes": false
   },
   {
    "id": "muros",
@@ -5467,10 +5796,11 @@
    "n_municipios": 4,
    "poblacion": 21672,
    "capas": [
-    "provincia/a-coruna"
+    "nacional",
+    "ccaa/ga",
+    "local/muros"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Muros pendientes; se aplican los de A Coruña capital."
+   "locales_pendientes": false
   },
   {
    "id": "merida",
@@ -5487,10 +5817,11 @@
    "n_municipios": 16,
    "poblacion": 84277,
    "capas": [
-    "provincia/badajoz"
+    "nacional",
+    "ccaa/ex",
+    "local/merida"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Mérida pendientes; se aplican los de Badajoz capital."
+   "locales_pendientes": false
   },
   {
    "id": "mostoles",
@@ -5507,10 +5838,11 @@
    "n_municipios": 6,
    "poblacion": 350652,
    "capas": [
-    "provincia/madrid"
+    "nacional",
+    "ccaa/md",
+    "local/mostoles"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Móstoles pendientes; se aplican los de Madrid capital."
+   "locales_pendientes": false
   },
   {
    "id": "navalcarnero",
@@ -5527,10 +5859,11 @@
    "n_municipios": 22,
    "poblacion": 168655,
    "capas": [
-    "provincia/madrid"
+    "nacional",
+    "ccaa/md",
+    "local/navalcarnero"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Navalcarnero pendientes; se aplican los de Madrid capital."
+   "locales_pendientes": false
   },
   {
    "id": "navalmoral-de-la-mata",
@@ -5547,10 +5880,11 @@
    "n_municipios": 44,
    "poblacion": 55010,
    "capas": [
-    "provincia/caceres"
+    "nacional",
+    "ccaa/ex",
+    "local/navalmoral-de-la-mata"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Navalmoral de la Mata pendientes; se aplican los de Cáceres capital."
+   "locales_pendientes": false
   },
   {
    "id": "negreira",
@@ -5567,10 +5901,11 @@
    "n_municipios": 4,
    "poblacion": 27842,
    "capas": [
-    "provincia/a-coruna"
+    "nacional",
+    "ccaa/ga",
+    "local/negreira"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Negreira pendientes; se aplican los de A Coruña capital."
+   "locales_pendientes": false
   },
   {
    "id": "noia",
@@ -5587,10 +5922,11 @@
    "n_municipios": 3,
    "poblacion": 26239,
    "capas": [
-    "provincia/a-coruna"
+    "nacional",
+    "ccaa/ga",
+    "local/noia"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Noia pendientes; se aplican los de A Coruña capital."
+   "locales_pendientes": false
   },
   {
    "id": "novelda",
@@ -5607,10 +5943,11 @@
    "n_municipios": 10,
    "poblacion": 93279,
    "capas": [
-    "provincia/alicante"
+    "nacional",
+    "ccaa/vc",
+    "local/novelda"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Novelda pendientes; se aplican los de Alicante/Alacant capital."
+   "locales_pendientes": false
   },
   {
    "id": "nules",
@@ -5627,10 +5964,11 @@
    "n_municipios": 30,
    "poblacion": 113693,
    "capas": [
-    "provincia/castellon"
+    "nacional",
+    "ccaa/vc",
+    "local/nules"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Nules pendientes; se aplican los de Castellón/Castelló capital."
+   "locales_pendientes": false
   },
   {
    "id": "o-barco-de-valdeorras",
@@ -5647,10 +5985,11 @@
    "n_municipios": 7,
    "poblacion": 23830,
    "capas": [
-    "provincia/ourense"
+    "nacional",
+    "ccaa/ga",
+    "local/o-barco-de-valdeorras"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de O Barco de Valdeorras pendientes; se aplican los de Ourense capital."
+   "locales_pendientes": false
   },
   {
    "id": "o-carballino",
@@ -5667,10 +6006,11 @@
    "n_municipios": 9,
    "poblacion": 26269,
    "capas": [
-    "provincia/ourense"
+    "nacional",
+    "ccaa/ga",
+    "local/o-carballino"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de O Carballiño pendientes; se aplican los de Ourense capital."
+   "locales_pendientes": false
   },
   {
    "id": "o-porrino",
@@ -5687,10 +6027,11 @@
    "n_municipios": 3,
    "poblacion": 45607,
    "capas": [
-    "provincia/pontevedra"
+    "nacional",
+    "ccaa/ga",
+    "local/o-porrino"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de O Porriño pendientes; se aplican los de Pontevedra capital."
+   "locales_pendientes": false
   },
   {
    "id": "ocana",
@@ -5707,10 +6048,11 @@
    "n_municipios": 16,
    "poblacion": 55280,
    "capas": [
-    "provincia/toledo"
+    "nacional",
+    "ccaa/cm",
+    "local/ocana"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Ocaña pendientes; se aplican los de Toledo capital."
+   "locales_pendientes": false
   },
   {
    "id": "olivenza",
@@ -5727,10 +6069,11 @@
    "n_municipios": 9,
    "poblacion": 26949,
    "capas": [
-    "provincia/badajoz"
+    "nacional",
+    "ccaa/ex",
+    "local/olivenza"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Olivenza pendientes; se aplican los de Badajoz capital."
+   "locales_pendientes": false
   },
   {
    "id": "olot",
@@ -5747,10 +6090,11 @@
    "n_municipios": 21,
    "poblacion": 63411,
    "capas": [
-    "provincia/girona"
+    "nacional",
+    "ccaa/ct",
+    "local/olot"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Olot pendientes; se aplican los de Girona capital."
+   "locales_pendientes": false
   },
   {
    "id": "ontinyent",
@@ -5767,10 +6111,11 @@
    "n_municipios": 34,
    "poblacion": 89792,
    "capas": [
-    "provincia/valencia"
+    "nacional",
+    "ccaa/vc",
+    "local/ontinyent"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Ontinyent pendientes; se aplican los de Valencia/València capital."
+   "locales_pendientes": false
   },
   {
    "id": "ordes",
@@ -5787,10 +6132,11 @@
    "n_municipios": 7,
    "poblacion": 35068,
    "capas": [
-    "provincia/a-coruna"
+    "nacional",
+    "ccaa/ga",
+    "local/ordes"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Ordes pendientes; se aplican los de A Coruña capital."
+   "locales_pendientes": false
   },
   {
    "id": "orgaz",
@@ -5807,10 +6153,11 @@
    "n_municipios": 19,
    "poblacion": 66733,
    "capas": [
-    "provincia/toledo"
+    "nacional",
+    "ccaa/cm",
+    "local/orgaz"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Orgaz pendientes; se aplican los de Toledo capital."
+   "locales_pendientes": false
   },
   {
    "id": "orihuela",
@@ -5827,10 +6174,11 @@
    "n_municipios": 21,
    "poblacion": 247871,
    "capas": [
-    "provincia/alicante"
+    "nacional",
+    "ccaa/vc",
+    "local/orihuela"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Orihuela pendientes; se aplican los de Alicante/Alacant capital."
+   "locales_pendientes": false
   },
   {
    "id": "ortigueira",
@@ -5847,10 +6195,11 @@
    "n_municipios": 6,
    "poblacion": 19010,
    "capas": [
-    "provincia/a-coruna"
+    "nacional",
+    "ccaa/ga",
+    "local/ortigueira"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Ortigueira pendientes; se aplican los de A Coruña capital."
+   "locales_pendientes": false
   },
   {
    "id": "osuna",
@@ -5867,10 +6216,11 @@
    "n_municipios": 8,
    "poblacion": 37621,
    "capas": [
-    "provincia/sevilla"
+    "nacional",
+    "ccaa/an",
+    "local/osuna"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Osuna pendientes; se aplican los de Sevilla capital."
+   "locales_pendientes": false
   },
   {
    "id": "padron",
@@ -5887,10 +6237,11 @@
    "n_municipios": 4,
    "poblacion": 26039,
    "capas": [
-    "provincia/a-coruna"
+    "nacional",
+    "ccaa/ga",
+    "local/padron"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Padrón pendientes; se aplican los de A Coruña capital."
+   "locales_pendientes": false
   },
   {
    "id": "parla",
@@ -5907,10 +6258,11 @@
    "n_municipios": 2,
    "poblacion": 194122,
    "capas": [
-    "provincia/madrid"
+    "nacional",
+    "ccaa/md",
+    "local/parla"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Parla pendientes; se aplican los de Madrid capital."
+   "locales_pendientes": false
   },
   {
    "id": "paterna",
@@ -5927,10 +6279,11 @@
    "n_municipios": 4,
    "poblacion": 142043,
    "capas": [
-    "provincia/valencia"
+    "nacional",
+    "ccaa/vc",
+    "local/paterna"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Paterna pendientes; se aplican los de Valencia/València capital."
+   "locales_pendientes": false
   },
   {
    "id": "penaranda-de-bracamonte",
@@ -5947,10 +6300,11 @@
    "n_municipios": 33,
    "poblacion": 17283,
    "capas": [
-    "provincia/salamanca"
+    "nacional",
+    "ccaa/cl",
+    "local/penaranda-de-bracamonte"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Peñaranda de Bracamonte pendientes; se aplican los de Salamanca capital."
+   "locales_pendientes": false
   },
   {
    "id": "penarroya-pueblonuevo",
@@ -5967,10 +6321,11 @@
    "n_municipios": 11,
    "poblacion": 32082,
    "capas": [
-    "provincia/cordoba"
+    "nacional",
+    "ccaa/an",
+    "local/penarroya-pueblonuevo"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Peñarroya-Pueblonuevo pendientes; se aplican los de Córdoba capital."
+   "locales_pendientes": false
   },
   {
    "id": "picassent",
@@ -5987,10 +6342,11 @@
    "n_municipios": 9,
    "poblacion": 59992,
    "capas": [
-    "provincia/valencia"
+    "nacional",
+    "ccaa/vc",
+    "local/picassent"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Picassent pendientes; se aplican los de Valencia/València capital."
+   "locales_pendientes": false
   },
   {
    "id": "piedrahita",
@@ -6007,10 +6363,11 @@
    "n_municipios": 64,
    "poblacion": 10449,
    "capas": [
-    "provincia/avila"
+    "nacional",
+    "ccaa/cl",
+    "local/piedrahita"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Piedrahita pendientes; se aplican los de Ávila capital."
+   "locales_pendientes": false
   },
   {
    "id": "pilona",
@@ -6027,10 +6384,11 @@
    "n_municipios": 3,
    "poblacion": 13054,
    "capas": [
-    "provincia/asturias"
+    "nacional",
+    "ccaa/as",
+    "local/pilona"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Piloña pendientes; se aplican los de Asturias capital."
+   "locales_pendientes": false
   },
   {
    "id": "plasencia",
@@ -6047,10 +6405,11 @@
    "n_municipios": 60,
    "poblacion": 99698,
    "capas": [
-    "provincia/caceres"
+    "nacional",
+    "ccaa/ex",
+    "local/plasencia"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Plasencia pendientes; se aplican los de Cáceres capital."
+   "locales_pendientes": false
   },
   {
    "id": "ponferrada",
@@ -6067,10 +6426,11 @@
    "n_municipios": 37,
    "poblacion": 117215,
    "capas": [
-    "provincia/leon"
+    "nacional",
+    "ccaa/cl",
+    "local/ponferrada"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Ponferrada pendientes; se aplican los de León capital."
+   "locales_pendientes": false
   },
   {
    "id": "ponteareas",
@@ -6087,10 +6447,11 @@
    "n_municipios": 9,
    "poblacion": 54669,
    "capas": [
-    "provincia/pontevedra"
+    "nacional",
+    "ccaa/ga",
+    "local/ponteareas"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Ponteareas pendientes; se aplican los de Pontevedra capital."
+   "locales_pendientes": false
   },
   {
    "id": "posadas",
@@ -6107,10 +6468,11 @@
    "n_municipios": 8,
    "poblacion": 67182,
    "capas": [
-    "provincia/cordoba"
+    "nacional",
+    "ccaa/an",
+    "local/posadas"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Posadas pendientes; se aplican los de Córdoba capital."
+   "locales_pendientes": false
   },
   {
    "id": "pozoblanco",
@@ -6127,10 +6489,11 @@
    "n_municipios": 13,
    "poblacion": 39392,
    "capas": [
-    "provincia/cordoba"
+    "nacional",
+    "ccaa/an",
+    "local/pozoblanco"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Pozoblanco pendientes; se aplican los de Córdoba capital."
+   "locales_pendientes": false
   },
   {
    "id": "pozuelo-de-alarcon",
@@ -6147,10 +6510,11 @@
    "n_municipios": 1,
    "poblacion": 89770,
    "capas": [
-    "provincia/madrid"
+    "nacional",
+    "ccaa/md",
+    "local/pozuelo-de-alarcon"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Pozuelo de Alarcón pendientes; se aplican los de Madrid capital."
+   "locales_pendientes": false
   },
   {
    "id": "pravia",
@@ -6167,10 +6531,11 @@
    "n_municipios": 5,
    "poblacion": 20317,
    "capas": [
-    "provincia/asturias"
+    "nacional",
+    "ccaa/as",
+    "local/pravia"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Pravia pendientes; se aplican los de Asturias capital."
+   "locales_pendientes": false
   },
   {
    "id": "priego-de-cordoba",
@@ -6187,10 +6552,11 @@
    "n_municipios": 4,
    "poblacion": 27034,
    "capas": [
-    "provincia/cordoba"
+    "nacional",
+    "ccaa/an",
+    "local/priego-de-cordoba"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Priego de Córdoba pendientes; se aplican los de Córdoba capital."
+   "locales_pendientes": false
   },
   {
    "id": "puebla-de-sanabria",
@@ -6207,10 +6573,11 @@
    "n_municipios": 26,
    "poblacion": 7606,
    "capas": [
-    "provincia/zamora"
+    "nacional",
+    "ccaa/cl",
+    "local/puebla-de-sanabria"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Puebla de Sanabria pendientes; se aplican los de Zamora capital."
+   "locales_pendientes": false
   },
   {
    "id": "puente-genil",
@@ -6227,10 +6594,11 @@
    "n_municipios": 1,
    "poblacion": 29963,
    "capas": [
-    "provincia/cordoba"
+    "nacional",
+    "ccaa/an",
+    "local/puente-genil"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Puente Genil pendientes; se aplican los de Córdoba capital."
+   "locales_pendientes": false
   },
   {
    "id": "puerto-de-la-cruz",
@@ -6246,11 +6614,14 @@
    "partido_judicial": true,
    "n_municipios": 1,
    "poblacion": 31137,
+   "isla": "tenerife",
    "capas": [
-    "provincia/tenerife"
+    "nacional",
+    "ccaa/cn",
+    "insular/tenerife",
+    "local/puerto-de-la-cruz"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Puerto de la Cruz pendientes; se aplican los de Santa Cruz de Tenerife capital."
+   "locales_pendientes": false
   },
   {
    "id": "puerto-del-rosario",
@@ -6266,11 +6637,14 @@
    "partido_judicial": true,
    "n_municipios": 6,
    "poblacion": 129541,
+   "isla": "fuerteventura",
    "capas": [
-    "provincia/las-palmas"
+    "nacional",
+    "ccaa/cn",
+    "insular/fuerteventura",
+    "local/puerto-del-rosario"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Puerto del Rosario pendientes; se aplican los de Las Palmas capital."
+   "locales_pendientes": false
   },
   {
    "id": "puerto-real",
@@ -6287,10 +6661,11 @@
    "n_municipios": 1,
    "poblacion": 42527,
    "capas": [
-    "provincia/cadiz"
+    "nacional",
+    "ccaa/an",
+    "local/puerto-real"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Puerto Real pendientes; se aplican los de Cádiz capital."
+   "locales_pendientes": false
   },
   {
    "id": "puertollano",
@@ -6307,10 +6682,11 @@
    "n_municipios": 18,
    "poblacion": 66853,
    "capas": [
-    "provincia/ciudad-real"
+    "nacional",
+    "ccaa/cm",
+    "local/puertollano"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Puertollano pendientes; se aplican los de Ciudad Real capital."
+   "locales_pendientes": false
   },
   {
    "id": "puigcerda",
@@ -6327,10 +6703,11 @@
    "n_municipios": 11,
    "poblacion": 16275,
    "capas": [
-    "provincia/girona"
+    "nacional",
+    "ccaa/ct",
+    "local/puigcerda"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Puigcerdà pendientes; se aplican los de Girona capital."
+   "locales_pendientes": false
   },
   {
    "id": "purchena",
@@ -6347,10 +6724,11 @@
    "n_municipios": 21,
    "poblacion": 29196,
    "capas": [
-    "provincia/almeria"
+    "nacional",
+    "ccaa/an",
+    "local/purchena"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Purchena pendientes; se aplican los de Almería capital."
+   "locales_pendientes": false
   },
   {
    "id": "quart-de-poblet",
@@ -6367,10 +6745,11 @@
    "n_municipios": 2,
    "poblacion": 59576,
    "capas": [
-    "provincia/valencia"
+    "nacional",
+    "ccaa/vc",
+    "local/quart-de-poblet"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Quart de Poblet pendientes; se aplican los de Valencia/València capital."
+   "locales_pendientes": false
   },
   {
    "id": "quintanar-de-la-orden",
@@ -6387,10 +6766,11 @@
    "n_municipios": 11,
    "poblacion": 45745,
    "capas": [
-    "provincia/toledo"
+    "nacional",
+    "ccaa/cm",
+    "local/quintanar-de-la-orden"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Quintanar de la Orden pendientes; se aplican los de Toledo capital."
+   "locales_pendientes": false
   },
   {
    "id": "redondela",
@@ -6407,10 +6787,11 @@
    "n_municipios": 4,
    "poblacion": 41123,
    "capas": [
-    "provincia/pontevedra"
+    "nacional",
+    "ccaa/ga",
+    "local/redondela"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Redondela pendientes; se aplican los de Pontevedra capital."
+   "locales_pendientes": false
   },
   {
    "id": "reinosa",
@@ -6427,10 +6808,11 @@
    "n_municipios": 11,
    "poblacion": 17443,
    "capas": [
-    "provincia/cantabria"
+    "nacional",
+    "ccaa/cb",
+    "local/reinosa"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Reinosa pendientes; se aplican los de Cantabria capital."
+   "locales_pendientes": false
   },
   {
    "id": "requena",
@@ -6447,10 +6829,11 @@
    "n_municipios": 27,
    "poblacion": 104405,
    "capas": [
-    "provincia/valencia"
+    "nacional",
+    "ccaa/vc",
+    "local/requena"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Requena pendientes; se aplican los de Valencia/València capital."
+   "locales_pendientes": false
   },
   {
    "id": "reus",
@@ -6467,10 +6850,11 @@
    "n_municipios": 28,
    "poblacion": 206986,
    "capas": [
-    "provincia/tarragona"
+    "nacional",
+    "ccaa/ct",
+    "local/reus"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Reus pendientes; se aplican los de Tarragona capital."
+   "locales_pendientes": false
   },
   {
    "id": "ribadavia",
@@ -6487,10 +6871,11 @@
    "n_municipios": 11,
    "poblacion": 15534,
    "capas": [
-    "provincia/ourense"
+    "nacional",
+    "ccaa/ga",
+    "local/ribadavia"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Ribadavia pendientes; se aplican los de Ourense capital."
+   "locales_pendientes": false
   },
   {
    "id": "ribeira",
@@ -6507,10 +6892,11 @@
    "n_municipios": 3,
    "poblacion": 55195,
    "capas": [
-    "provincia/a-coruna"
+    "nacional",
+    "ccaa/ga",
+    "local/ribeira"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Ribeira pendientes; se aplican los de A Coruña capital."
+   "locales_pendientes": false
   },
   {
    "id": "ripoll",
@@ -6527,10 +6913,11 @@
    "n_municipios": 20,
    "poblacion": 25958,
    "capas": [
-    "provincia/girona"
+    "nacional",
+    "ccaa/ct",
+    "local/ripoll"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Ripoll pendientes; se aplican los de Girona capital."
+   "locales_pendientes": false
   },
   {
    "id": "ronda",
@@ -6547,10 +6934,11 @@
    "n_municipios": 25,
    "poblacion": 54901,
    "capas": [
-    "provincia/malaga"
+    "nacional",
+    "ccaa/an",
+    "local/ronda"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Ronda pendientes; se aplican los de Málaga capital."
+   "locales_pendientes": false
   },
   {
    "id": "roquetas-de-mar",
@@ -6567,10 +6955,11 @@
    "n_municipios": 1,
    "poblacion": 111240,
    "capas": [
-    "provincia/almeria"
+    "nacional",
+    "ccaa/an",
+    "local/roquetas-de-mar"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Roquetas de Mar pendientes; se aplican los de Almería capital."
+   "locales_pendientes": false
   },
   {
    "id": "rota",
@@ -6587,10 +6976,11 @@
    "n_municipios": 1,
    "poblacion": 29289,
    "capas": [
-    "provincia/cadiz"
+    "nacional",
+    "ccaa/an",
+    "local/rota"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Rota pendientes; se aplican los de Cádiz capital."
+   "locales_pendientes": false
   },
   {
    "id": "rubi",
@@ -6607,10 +6997,11 @@
    "n_municipios": 3,
    "poblacion": 193867,
    "capas": [
-    "provincia/barcelona"
+    "nacional",
+    "ccaa/ct",
+    "local/rubi"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Rubí pendientes; se aplican los de Barcelona capital."
+   "locales_pendientes": false
   },
   {
    "id": "sabadell",
@@ -6627,10 +7018,11 @@
    "n_municipios": 9,
    "poblacion": 333630,
    "capas": [
-    "provincia/barcelona"
+    "nacional",
+    "ccaa/ct",
+    "local/sabadell"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Sabadell pendientes; se aplican los de Barcelona capital."
+   "locales_pendientes": false
   },
   {
    "id": "sagunto-sagunt",
@@ -6647,10 +7039,11 @@
    "n_municipios": 16,
    "poblacion": 102642,
    "capas": [
-    "provincia/valencia"
+    "nacional",
+    "ccaa/vc",
+    "local/sagunto-sagunt"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Sagunto/Sagunt pendientes; se aplican los de Valencia/València capital."
+   "locales_pendientes": false
   },
   {
    "id": "sahagun",
@@ -6667,10 +7060,11 @@
    "n_municipios": 20,
    "poblacion": 6888,
    "capas": [
-    "provincia/leon"
+    "nacional",
+    "ccaa/cl",
+    "local/sahagun"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Sahagún pendientes; se aplican los de León capital."
+   "locales_pendientes": false
   },
   {
    "id": "salas-de-los-infantes",
@@ -6687,10 +7081,11 @@
    "n_municipios": 48,
    "poblacion": 9888,
    "capas": [
-    "provincia/burgos"
+    "nacional",
+    "ccaa/cl",
+    "local/salas-de-los-infantes"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Salas de los Infantes pendientes; se aplican los de Burgos capital."
+   "locales_pendientes": false
   },
   {
    "id": "san-bartolome-de-tirajana",
@@ -6706,11 +7101,14 @@
    "partido_judicial": true,
    "n_municipios": 3,
    "poblacion": 154047,
+   "isla": "gran-canaria",
    "capas": [
-    "provincia/las-palmas"
+    "nacional",
+    "ccaa/cn",
+    "insular/gran-canaria",
+    "local/san-bartolome-de-tirajana"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de San Bartolomé de Tirajana pendientes; se aplican los de Las Palmas capital."
+   "locales_pendientes": false
   },
   {
    "id": "san-clemente",
@@ -6727,10 +7125,11 @@
    "n_municipios": 27,
    "poblacion": 36476,
    "capas": [
-    "provincia/cuenca"
+    "nacional",
+    "ccaa/cm",
+    "local/san-clemente"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de San Clemente pendientes; se aplican los de Cuenca capital."
+   "locales_pendientes": false
   },
   {
    "id": "san-cristobal-de-la-laguna",
@@ -6746,11 +7145,14 @@
    "partido_judicial": true,
    "n_municipios": 4,
    "poblacion": 206562,
+   "isla": "tenerife",
    "capas": [
-    "provincia/tenerife"
+    "nacional",
+    "ccaa/cn",
+    "insular/tenerife",
+    "local/san-cristobal-de-la-laguna"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de San Cristóbal de la Laguna pendientes; se aplican los de Santa Cruz de Tenerife capital."
+   "locales_pendientes": false
   },
   {
    "id": "san-fernando",
@@ -6767,10 +7169,11 @@
    "n_municipios": 1,
    "poblacion": 93338,
    "capas": [
-    "provincia/cadiz"
+    "nacional",
+    "ccaa/an",
+    "local/san-fernando"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de San Fernando pendientes; se aplican los de Cádiz capital."
+   "locales_pendientes": false
   },
   {
    "id": "san-javier",
@@ -6787,10 +7190,11 @@
    "n_municipios": 4,
    "poblacion": 128085,
    "capas": [
-    "provincia/murcia"
+    "nacional",
+    "ccaa/mc",
+    "local/san-javier"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de San Javier pendientes; se aplican los de Murcia capital."
+   "locales_pendientes": false
   },
   {
    "id": "san-lorenzo-de-el-escorial",
@@ -6807,10 +7211,11 @@
    "n_municipios": 12,
    "poblacion": 94883,
    "capas": [
-    "provincia/madrid"
+    "nacional",
+    "ccaa/md",
+    "local/san-lorenzo-de-el-escorial"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de San Lorenzo de el Escorial pendientes; se aplican los de Madrid capital."
+   "locales_pendientes": false
   },
   {
    "id": "san-roque",
@@ -6827,10 +7232,11 @@
    "n_municipios": 4,
    "poblacion": 46748,
    "capas": [
-    "provincia/cadiz"
+    "nacional",
+    "ccaa/an",
+    "local/san-roque"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de San Roque pendientes; se aplican los de Cádiz capital."
+   "locales_pendientes": false
   },
   {
    "id": "san-sebastian-de-la-gomera",
@@ -6846,11 +7252,14 @@
    "partido_judicial": true,
    "n_municipios": 6,
    "poblacion": 22442,
+   "isla": "la-gomera",
    "capas": [
-    "provincia/tenerife"
+    "nacional",
+    "ccaa/cn",
+    "insular/la-gomera",
+    "local/san-sebastian-de-la-gomera"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de San Sebastián de la Gomera pendientes; se aplican los de Santa Cruz de Tenerife capital."
+   "locales_pendientes": false
   },
   {
    "id": "san-vicente-de-la-barquera",
@@ -6867,10 +7276,11 @@
    "n_municipios": 19,
    "poblacion": 20408,
    "capas": [
-    "provincia/cantabria"
+    "nacional",
+    "ccaa/cb",
+    "local/san-vicente-de-la-barquera"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de San Vicente de la Barquera pendientes; se aplican los de Cantabria capital."
+   "locales_pendientes": false
   },
   {
    "id": "san-vicente-del-raspeig",
@@ -6887,10 +7297,11 @@
    "n_municipios": 6,
    "poblacion": 102267,
    "capas": [
-    "provincia/alicante"
+    "nacional",
+    "ccaa/vc",
+    "local/san-vicente-del-raspeig"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de San Vicente del Raspeig pendientes; se aplican los de Alicante/Alacant capital."
+   "locales_pendientes": false
   },
   {
    "id": "sanlucar-de-barrameda",
@@ -6907,10 +7318,11 @@
    "n_municipios": 3,
    "poblacion": 97087,
    "capas": [
-    "provincia/cadiz"
+    "nacional",
+    "ccaa/an",
+    "local/sanlucar-de-barrameda"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Sanlúcar de Barrameda pendientes; se aplican los de Cádiz capital."
+   "locales_pendientes": false
   },
   {
    "id": "sanlucar-la-mayor",
@@ -6927,10 +7339,11 @@
    "n_municipios": 16,
    "poblacion": 121235,
    "capas": [
-    "provincia/sevilla"
+    "nacional",
+    "ccaa/an",
+    "local/sanlucar-la-mayor"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Sanlúcar la Mayor pendientes; se aplican los de Sevilla capital."
+   "locales_pendientes": false
   },
   {
    "id": "sant-boi-de-llobregat",
@@ -6947,10 +7360,11 @@
    "n_municipios": 4,
    "poblacion": 104240,
    "capas": [
-    "provincia/barcelona"
+    "nacional",
+    "ccaa/ct",
+    "local/sant-boi-de-llobregat"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Sant Boi de Llobregat pendientes; se aplican los de Barcelona capital."
+   "locales_pendientes": false
   },
   {
    "id": "sant-feliu-de-guixols",
@@ -6967,10 +7381,11 @@
    "n_municipios": 4,
    "poblacion": 54445,
    "capas": [
-    "provincia/girona"
+    "nacional",
+    "ccaa/ct",
+    "local/sant-feliu-de-guixols"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Sant Feliu de Guixols pendientes; se aplican los de Girona capital."
+   "locales_pendientes": false
   },
   {
    "id": "sant-feliu-de-llobregat",
@@ -6987,10 +7402,11 @@
    "n_municipios": 10,
    "poblacion": 200217,
    "capas": [
-    "provincia/barcelona"
+    "nacional",
+    "ccaa/ct",
+    "local/sant-feliu-de-llobregat"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Sant Feliu de Llobregat pendientes; se aplican los de Barcelona capital."
+   "locales_pendientes": false
   },
   {
    "id": "santa-coloma-de-farners",
@@ -7007,10 +7423,11 @@
    "n_municipios": 24,
    "poblacion": 96297,
    "capas": [
-    "provincia/girona"
+    "nacional",
+    "ccaa/ct",
+    "local/santa-coloma-de-farners"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Santa Coloma de Farners pendientes; se aplican los de Girona capital."
+   "locales_pendientes": false
   },
   {
    "id": "santa-coloma-de-gramenet",
@@ -7027,10 +7444,11 @@
    "n_municipios": 1,
    "poblacion": 123981,
    "capas": [
-    "provincia/barcelona"
+    "nacional",
+    "ccaa/ct",
+    "local/santa-coloma-de-gramenet"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Santa Coloma de Gramenet pendientes; se aplican los de Barcelona capital."
+   "locales_pendientes": false
   },
   {
    "id": "santa-cruz-de-la-palma",
@@ -7046,11 +7464,14 @@
    "partido_judicial": true,
    "n_municipios": 7,
    "poblacion": 43715,
+   "isla": "la-palma",
    "capas": [
-    "provincia/tenerife"
+    "nacional",
+    "ccaa/cn",
+    "insular/la-palma",
+    "local/santa-cruz-de-la-palma"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Santa Cruz de la Palma pendientes; se aplican los de Santa Cruz de Tenerife capital."
+   "locales_pendientes": false
   },
   {
    "id": "santa-fe",
@@ -7067,10 +7488,11 @@
    "n_municipios": 12,
    "poblacion": 98653,
    "capas": [
-    "provincia/granada"
+    "nacional",
+    "ccaa/an",
+    "local/santa-fe"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Santa Fe pendientes; se aplican los de Granada capital."
+   "locales_pendientes": false
   },
   {
    "id": "santa-maria-de-guia-de-gran-canaria",
@@ -7086,11 +7508,14 @@
    "partido_judicial": true,
    "n_municipios": 5,
    "poblacion": 60510,
+   "isla": "gran-canaria",
    "capas": [
-    "provincia/las-palmas"
+    "nacional",
+    "ccaa/cn",
+    "insular/gran-canaria",
+    "local/santa-maria-de-guia-de-gran-canaria"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Santa María de Guía de Gran Canaria pendientes; se aplican los de Las Palmas capital."
+   "locales_pendientes": false
   },
   {
    "id": "santa-maria-la-real-de-nieva",
@@ -7107,10 +7532,11 @@
    "n_municipios": 42,
    "poblacion": 17806,
    "capas": [
-    "provincia/segovia"
+    "nacional",
+    "ccaa/cl",
+    "local/santa-maria-la-real-de-nieva"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Santa María la Real de Nieva pendientes; se aplican los de Segovia capital."
+   "locales_pendientes": false
   },
   {
    "id": "santiago-de-compostela",
@@ -7127,10 +7553,11 @@
    "n_municipios": 5,
    "poblacion": 162331,
    "capas": [
-    "provincia/a-coruna"
+    "nacional",
+    "ccaa/ga",
+    "local/santiago-de-compostela"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Santiago de Compostela pendientes; se aplican los de A Coruña capital."
+   "locales_pendientes": false
   },
   {
    "id": "santona",
@@ -7147,10 +7574,11 @@
    "n_municipios": 12,
    "poblacion": 37989,
    "capas": [
-    "provincia/cantabria"
+    "nacional",
+    "ccaa/cb",
+    "local/santona"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Santoña pendientes; se aplican los de Cantabria capital."
+   "locales_pendientes": false
   },
   {
    "id": "sarria",
@@ -7167,10 +7595,11 @@
    "n_municipios": 6,
    "poblacion": 21708,
    "capas": [
-    "provincia/lugo"
+    "nacional",
+    "ccaa/ga",
+    "local/sarria"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Sarria pendientes; se aplican los de Lugo capital."
+   "locales_pendientes": false
   },
   {
    "id": "segorbe",
@@ -7187,10 +7616,11 @@
    "n_municipios": 32,
    "poblacion": 27420,
    "capas": [
-    "provincia/castellon"
+    "nacional",
+    "ccaa/vc",
+    "local/segorbe"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Segorbe pendientes; se aplican los de Castellón/Castelló capital."
+   "locales_pendientes": false
   },
   {
    "id": "sepulveda",
@@ -7207,10 +7637,11 @@
    "n_municipios": 84,
    "poblacion": 17245,
    "capas": [
-    "provincia/segovia"
+    "nacional",
+    "ccaa/cl",
+    "local/sepulveda"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Sepúlveda pendientes; se aplican los de Segovia capital."
+   "locales_pendientes": false
   },
   {
    "id": "siero",
@@ -7227,10 +7658,11 @@
    "n_municipios": 4,
    "poblacion": 61071,
    "capas": [
-    "provincia/asturias"
+    "nacional",
+    "ccaa/as",
+    "local/siero"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Siero pendientes; se aplican los de Asturias capital."
+   "locales_pendientes": false
   },
   {
    "id": "siguenza",
@@ -7247,10 +7679,11 @@
    "n_municipios": 71,
    "poblacion": 10689,
    "capas": [
-    "provincia/guadalajara"
+    "nacional",
+    "ccaa/cm",
+    "local/siguenza"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Sigüenza pendientes; se aplican los de Guadalajara capital."
+   "locales_pendientes": false
   },
   {
    "id": "solsona",
@@ -7267,10 +7700,11 @@
    "n_municipios": 26,
    "poblacion": 21658,
    "capas": [
-    "provincia/lleida"
+    "nacional",
+    "ccaa/ct",
+    "local/solsona"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Solsona pendientes; se aplican los de Lleida capital."
+   "locales_pendientes": false
   },
   {
    "id": "sueca",
@@ -7287,10 +7721,11 @@
    "n_municipios": 14,
    "poblacion": 99141,
    "capas": [
-    "provincia/valencia"
+    "nacional",
+    "ccaa/vc",
+    "local/sueca"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Sueca pendientes; se aplican los de Valencia/València capital."
+   "locales_pendientes": false
   },
   {
    "id": "tafalla",
@@ -7307,10 +7742,11 @@
    "n_municipios": 27,
    "poblacion": 47970,
    "capas": [
-    "provincia/navarra"
+    "nacional",
+    "ccaa/na",
+    "local/tafalla"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Tafalla pendientes; se aplican los de Navarra capital."
+   "locales_pendientes": false
   },
   {
    "id": "talavera-de-la-reina",
@@ -7327,10 +7763,11 @@
    "n_municipios": 65,
    "poblacion": 141834,
    "capas": [
-    "provincia/toledo"
+    "nacional",
+    "ccaa/cm",
+    "local/talavera-de-la-reina"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Talavera de la Reina pendientes; se aplican los de Toledo capital."
+   "locales_pendientes": false
   },
   {
    "id": "tarancon",
@@ -7347,10 +7784,11 @@
    "n_municipios": 57,
    "poblacion": 41564,
    "capas": [
-    "provincia/cuenca"
+    "nacional",
+    "ccaa/cm",
+    "local/tarancon"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Tarancón pendientes; se aplican los de Cuenca capital."
+   "locales_pendientes": false
   },
   {
    "id": "tarazona",
@@ -7367,10 +7805,11 @@
    "n_municipios": 31,
    "poblacion": 23556,
    "capas": [
-    "provincia/zaragoza"
+    "nacional",
+    "ccaa/ar",
+    "local/tarazona"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Tarazona pendientes; se aplican los de Zaragoza capital."
+   "locales_pendientes": false
   },
   {
    "id": "telde",
@@ -7386,11 +7825,14 @@
    "partido_judicial": true,
    "n_municipios": 4,
    "poblacion": 180742,
+   "isla": "gran-canaria",
    "capas": [
-    "provincia/las-palmas"
+    "nacional",
+    "ccaa/cn",
+    "insular/gran-canaria",
+    "local/telde"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Telde pendientes; se aplican los de Las Palmas capital."
+   "locales_pendientes": false
   },
   {
    "id": "terrassa",
@@ -7407,10 +7849,11 @@
    "n_municipios": 6,
    "poblacion": 261689,
    "capas": [
-    "provincia/barcelona"
+    "nacional",
+    "ccaa/ct",
+    "local/terrassa"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Terrassa pendientes; se aplican los de Barcelona capital."
+   "locales_pendientes": false
   },
   {
    "id": "tineo",
@@ -7427,10 +7870,11 @@
    "n_municipios": 2,
    "poblacion": 10185,
    "capas": [
-    "provincia/asturias"
+    "nacional",
+    "ccaa/as",
+    "local/tineo"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Tineo pendientes; se aplican los de Asturias capital."
+   "locales_pendientes": false
   },
   {
    "id": "tolosa",
@@ -7470,10 +7914,11 @@
    "n_municipios": 4,
    "poblacion": 56538,
    "capas": [
-    "provincia/ciudad-real"
+    "nacional",
+    "ccaa/cm",
+    "local/tomelloso"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Tomelloso pendientes; se aplican los de Ciudad Real capital."
+   "locales_pendientes": false
   },
   {
    "id": "toro",
@@ -7490,10 +7935,11 @@
    "n_municipios": 26,
    "poblacion": 16650,
    "capas": [
-    "provincia/zamora"
+    "nacional",
+    "ccaa/cl",
+    "local/toro"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Toro pendientes; se aplican los de Zamora capital."
+   "locales_pendientes": false
   },
   {
    "id": "torrejon-de-ardoz",
@@ -7510,10 +7956,11 @@
    "n_municipios": 11,
    "poblacion": 236302,
    "capas": [
-    "provincia/madrid"
+    "nacional",
+    "ccaa/md",
+    "local/torrejon-de-ardoz"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Torrejón de Ardoz pendientes; se aplican los de Madrid capital."
+   "locales_pendientes": false
   },
   {
    "id": "torrelaguna",
@@ -7530,10 +7977,11 @@
    "n_municipios": 42,
    "poblacion": 33971,
    "capas": [
-    "provincia/madrid"
+    "nacional",
+    "ccaa/md",
+    "local/torrelaguna"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Torrelaguna pendientes; se aplican los de Madrid capital."
+   "locales_pendientes": false
   },
   {
    "id": "torrelavega",
@@ -7550,10 +7998,11 @@
    "n_municipios": 20,
    "poblacion": 124104,
    "capas": [
-    "provincia/cantabria"
+    "nacional",
+    "ccaa/cb",
+    "local/torrelavega"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Torrelavega pendientes; se aplican los de Cantabria capital."
+   "locales_pendientes": false
   },
   {
    "id": "torremolinos",
@@ -7570,10 +8019,11 @@
    "n_municipios": 2,
    "poblacion": 149667,
    "capas": [
-    "provincia/malaga"
+    "nacional",
+    "ccaa/an",
+    "local/torremolinos"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Torremolinos pendientes; se aplican los de Málaga capital."
+   "locales_pendientes": false
   },
   {
    "id": "torrent",
@@ -7590,10 +8040,11 @@
    "n_municipios": 5,
    "poblacion": 195761,
    "capas": [
-    "provincia/valencia"
+    "nacional",
+    "ccaa/vc",
+    "local/torrent"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Torrent pendientes; se aplican los de Valencia/València capital."
+   "locales_pendientes": false
   },
   {
    "id": "torrevieja",
@@ -7610,10 +8061,11 @@
    "n_municipios": 6,
    "poblacion": 151391,
    "capas": [
-    "provincia/alicante"
+    "nacional",
+    "ccaa/vc",
+    "local/torrevieja"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Torrevieja pendientes; se aplican los de Alicante/Alacant capital."
+   "locales_pendientes": false
   },
   {
    "id": "torrijos",
@@ -7630,10 +8082,11 @@
    "n_municipios": 42,
    "poblacion": 95818,
    "capas": [
-    "provincia/toledo"
+    "nacional",
+    "ccaa/cm",
+    "local/torrijos"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Torrijos pendientes; se aplican los de Toledo capital."
+   "locales_pendientes": false
   },
   {
    "id": "torrox",
@@ -7650,10 +8103,11 @@
    "n_municipios": 8,
    "poblacion": 61377,
    "capas": [
-    "provincia/malaga"
+    "nacional",
+    "ccaa/an",
+    "local/torrox"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Torrox pendientes; se aplican los de Málaga capital."
+   "locales_pendientes": false
   },
   {
    "id": "tortosa",
@@ -7670,10 +8124,11 @@
    "n_municipios": 14,
    "poblacion": 83594,
    "capas": [
-    "provincia/tarragona"
+    "nacional",
+    "ccaa/ct",
+    "local/tortosa"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Tortosa pendientes; se aplican los de Tarragona capital."
+   "locales_pendientes": false
   },
   {
    "id": "totana",
@@ -7690,10 +8145,11 @@
    "n_municipios": 5,
    "poblacion": 99947,
    "capas": [
-    "provincia/murcia"
+    "nacional",
+    "ccaa/mc",
+    "local/totana"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Totana pendientes; se aplican los de Murcia capital."
+   "locales_pendientes": false
   },
   {
    "id": "tremp",
@@ -7710,10 +8166,11 @@
    "n_municipios": 32,
    "poblacion": 24781,
    "capas": [
-    "provincia/lleida"
+    "nacional",
+    "ccaa/ct",
+    "local/tremp"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Tremp pendientes; se aplican los de Lleida capital."
+   "locales_pendientes": false
   },
   {
    "id": "trujillo",
@@ -7730,10 +8187,11 @@
    "n_municipios": 22,
    "poblacion": 29178,
    "capas": [
-    "provincia/caceres"
+    "nacional",
+    "ccaa/ex",
+    "local/trujillo"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Trujillo pendientes; se aplican los de Cáceres capital."
+   "locales_pendientes": false
   },
   {
    "id": "tudela",
@@ -7750,10 +8208,11 @@
    "n_municipios": 23,
    "poblacion": 103268,
    "capas": [
-    "provincia/navarra"
+    "nacional",
+    "ccaa/na",
+    "local/tudela"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Tudela pendientes; se aplican los de Navarra capital."
+   "locales_pendientes": false
   },
   {
    "id": "tui",
@@ -7770,10 +8229,11 @@
    "n_municipios": 5,
    "poblacion": 50786,
    "capas": [
-    "provincia/pontevedra"
+    "nacional",
+    "ccaa/ga",
+    "local/tui"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Tui pendientes; se aplican los de Pontevedra capital."
+   "locales_pendientes": false
   },
   {
    "id": "ubrique",
@@ -7790,10 +8250,11 @@
    "n_municipios": 7,
    "poblacion": 29075,
    "capas": [
-    "provincia/cadiz"
+    "nacional",
+    "ccaa/an",
+    "local/ubrique"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Ubrique pendientes; se aplican los de Cádiz capital."
+   "locales_pendientes": false
   },
   {
    "id": "utrera",
@@ -7810,10 +8271,11 @@
    "n_municipios": 5,
    "poblacion": 101783,
    "capas": [
-    "provincia/sevilla"
+    "nacional",
+    "ccaa/an",
+    "local/utrera"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Utrera pendientes; se aplican los de Sevilla capital."
+   "locales_pendientes": false
   },
   {
    "id": "valdemoro",
@@ -7830,10 +8292,11 @@
    "n_municipios": 8,
    "poblacion": 157196,
    "capas": [
-    "provincia/madrid"
+    "nacional",
+    "ccaa/md",
+    "local/valdemoro"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Valdemoro pendientes; se aplican los de Madrid capital."
+   "locales_pendientes": false
   },
   {
    "id": "valdepenas",
@@ -7850,10 +8313,11 @@
    "n_municipios": 7,
    "poblacion": 47041,
    "capas": [
-    "provincia/ciudad-real"
+    "nacional",
+    "ccaa/cm",
+    "local/valdepenas"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Valdepeñas pendientes; se aplican los de Ciudad Real capital."
+   "locales_pendientes": false
   },
   {
    "id": "valdes",
@@ -7870,10 +8334,11 @@
    "n_municipios": 6,
    "poblacion": 24831,
    "capas": [
-    "provincia/asturias"
+    "nacional",
+    "ccaa/as",
+    "local/valdes"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Valdés pendientes; se aplican los de Asturias capital."
+   "locales_pendientes": false
   },
   {
    "id": "valencia-de-alcantara",
@@ -7890,10 +8355,11 @@
    "n_municipios": 8,
    "poblacion": 7896,
    "capas": [
-    "provincia/caceres"
+    "nacional",
+    "ccaa/ex",
+    "local/valencia-de-alcantara"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Valencia de Alcántara pendientes; se aplican los de Cáceres capital."
+   "locales_pendientes": false
   },
   {
    "id": "valls",
@@ -7910,10 +8376,11 @@
    "n_municipios": 43,
    "poblacion": 68305,
    "capas": [
-    "provincia/tarragona"
+    "nacional",
+    "ccaa/ct",
+    "local/valls"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Valls pendientes; se aplican los de Tarragona capital."
+   "locales_pendientes": false
   },
   {
    "id": "valverde",
@@ -7929,11 +8396,14 @@
    "partido_judicial": true,
    "n_municipios": 3,
    "poblacion": 12040,
+   "isla": "el-hierro",
    "capas": [
-    "provincia/tenerife"
+    "nacional",
+    "ccaa/cn",
+    "insular/el-hierro",
+    "local/valverde"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Valverde pendientes; se aplican los de Santa Cruz de Tenerife capital."
+   "locales_pendientes": false
   },
   {
    "id": "valverde-del-camino",
@@ -7950,10 +8420,11 @@
    "n_municipios": 18,
    "poblacion": 47561,
    "capas": [
-    "provincia/huelva"
+    "nacional",
+    "ccaa/an",
+    "local/valverde-del-camino"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Valverde del Camino pendientes; se aplican los de Huelva capital."
+   "locales_pendientes": false
   },
   {
    "id": "vera",
@@ -7970,10 +8441,11 @@
    "n_municipios": 10,
    "poblacion": 76121,
    "capas": [
-    "provincia/almeria"
+    "nacional",
+    "ccaa/an",
+    "local/vera"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Vera pendientes; se aplican los de Almería capital."
+   "locales_pendientes": false
   },
   {
    "id": "verin",
@@ -7990,10 +8462,11 @@
    "n_municipios": 10,
    "poblacion": 26877,
    "capas": [
-    "provincia/ourense"
+    "nacional",
+    "ccaa/ga",
+    "local/verin"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Verín pendientes; se aplican los de Ourense capital."
+   "locales_pendientes": false
   },
   {
    "id": "vic",
@@ -8010,10 +8483,11 @@
    "n_municipios": 49,
    "poblacion": 171792,
    "capas": [
-    "provincia/barcelona"
+    "nacional",
+    "ccaa/ct",
+    "local/vic"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Vic pendientes; se aplican los de Barcelona capital."
+   "locales_pendientes": false
   },
   {
    "id": "vielha-e-mijaran",
@@ -8030,10 +8504,12 @@
    "n_municipios": 9,
    "poblacion": 10662,
    "capas": [
-    "provincia/lleida"
+    "nacional",
+    "ccaa/ct",
+    "territorial/aran",
+    "local/vielha-e-mijaran"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Vielha e Mijaran pendientes; se aplican los de Lleida capital."
+   "locales_pendientes": false
   },
   {
    "id": "vigo",
@@ -8050,10 +8526,11 @@
    "n_municipios": 4,
    "poblacion": 340090,
    "capas": [
-    "provincia/pontevedra"
+    "nacional",
+    "ccaa/ga",
+    "local/vigo"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Vigo pendientes; se aplican los de Pontevedra capital."
+   "locales_pendientes": false
   },
   {
    "id": "vila-real",
@@ -8070,10 +8547,11 @@
    "n_municipios": 2,
    "poblacion": 91538,
    "capas": [
-    "provincia/castellon"
+    "nacional",
+    "ccaa/vc",
+    "local/vila-real"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Vila-Real pendientes; se aplican los de Castellón/Castelló capital."
+   "locales_pendientes": false
   },
   {
    "id": "vilafranca-del-penedes",
@@ -8090,10 +8568,11 @@
    "n_municipios": 26,
    "poblacion": 113384,
    "capas": [
-    "provincia/barcelona"
+    "nacional",
+    "ccaa/ct",
+    "local/vilafranca-del-penedes"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Vilafranca del Penedès pendientes; se aplican los de Barcelona capital."
+   "locales_pendientes": false
   },
   {
    "id": "vilagarcia-de-arousa",
@@ -8110,10 +8589,11 @@
    "n_municipios": 4,
    "poblacion": 56130,
    "capas": [
-    "provincia/pontevedra"
+    "nacional",
+    "ccaa/ga",
+    "local/vilagarcia-de-arousa"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Vilagarcía de Arousa pendientes; se aplican los de Pontevedra capital."
+   "locales_pendientes": false
   },
   {
    "id": "vilalba",
@@ -8130,10 +8610,11 @@
    "n_municipios": 6,
    "poblacion": 28332,
    "capas": [
-    "provincia/lugo"
+    "nacional",
+    "ccaa/ga",
+    "local/vilalba"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Vilalba pendientes; se aplican los de Lugo capital."
+   "locales_pendientes": false
   },
   {
    "id": "vilanova-i-la-geltru",
@@ -8150,10 +8631,11 @@
    "n_municipios": 7,
    "poblacion": 167344,
    "capas": [
-    "provincia/barcelona"
+    "nacional",
+    "ccaa/ct",
+    "local/vilanova-i-la-geltru"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Vilanova i la Geltrú pendientes; se aplican los de Barcelona capital."
+   "locales_pendientes": false
   },
   {
    "id": "villablino",
@@ -8170,10 +8652,11 @@
    "n_municipios": 5,
    "poblacion": 10056,
    "capas": [
-    "provincia/leon"
+    "nacional",
+    "ccaa/cl",
+    "local/villablino"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Villablino pendientes; se aplican los de León capital."
+   "locales_pendientes": false
   },
   {
    "id": "villacarrillo",
@@ -8190,10 +8673,11 @@
    "n_municipios": 21,
    "poblacion": 52265,
    "capas": [
-    "provincia/jaen"
+    "nacional",
+    "ccaa/an",
+    "local/villacarrillo"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Villacarrillo pendientes; se aplican los de Jaén capital."
+   "locales_pendientes": false
   },
   {
    "id": "villafranca-de-los-barros",
@@ -8210,10 +8694,11 @@
    "n_municipios": 8,
    "poblacion": 27562,
    "capas": [
-    "provincia/badajoz"
+    "nacional",
+    "ccaa/ex",
+    "local/villafranca-de-los-barros"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Villafranca de los Barros pendientes; se aplican los de Badajoz capital."
+   "locales_pendientes": false
   },
   {
    "id": "villajoyosa",
@@ -8230,10 +8715,11 @@
    "n_municipios": 14,
    "poblacion": 76147,
    "capas": [
-    "provincia/alicante"
+    "nacional",
+    "ccaa/vc",
+    "local/villajoyosa"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Villajoyosa pendientes; se aplican los de Alicante/Alacant capital."
+   "locales_pendientes": false
   },
   {
    "id": "villalpando",
@@ -8250,10 +8736,11 @@
    "n_municipios": 30,
    "poblacion": 7030,
    "capas": [
-    "provincia/zamora"
+    "nacional",
+    "ccaa/cl",
+    "local/villalpando"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Villalpando pendientes; se aplican los de Zamora capital."
+   "locales_pendientes": false
   },
   {
    "id": "villanueva-de-la-serena",
@@ -8270,10 +8757,11 @@
    "n_municipios": 10,
    "poblacion": 43571,
    "capas": [
-    "provincia/badajoz"
+    "nacional",
+    "ccaa/ex",
+    "local/villanueva-de-la-serena"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Villanueva de la Serena pendientes; se aplican los de Badajoz capital."
+   "locales_pendientes": false
   },
   {
    "id": "villanueva-de-los-infantes",
@@ -8290,10 +8778,11 @@
    "n_municipios": 16,
    "poblacion": 18117,
    "capas": [
-    "provincia/ciudad-real"
+    "nacional",
+    "ccaa/cm",
+    "local/villanueva-de-los-infantes"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Villanueva de los Infantes pendientes; se aplican los de Ciudad Real capital."
+   "locales_pendientes": false
   },
   {
    "id": "villarcayo-de-merindad-de-castilla-la-vieja",
@@ -8310,10 +8799,11 @@
    "n_municipios": 26,
    "poblacion": 22117,
    "capas": [
-    "provincia/burgos"
+    "nacional",
+    "ccaa/cl",
+    "local/villarcayo-de-merindad-de-castilla-la-vieja"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Villarcayo de Merindad de Castilla la Vieja pendientes; se aplican los de Burgos capital."
+   "locales_pendientes": false
   },
   {
    "id": "villarrobledo",
@@ -8330,10 +8820,11 @@
    "n_municipios": 4,
    "poblacion": 33629,
    "capas": [
-    "provincia/albacete"
+    "nacional",
+    "ccaa/cm",
+    "local/villarrobledo"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Villarrobledo pendientes; se aplican los de Albacete capital."
+   "locales_pendientes": false
   },
   {
    "id": "villaviciosa",
@@ -8350,10 +8841,11 @@
    "n_municipios": 3,
    "poblacion": 19008,
    "capas": [
-    "provincia/asturias"
+    "nacional",
+    "ccaa/as",
+    "local/villaviciosa"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Villaviciosa pendientes; se aplican los de Asturias capital."
+   "locales_pendientes": false
   },
   {
    "id": "villena",
@@ -8370,10 +8862,11 @@
    "n_municipios": 7,
    "poblacion": 53919,
    "capas": [
-    "provincia/alicante"
+    "nacional",
+    "ccaa/vc",
+    "local/villena"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Villena pendientes; se aplican los de Alicante/Alacant capital."
+   "locales_pendientes": false
   },
   {
    "id": "vinaros",
@@ -8390,10 +8883,11 @@
    "n_municipios": 34,
    "poblacion": 95574,
    "capas": [
-    "provincia/castellon"
+    "nacional",
+    "ccaa/vc",
+    "local/vinaros"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Vinaròs pendientes; se aplican los de Castellón/Castelló capital."
+   "locales_pendientes": false
   },
   {
    "id": "vitigudino",
@@ -8410,10 +8904,11 @@
    "n_municipios": 56,
    "poblacion": 14089,
    "capas": [
-    "provincia/salamanca"
+    "nacional",
+    "ccaa/cl",
+    "local/vitigudino"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Vitigudino pendientes; se aplican los de Salamanca capital."
+   "locales_pendientes": false
   },
   {
    "id": "viveiro",
@@ -8430,10 +8925,11 @@
    "n_municipios": 7,
    "poblacion": 45003,
    "capas": [
-    "provincia/lugo"
+    "nacional",
+    "ccaa/ga",
+    "local/viveiro"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Viveiro pendientes; se aplican los de Lugo capital."
+   "locales_pendientes": false
   },
   {
    "id": "velez-malaga",
@@ -8450,10 +8946,11 @@
    "n_municipios": 17,
    "poblacion": 110337,
    "capas": [
-    "provincia/malaga"
+    "nacional",
+    "ccaa/an",
+    "local/velez-malaga"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Vélez-Málaga pendientes; se aplican los de Málaga capital."
+   "locales_pendientes": false
   },
   {
    "id": "velez-rubio",
@@ -8470,10 +8967,11 @@
    "n_municipios": 4,
    "poblacion": 11434,
    "capas": [
-    "provincia/almeria"
+    "nacional",
+    "ccaa/an",
+    "local/velez-rubio"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Vélez-Rubio pendientes; se aplican los de Almería capital."
+   "locales_pendientes": false
   },
   {
    "id": "xinzo-de-limia",
@@ -8490,10 +8988,11 @@
    "n_municipios": 10,
    "poblacion": 18536,
    "capas": [
-    "provincia/ourense"
+    "nacional",
+    "ccaa/ga",
+    "local/xinzo-de-limia"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Xinzo de Limia pendientes; se aplican los de Ourense capital."
+   "locales_pendientes": false
   },
   {
    "id": "xativa",
@@ -8510,10 +9009,11 @@
    "n_municipios": 26,
    "poblacion": 89699,
    "capas": [
-    "provincia/valencia"
+    "nacional",
+    "ccaa/vc",
+    "local/xativa"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Xàtiva pendientes; se aplican los de Valencia/València capital."
+   "locales_pendientes": false
   },
   {
    "id": "yecla",
@@ -8530,10 +9030,11 @@
    "n_municipios": 1,
    "poblacion": 36453,
    "capas": [
-    "provincia/murcia"
+    "nacional",
+    "ccaa/mc",
+    "local/yecla"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Yecla pendientes; se aplican los de Murcia capital."
+   "locales_pendientes": false
   },
   {
    "id": "zafra",
@@ -8550,10 +9051,11 @@
    "n_municipios": 18,
    "poblacion": 51429,
    "capas": [
-    "provincia/badajoz"
+    "nacional",
+    "ccaa/ex",
+    "local/zafra"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Zafra pendientes; se aplican los de Badajoz capital."
+   "locales_pendientes": false
   },
   {
    "id": "ecija",
@@ -8570,10 +9072,11 @@
    "n_municipios": 4,
    "poblacion": 55005,
    "capas": [
-    "provincia/sevilla"
+    "nacional",
+    "ccaa/an",
+    "local/ecija"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Écija pendientes; se aplican los de Sevilla capital."
+   "locales_pendientes": false
   },
   {
    "id": "orgiva",
@@ -8590,10 +9093,11 @@
    "n_municipios": 26,
    "poblacion": 24017,
    "capas": [
-    "provincia/granada"
+    "nacional",
+    "ccaa/an",
+    "local/orgiva"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Órgiva pendientes; se aplican los de Granada capital."
+   "locales_pendientes": false
   },
   {
    "id": "ubeda",
@@ -8610,10 +9114,11 @@
    "n_municipios": 6,
    "poblacion": 60825,
    "capas": [
-    "provincia/jaen"
+    "nacional",
+    "ccaa/an",
+    "local/ubeda"
    ],
-   "locales_pendientes": true,
-   "nota": "Festivos locales de Úbeda pendientes; se aplican los de Jaén capital."
+   "locales_pendientes": false
   }
  ]
 }

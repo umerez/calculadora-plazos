@@ -42,8 +42,9 @@ with st.sidebar:
 
     **Lugares:** las 431 cabeceras de partido judicial de España (incluidas las 52 capitales de provincia), según
     el Censo Judicial del Ministerio de Justicia. El calendario correcto para un plazo procesal es el de la localidad
-    donde tiene su sede el órgano judicial (art. 182 LOPJ). En Euskadi cada cabecera lleva sus festivos locales
-    oficiales; en el resto, de momento, se aplican los de la capital de la provincia.
+    donde tiene su sede el órgano judicial (art. 182 LOPJ). Cada cabecera lleva sus festivos estatales, autonómicos
+    (e insulares en Canarias) y locales, tomados de los boletines oficiales y portales de datos de cada comunidad; cuando
+    falta algún año la aplicación lo avisa.
 
     **Créditos:** Creado por **Esteban Umerez**, con la asistencia de **ChatGPT** (OpenAI), **Gemini** (Google) y **Claude** (Anthropic).
     """)

@@ -1,8 +1,11 @@
 Fecha,Festividad,Fuente
-2025-04-17,Jueves Santo,Derivado de los calendarios provinciales 2025 (calendarioslaborales.com)
-2025-04-23,San Jorge. Día de Aragón,Derivado de los calendarios provinciales 2025 (calendarioslaborales.com)
-2025-10-13,Fiesta Nacional (se traslada al lunes),Derivado de los calendarios provinciales 2025 (calendarioslaborales.com)
-2026-04-02,Jueves Santo,Derivado de los calendarios provinciales 2026 (calendarioslaborales.com)
-2026-04-23,San Jorge. Día de Aragón,Derivado de los calendarios provinciales 2026 (calendarioslaborales.com)
-2026-11-02,Día de Todos los Santos (se traslada al lunes),Derivado de los calendarios provinciales 2026 (calendarioslaborales.com)
-2026-12-07,Día de la Constitución (se traslada al lunes),Derivado de los calendarios provinciales 2026 (calendarioslaborales.com)
+2025-04-17,Jueves Santo,opendata.aragon.es – «Calendario de festivos en comunidad de Aragón 2025» (ar-open-data-festivos-comunidad-2025.xls)
+2025-04-23,"San Jorge, Día de Aragón",opendata.aragon.es – «Calendario de festivos en comunidad de Aragón 2025» (ar-open-data-festivos-comunidad-2025.xls)
+2025-10-13,"En sustitución del día 12, domingo, Fiesta Nacional de España",opendata.aragon.es – «Calendario de festivos en comunidad de Aragón 2025» (ar-open-data-festivos-comunidad-2025.xls)
+2026-04-02,Jueves Santo,"BOA núm. 135, 16/07/2025 – Decreto 70/2025, de 9 de julio, del Gobierno de Aragón (fiestas laborales 2026); dataset opendata.aragon.es festivos_aragon_2026_ccaa.csv"
+2026-04-23,"San Jorge, Día de Aragón","BOA núm. 135, 16/07/2025 – Decreto 70/2025, de 9 de julio, del Gobierno de Aragón (fiestas laborales 2026); dataset opendata.aragon.es festivos_aragon_2026_ccaa.csv"
+2026-11-02,"Todos los Santos (en sustitución del día 1, domingo)","BOA núm. 135, 16/07/2025 – Decreto 70/2025, de 9 de julio, del Gobierno de Aragón (fiestas laborales 2026); dataset opendata.aragon.es festivos_aragon_2026_ccaa.csv"
+2026-12-07,"Día de la Constitución Española (en sustitución del día 6, domingo)","BOA núm. 135, 16/07/2025 – Decreto 70/2025, de 9 de julio, del Gobierno de Aragón (fiestas laborales 2026); dataset opendata.aragon.es festivos_aragon_2026_ccaa.csv"
+2027-03-25,Jueves Santo,"BOA núm. 180, 16/09/2026 – Decreto 163/2026, de 9 de septiembre, del Gobierno de Aragón (fiestas laborales 2027)"
+2027-04-23,"San Jorge, Día de Aragón","BOA núm. 180, 16/09/2026 – Decreto 163/2026, de 9 de septiembre, del Gobierno de Aragón (fiestas laborales 2027)"
+2027-08-16,"Asunción de la Virgen (en sustitución del día 15, domingo)","BOA núm. 180, 16/09/2026 – Decreto 163/2026, de 9 de septiembre, del Gobierno de Aragón (fiestas laborales 2027)"

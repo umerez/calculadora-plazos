@@ -1,12 +1,11 @@
 Fecha,Festividad,Fuente
-2025-04-17,Jueves Santo,Derivado de los calendarios provinciales 2025 (calendarioslaborales.com)
-2025-05-02,Día de la Comunidad de Madrid,Derivado de los calendarios provinciales 2025 (calendarioslaborales.com)
-2025-05-15,San Isidro,Derivado de los calendarios provinciales 2025 (calendarioslaborales.com)
-2025-07-25,Santiago Apóstol,Derivado de los calendarios provinciales 2025 (calendarioslaborales.com)
-2025-11-10,La Almudena (se traslada al lunes),Derivado de los calendarios provinciales 2025 (calendarioslaborales.com)
-2026-04-02,Jueves Santo,Derivado de los calendarios provinciales 2026 (calendarioslaborales.com)
-2026-05-02,Día de la Comunidad de Madrid,Derivado de los calendarios provinciales 2026 (calendarioslaborales.com)
-2026-05-15,San Isidro,Derivado de los calendarios provinciales 2026 (calendarioslaborales.com)
-2026-11-02,Día de Todos los Santos (se traslada al lunes),Derivado de los calendarios provinciales 2026 (calendarioslaborales.com)
-2026-11-09,Nuestra Señora de la Almudena,Derivado de los calendarios provinciales 2026 (calendarioslaborales.com)
-2026-12-07,Día de la Constitución (se traslada al lunes),Derivado de los calendarios provinciales 2026 (calendarioslaborales.com)
+2025-04-17,Jueves Santo,datos.comunidad.madrid – «Festivos regionales y locales histórico» (festivos_regionales_historicos.csv)
+2025-05-02,Fiesta Comunidad de Madrid,datos.comunidad.madrid – «Festivos regionales y locales histórico» (festivos_regionales_historicos.csv)
+2025-07-25,Santiago Apóstol,datos.comunidad.madrid – «Festivos regionales y locales histórico» (festivos_regionales_historicos.csv)
+2026-04-02,Jueves Santo,"BOCM núm. 228, 25/09/2025 – Decreto 75/2025, de 24 de septiembre, del Consejo de Gobierno (fiestas laborales 2026); dataset datos.comunidad.madrid festivos_regionales.csv"
+2026-05-02,Fiesta Comunidad de Madrid,"BOCM núm. 228, 25/09/2025 – Decreto 75/2025, de 24 de septiembre, del Consejo de Gobierno (fiestas laborales 2026); dataset datos.comunidad.madrid festivos_regionales.csv"
+2026-11-02,Todos los Santos,"BOCM núm. 228, 25/09/2025 – Decreto 75/2025, de 24 de septiembre, del Consejo de Gobierno (fiestas laborales 2026); dataset datos.comunidad.madrid festivos_regionales.csv"
+2026-12-07,Día de la Constitución Española,"BOCM núm. 228, 25/09/2025 – Decreto 75/2025, de 24 de septiembre, del Consejo de Gobierno (fiestas laborales 2026); dataset datos.comunidad.madrid festivos_regionales.csv"
+2027-03-19,San José,"BOCM núm. 234, 01/10/2026 – Decreto 82/2026, de 30 de septiembre, del Consejo de Gobierno (fiestas laborales 2027)"
+2027-03-25,Jueves Santo,"BOCM núm. 234, 01/10/2026 – Decreto 82/2026, de 30 de septiembre, del Consejo de Gobierno (fiestas laborales 2027)"
+2027-08-16,Traslado de la Asunción de la Virgen,"BOCM núm. 234, 01/10/2026 – Decreto 82/2026, de 30 de septiembre, del Consejo de Gobierno (fiestas laborales 2027)"

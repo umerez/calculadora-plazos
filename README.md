@@ -30,10 +30,11 @@ calendario(lugar) = nacional ∪ ccaa/<comunidad> ∪ territorial/<provincia> �
 | Carpeta / fichero | Contenido | Fuente |
 |---|---|---|
 | `festivos/nacional.csv` | Festivos estatales (2025–2027) | Art. 37.2 ET; resolución anual del BOE |
-| `festivos/ccaa/pv.csv` | Festivos autonómicos de Euskadi | Decretos del Gobierno Vasco (BOPV) |
-| `festivos/territorial/{araba,bizkaia,gipuzkoa}.csv` | San Prudencio, San Ignacio | BOPV, BOB, BOG |
-| `festivos/local/<municipio>.csv` | Festivos locales de los ~280 municipios vascos | Open Data Euskadi (2026), BOB y BOG (2027) |
-| `festivos/provincia/<provincia>.csv` | Calendario plano heredado del resto de provincias (estatal + autonómico + locales de la capital) | calendarioslaborales.com |
+| `festivos/territorial/{araba,bizkaia,gipuzkoa,aran}.csv` | San Prudencio, San Ignacio, Festa d'Aran | BOPV, BOB, BOG, DOGC |
+| `festivos/local/<municipio>.csv` | Festivos locales de las 431 cabeceras de partido judicial (y de los ~280 municipios vascos) | Boletines oficiales y portales de datos de cada comunidad; Open Data Euskadi, BOB y BOG. Cobertura por año en `festivos/COBERTURA.md` |
+| `festivos/ccaa/<comunidad>.csv` | Festivos autonómicos de las 19 comunidades y ciudades autónomas | Decretos/órdenes anuales de cada comunidad (boletín oficial) |
+| `festivos/insular/<isla>.csv` | Festivo insular de cada isla canaria | Decreto anual del Gobierno de Canarias |
+| `festivos/provincia/<provincia>.csv` | Calendario plano heredado por provincia (solo como respaldo; ya no lo usa ningún lugar) | calendarioslaborales.com |
 | `festivos/lugares.json` | Índice de lugares seleccionables: las **431 cabeceras de partido judicial** de España (incluidas las 52 capitales de provincia) y las capas de cada una | Censo Judicial del Ministerio de Justicia (planta Ley 38/1988, nomenclátor 30/12/2025) |
 | `festivos/fuentes/` | Documentos de origen: partidos judiciales y municipios del Censo Judicial, ICS de Open Data Euskadi, listas extraídas de los boletines | — |
 
@@ -64,7 +65,7 @@ cargan desde el BOPV (comunes), BOB/BOG/BOTHA (locales) y Open Data Euskadi.
 
 ### 1. Configuración del Calendario y Procedimiento
 
-* **Selecciona la sede del órgano:** una de las 431 cabeceras de partido judicial (las capitales de provincia aparecen primero). En Euskadi cada cabecera lleva sus festivos locales oficiales; en el resto de España, de momento, se aplican los de la capital de la provincia y la aplicación lo avisa.
+* **Selecciona la sede del órgano:** una de las 431 cabeceras de partido judicial (las capitales de provincia aparecen primero). Cada cabecera lleva sus festivos estatales, autonómicos, insulares (Canarias) y locales desde fuentes oficiales; la cobertura por año está en `festivos/COBERTURA.md` y la aplicación avisa cuando falta alguno.
 * **Tipo de Procedimiento:**
 * *Administrativo:* Para trámites ante Ayuntamientos, Hacienda, etc.
 * *Procesal Contencioso:* Para plazos dentro de un juicio ya iniciado.

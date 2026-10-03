@@ -246,7 +246,29 @@ def _fecha_valida(f: str) -> bool:
         return False
 
 
-def construir_resto_espana(ine_a_slug: dict, partidos: list) -> tuple[dict, dict, list]:
+# Canarias: cada isla tiene un festivo insular propio (sustituye a Santiago Apóstol). Cabecera → isla.
+ISLA_DE_CABECERA = {
+    'arrecife': 'lanzarote', 'puerto-del-rosario': 'fuerteventura',
+    'arucas': 'gran-canaria', 'las-palmas-de-gran-canaria': 'gran-canaria', 'san-bartolome-de-tirajana': 'gran-canaria',
+    'santa-maria-de-guia-de-gran-canaria': 'gran-canaria', 'telde': 'gran-canaria',
+    'arona': 'tenerife', 'granadilla-de-abona': 'tenerife', 'guimar': 'tenerife', 'icod-de-los-vinos': 'tenerife',
+    'la-orotava': 'tenerife', 'puerto-de-la-cruz': 'tenerife', 'san-cristobal-de-la-laguna': 'tenerife',
+    'santa-cruz-de-tenerife': 'tenerife',
+    'los-llanos-de-aridane': 'la-palma', 'santa-cruz-de-la-palma': 'la-palma',
+    'san-sebastian-de-la-gomera': 'la-gomera', 'valverde': 'el-hierro',
+}
+RE_INSULAR = re.compile(r'festivo insular\s+(.+?)\s*$', re.I)
+
+
+def _slug_isla(texto: str) -> str | None:
+    t = unicodedata.normalize('NFKD', texto).encode('ascii', 'ignore').decode().lower()
+    for isla in ('tenerife', 'gran canaria', 'lanzarote', 'fuerteventura', 'la palma', 'la gomera', 'el hierro'):
+        if isla in t:
+            return isla.replace(' ', '-')
+    return None
+
+
+def construir_resto_espana(ine_a_slug: dict, partidos: list) -> tuple[dict, dict, dict, list]:
     """
     Lee festivos/fuentes/locales/locales_*.csv (ccaa,cpro,ine_municipio,municipio,fecha,festividad,fuente,url,calidad)
     y ccaa_*.csv (ccaa,fecha,festividad,fuente,url). Devuelve:
@@ -260,9 +282,10 @@ def construir_resto_espana(ine_a_slug: dict, partidos: list) -> tuple[dict, dict
     carpeta = os.path.join(FUENTES, 'locales')
     locales = defaultdict(list)
     ccaa = defaultdict(list)
+    insular = defaultdict(list)
     resumen = []
     if not os.path.isdir(carpeta):
-        return {}, {}, ['(sin carpeta festivos/fuentes/locales)']
+        return {}, {}, {}, ['(sin carpeta festivos/fuentes/locales)']
 
     nacional_por_anio = defaultdict(set)
     for anio, filas in NACIONAL.items():
@@ -294,8 +317,16 @@ def construir_resto_espana(ine_a_slug: dict, partidos: list) -> tuple[dict, dict
                         continue
                     if fecha in nacional_por_anio.get(int(fecha[:4]), set()):
                         continue  # estatal: ya está en nacional.csv
-                    ccaa[codigo].append((fecha, (r.get('festividad') or '').strip() or 'Festivo autonómico',
-                                         (r.get('fuente') or '').strip()))
+                    nombre_f = (r.get('festividad') or '').strip() or 'Festivo autonómico'
+                    if codigo == 'ct' and 'aran' in nombre_f.lower() and ('només' in nombre_f.lower() or 'solo' in nombre_f.lower() or 'sólo' in nombre_f.lower()):
+                        # Festa d'Aran: solo rige en la Val d'Aran (cabecera Vielha e Mijaran) → capa territorial/aran
+                        insular['__aran__'].append((fecha, nombre_f, (r.get('fuente') or '').strip()))
+                        continue
+                    m_ins = RE_INSULAR.search(nombre_f)
+                    if codigo == 'cn' and m_ins and _slug_isla(m_ins.group(1)):
+                        insular[_slug_isla(m_ins.group(1))].append((fecha, nombre_f, (r.get('fuente') or '').strip()))
+                        continue
+                    ccaa[codigo].append((fecha, nombre_f, (r.get('fuente') or '').strip()))
     if descartadas:
         resumen.append(f"filas de locales descartadas (INE no es cabecera o fecha inválida): {descartadas}")
 
@@ -323,16 +354,17 @@ def construir_resto_espana(ine_a_slug: dict, partidos: list) -> tuple[dict, dict
                 fechas = {f for f in pl if f.startswith(anio)}
                 comunes = fechas if comunes is None else comunes & fechas
             comunes = (comunes or set()) - nacional_por_anio.get(int(anio), set())
-            if len(provs) == 1:
-                for cap in capitales.get(codigo, []):
-                    comunes -= {f for f, _, _ in locales.get(cap, []) if f.startswith(anio)}
+            # Quitar los locales conocidos de las capitales: en CCAA uniprovinciales son todo el "exceso" del plano,
+            # y en las demás evitan que un local compartido por todas las capitales (p. ej. San Juan) parezca autonómico.
+            for cap in capitales.get(codigo, []):
+                comunes -= {f for f, _, _ in locales.get(cap, []) if f.startswith(anio)}
             nombres = planos[0]
             for f in sorted(comunes):
                 ccaa[codigo].append((f, nombres.get(f, 'Festivo autonómico'),
                                      f'Derivado de los calendarios provinciales {anio} (calendarioslaborales.com)'))
             if comunes:
                 resumen.append(f"ccaa/{codigo} {anio}: {len(comunes)} autonómicos derivados de los planos")
-    return dict(locales), dict(ccaa), resumen
+    return dict(locales), dict(ccaa), dict(insular), resumen
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -417,12 +449,18 @@ def main():
     for p in partidos:
         s0 = slug(p['cabecera'])
         ine_a_slug[p['ine_cabecera']] = ALIAS_CABECERAS.get(s0, s0)
-    locales_resto, ccaa_capas, resumen_locales = construir_resto_espana(ine_a_slug, partidos)
+    locales_resto, ccaa_capas, insular_capas, resumen_locales = construir_resto_espana(ine_a_slug, partidos)
     for s, filas in locales_resto.items():
         escribir_capa(os.path.join(FEST, 'local', f'{s}.csv'), filas)
     for codigo, filas in ccaa_capas.items():
         escribir_capa(os.path.join(FEST, 'ccaa', f'{codigo}.csv'), filas)
-    print(f"resto de España: {len(locales_resto)} cabeceras con festivos locales; capas ccaa/: {sorted(ccaa_capas)}")
+    for isla, filas in insular_capas.items():
+        if isla == '__aran__':
+            escribir_capa(os.path.join(FEST, 'territorial', 'aran.csv'), filas)
+        else:
+            escribir_capa(os.path.join(FEST, 'insular', f'{isla}.csv'), filas)
+    print(f"resto de España: {len(locales_resto)} cabeceras con festivos locales; capas ccaa/: {sorted(ccaa_capas)}; "
+          f"insular/: {sorted(insular_capas)}")
     for linea in resumen_locales:
         print("  " + linea)
 
@@ -450,8 +488,15 @@ def main():
             if s not in locales:
                 sin_local.append(s)
         elif s in locales_resto and ccaa in ccaa_capas:
-            # Modelo completo: estatal + autonómico + local propio de la cabecera (fuente oficial de la CCAA)
-            lugar_['capas'] = ['nacional', f'ccaa/{ccaa}', f'local/{s}']
+            # Modelo completo: estatal + autonómico (+ insular en Canarias) + local propio de la cabecera
+            capas = ['nacional', f'ccaa/{ccaa}']
+            if ccaa == 'cn' and s in ISLA_DE_CABECERA and ISLA_DE_CABECERA[s] in insular_capas:
+                capas.append(f'insular/{ISLA_DE_CABECERA[s]}')
+                lugar_['isla'] = ISLA_DE_CABECERA[s]
+            if s == 'vielha-e-mijaran' and '__aran__' in insular_capas:
+                capas.append('territorial/aran')
+            capas.append(f'local/{s}')
+            lugar_['capas'] = capas
             lugar_['locales_pendientes'] = False
         else:
             # Capa plana heredada de la provincia (incluye los locales de la capital). Para una cabecera que no es
