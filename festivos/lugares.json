@@ -1,0 +1,5116 @@
+{
+ "version": "2026-10-03",
+ "lugares": [
+  {
+   "id": "espana",
+   "nombre": "España (solo festivos estatales)",
+   "tipo": "nacional",
+   "capas": [
+    "nacional"
+   ]
+  },
+  {
+   "id": "a-coruna",
+   "nombre": "A Coruña",
+   "tipo": "provincia",
+   "ccaa": "ga",
+   "ccaa_nombre": "Galicia",
+   "capital_incluida": true,
+   "capas": [
+    "provincia/a-coruna"
+   ]
+  },
+  {
+   "id": "lugo",
+   "nombre": "Lugo",
+   "tipo": "provincia",
+   "ccaa": "ga",
+   "ccaa_nombre": "Galicia",
+   "capital_incluida": true,
+   "capas": [
+    "provincia/lugo"
+   ]
+  },
+  {
+   "id": "ourense",
+   "nombre": "Ourense",
+   "tipo": "provincia",
+   "ccaa": "ga",
+   "ccaa_nombre": "Galicia",
+   "capital_incluida": true,
+   "capas": [
+    "provincia/ourense"
+   ]
+  },
+  {
+   "id": "pontevedra",
+   "nombre": "Pontevedra",
+   "tipo": "provincia",
+   "ccaa": "ga",
+   "ccaa_nombre": "Galicia",
+   "capital_incluida": true,
+   "capas": [
+    "provincia/pontevedra"
+   ]
+  },
+  {
+   "id": "asturias",
+   "nombre": "Asturias",
+   "tipo": "provincia",
+   "ccaa": "as",
+   "ccaa_nombre": "Asturias",
+   "capital_incluida": true,
+   "capas": [
+    "provincia/asturias"
+   ]
+  },
+  {
+   "id": "cantabria",
+   "nombre": "Cantabria",
+   "tipo": "provincia",
+   "ccaa": "cb",
+   "ccaa_nombre": "Cantabria",
+   "capital_incluida": true,
+   "capas": [
+    "provincia/cantabria"
+   ]
+  },
+  {
+   "id": "navarra",
+   "nombre": "Navarra",
+   "tipo": "provincia",
+   "ccaa": "na",
+   "ccaa_nombre": "Navarra",
+   "capital_incluida": true,
+   "capas": [
+    "provincia/navarra"
+   ]
+  },
+  {
+   "id": "la-rioja",
+   "nombre": "La Rioja",
+   "tipo": "provincia",
+   "ccaa": "ri",
+   "ccaa_nombre": "La Rioja",
+   "capital_incluida": true,
+   "capas": [
+    "provincia/la-rioja"
+   ]
+  },
+  {
+   "id": "huesca",
+   "nombre": "Huesca",
+   "tipo": "provincia",
+   "ccaa": "ar",
+   "ccaa_nombre": "Aragón",
+   "capital_incluida": true,
+   "capas": [
+    "provincia/huesca"
+   ]
+  },
+  {
+   "id": "teruel",
+   "nombre": "Teruel",
+   "tipo": "provincia",
+   "ccaa": "ar",
+   "ccaa_nombre": "Aragón",
+   "capital_incluida": true,
+   "capas": [
+    "provincia/teruel"
+   ]
+  },
+  {
+   "id": "zaragoza",
+   "nombre": "Zaragoza",
+   "tipo": "provincia",
+   "ccaa": "ar",
+   "ccaa_nombre": "Aragón",
+   "capital_incluida": true,
+   "capas": [
+    "provincia/zaragoza"
+   ]
+  },
+  {
+   "id": "barcelona",
+   "nombre": "Barcelona",
+   "tipo": "provincia",
+   "ccaa": "ct",
+   "ccaa_nombre": "Cataluña",
+   "capital_incluida": true,
+   "capas": [
+    "provincia/barcelona"
+   ]
+  },
+  {
+   "id": "girona",
+   "nombre": "Girona",
+   "tipo": "provincia",
+   "ccaa": "ct",
+   "ccaa_nombre": "Cataluña",
+   "capital_incluida": true,
+   "capas": [
+    "provincia/girona"
+   ]
+  },
+  {
+   "id": "lleida",
+   "nombre": "Lleida",
+   "tipo": "provincia",
+   "ccaa": "ct",
+   "ccaa_nombre": "Cataluña",
+   "capital_incluida": true,
+   "capas": [
+    "provincia/lleida"
+   ]
+  },
+  {
+   "id": "tarragona",
+   "nombre": "Tarragona",
+   "tipo": "provincia",
+   "ccaa": "ct",
+   "ccaa_nombre": "Cataluña",
+   "capital_incluida": true,
+   "capas": [
+    "provincia/tarragona"
+   ]
+  },
+  {
+   "id": "alicante",
+   "nombre": "Alicante/Alacant",
+   "tipo": "provincia",
+   "ccaa": "vc",
+   "ccaa_nombre": "Comunitat Valenciana",
+   "capital_incluida": true,
+   "capas": [
+    "provincia/alicante"
+   ]
+  },
+  {
+   "id": "castellon",
+   "nombre": "Castellón/Castelló",
+   "tipo": "provincia",
+   "ccaa": "vc",
+   "ccaa_nombre": "Comunitat Valenciana",
+   "capital_incluida": true,
+   "capas": [
+    "provincia/castellon"
+   ]
+  },
+  {
+   "id": "valencia",
+   "nombre": "Valencia/València",
+   "tipo": "provincia",
+   "ccaa": "vc",
+   "ccaa_nombre": "Comunitat Valenciana",
+   "capital_incluida": true,
+   "capas": [
+    "provincia/valencia"
+   ]
+  },
+  {
+   "id": "baleares",
+   "nombre": "Illes Balears",
+   "tipo": "provincia",
+   "ccaa": "ib",
+   "ccaa_nombre": "Illes Balears",
+   "capital_incluida": true,
+   "capas": [
+    "provincia/baleares"
+   ]
+  },
+  {
+   "id": "avila",
+   "nombre": "Ávila",
+   "tipo": "provincia",
+   "ccaa": "cl",
+   "ccaa_nombre": "Castilla y León",
+   "capital_incluida": true,
+   "capas": [
+    "provincia/avila"
+   ]
+  },
+  {
+   "id": "burgos",
+   "nombre": "Burgos",
+   "tipo": "provincia",
+   "ccaa": "cl",
+   "ccaa_nombre": "Castilla y León",
+   "capital_incluida": true,
+   "capas": [
+    "provincia/burgos"
+   ]
+  },
+  {
+   "id": "leon",
+   "nombre": "León",
+   "tipo": "provincia",
+   "ccaa": "cl",
+   "ccaa_nombre": "Castilla y León",
+   "capital_incluida": true,
+   "capas": [
+    "provincia/leon"
+   ]
+  },
+  {
+   "id": "palencia",
+   "nombre": "Palencia",
+   "tipo": "provincia",
+   "ccaa": "cl",
+   "ccaa_nombre": "Castilla y León",
+   "capital_incluida": true,
+   "capas": [
+    "provincia/palencia"
+   ]
+  },
+  {
+   "id": "salamanca",
+   "nombre": "Salamanca",
+   "tipo": "provincia",
+   "ccaa": "cl",
+   "ccaa_nombre": "Castilla y León",
+   "capital_incluida": true,
+   "capas": [
+    "provincia/salamanca"
+   ]
+  },
+  {
+   "id": "segovia",
+   "nombre": "Segovia",
+   "tipo": "provincia",
+   "ccaa": "cl",
+   "ccaa_nombre": "Castilla y León",
+   "capital_incluida": true,
+   "capas": [
+    "provincia/segovia"
+   ]
+  },
+  {
+   "id": "soria",
+   "nombre": "Soria",
+   "tipo": "provincia",
+   "ccaa": "cl",
+   "ccaa_nombre": "Castilla y León",
+   "capital_incluida": true,
+   "capas": [
+    "provincia/soria"
+   ]
+  },
+  {
+   "id": "valladolid",
+   "nombre": "Valladolid",
+   "tipo": "provincia",
+   "ccaa": "cl",
+   "ccaa_nombre": "Castilla y León",
+   "capital_incluida": true,
+   "capas": [
+    "provincia/valladolid"
+   ]
+  },
+  {
+   "id": "zamora",
+   "nombre": "Zamora",
+   "tipo": "provincia",
+   "ccaa": "cl",
+   "ccaa_nombre": "Castilla y León",
+   "capital_incluida": true,
+   "capas": [
+    "provincia/zamora"
+   ]
+  },
+  {
+   "id": "madrid",
+   "nombre": "Madrid",
+   "tipo": "provincia",
+   "ccaa": "md",
+   "ccaa_nombre": "Comunidad de Madrid",
+   "capital_incluida": true,
+   "capas": [
+    "provincia/madrid"
+   ]
+  },
+  {
+   "id": "albacete",
+   "nombre": "Albacete",
+   "tipo": "provincia",
+   "ccaa": "cm",
+   "ccaa_nombre": "Castilla-La Mancha",
+   "capital_incluida": true,
+   "capas": [
+    "provincia/albacete"
+   ]
+  },
+  {
+   "id": "ciudad-real",
+   "nombre": "Ciudad Real",
+   "tipo": "provincia",
+   "ccaa": "cm",
+   "ccaa_nombre": "Castilla-La Mancha",
+   "capital_incluida": true,
+   "capas": [
+    "provincia/ciudad-real"
+   ]
+  },
+  {
+   "id": "cuenca",
+   "nombre": "Cuenca",
+   "tipo": "provincia",
+   "ccaa": "cm",
+   "ccaa_nombre": "Castilla-La Mancha",
+   "capital_incluida": true,
+   "capas": [
+    "provincia/cuenca"
+   ]
+  },
+  {
+   "id": "guadalajara",
+   "nombre": "Guadalajara",
+   "tipo": "provincia",
+   "ccaa": "cm",
+   "ccaa_nombre": "Castilla-La Mancha",
+   "capital_incluida": true,
+   "capas": [
+    "provincia/guadalajara"
+   ]
+  },
+  {
+   "id": "toledo",
+   "nombre": "Toledo",
+   "tipo": "provincia",
+   "ccaa": "cm",
+   "ccaa_nombre": "Castilla-La Mancha",
+   "capital_incluida": true,
+   "capas": [
+    "provincia/toledo"
+   ]
+  },
+  {
+   "id": "badajoz",
+   "nombre": "Badajoz",
+   "tipo": "provincia",
+   "ccaa": "ex",
+   "ccaa_nombre": "Extremadura",
+   "capital_incluida": true,
+   "capas": [
+    "provincia/badajoz"
+   ]
+  },
+  {
+   "id": "caceres",
+   "nombre": "Cáceres",
+   "tipo": "provincia",
+   "ccaa": "ex",
+   "ccaa_nombre": "Extremadura",
+   "capital_incluida": true,
+   "capas": [
+    "provincia/caceres"
+   ]
+  },
+  {
+   "id": "almeria",
+   "nombre": "Almería",
+   "tipo": "provincia",
+   "ccaa": "an",
+   "ccaa_nombre": "Andalucía",
+   "capital_incluida": true,
+   "capas": [
+    "provincia/almeria"
+   ]
+  },
+  {
+   "id": "cadiz",
+   "nombre": "Cádiz",
+   "tipo": "provincia",
+   "ccaa": "an",
+   "ccaa_nombre": "Andalucía",
+   "capital_incluida": true,
+   "capas": [
+    "provincia/cadiz"
+   ]
+  },
+  {
+   "id": "cordoba",
+   "nombre": "Córdoba",
+   "tipo": "provincia",
+   "ccaa": "an",
+   "ccaa_nombre": "Andalucía",
+   "capital_incluida": true,
+   "capas": [
+    "provincia/cordoba"
+   ]
+  },
+  {
+   "id": "granada",
+   "nombre": "Granada",
+   "tipo": "provincia",
+   "ccaa": "an",
+   "ccaa_nombre": "Andalucía",
+   "capital_incluida": true,
+   "capas": [
+    "provincia/granada"
+   ]
+  },
+  {
+   "id": "huelva",
+   "nombre": "Huelva",
+   "tipo": "provincia",
+   "ccaa": "an",
+   "ccaa_nombre": "Andalucía",
+   "capital_incluida": true,
+   "capas": [
+    "provincia/huelva"
+   ]
+  },
+  {
+   "id": "jaen",
+   "nombre": "Jaén",
+   "tipo": "provincia",
+   "ccaa": "an",
+   "ccaa_nombre": "Andalucía",
+   "capital_incluida": true,
+   "capas": [
+    "provincia/jaen"
+   ]
+  },
+  {
+   "id": "malaga",
+   "nombre": "Málaga",
+   "tipo": "provincia",
+   "ccaa": "an",
+   "ccaa_nombre": "Andalucía",
+   "capital_incluida": true,
+   "capas": [
+    "provincia/malaga"
+   ]
+  },
+  {
+   "id": "sevilla",
+   "nombre": "Sevilla",
+   "tipo": "provincia",
+   "ccaa": "an",
+   "ccaa_nombre": "Andalucía",
+   "capital_incluida": true,
+   "capas": [
+    "provincia/sevilla"
+   ]
+  },
+  {
+   "id": "murcia",
+   "nombre": "Murcia",
+   "tipo": "provincia",
+   "ccaa": "mc",
+   "ccaa_nombre": "Región de Murcia",
+   "capital_incluida": true,
+   "capas": [
+    "provincia/murcia"
+   ]
+  },
+  {
+   "id": "las-palmas",
+   "nombre": "Las Palmas",
+   "tipo": "provincia",
+   "ccaa": "cn",
+   "ccaa_nombre": "Canarias",
+   "capital_incluida": true,
+   "capas": [
+    "provincia/las-palmas"
+   ]
+  },
+  {
+   "id": "tenerife",
+   "nombre": "Santa Cruz de Tenerife",
+   "tipo": "provincia",
+   "ccaa": "cn",
+   "ccaa_nombre": "Canarias",
+   "capital_incluida": true,
+   "capas": [
+    "provincia/tenerife"
+   ]
+  },
+  {
+   "id": "ceuta",
+   "nombre": "Ceuta",
+   "tipo": "provincia",
+   "ccaa": "ce",
+   "ccaa_nombre": "Ceuta",
+   "capital_incluida": true,
+   "capas": [
+    "provincia/ceuta"
+   ]
+  },
+  {
+   "id": "melilla",
+   "nombre": "Melilla",
+   "tipo": "provincia",
+   "ccaa": "ml",
+   "ccaa_nombre": "Melilla",
+   "capital_incluida": true,
+   "capas": [
+    "provincia/melilla"
+   ]
+  },
+  {
+   "id": "araba",
+   "nombre": "Araba/Álava (sin festivos locales)",
+   "tipo": "territorio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba"
+   ]
+  },
+  {
+   "id": "bizkaia",
+   "nombre": "Bizkaia (sin festivos locales)",
+   "tipo": "territorio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia"
+   ]
+  },
+  {
+   "id": "gipuzkoa",
+   "nombre": "Gipuzkoa (sin festivos locales)",
+   "tipo": "territorio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa"
+   ]
+  },
+  {
+   "id": "abadino",
+   "nombre": "Abadiño",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/abadino"
+   ]
+  },
+  {
+   "id": "abaltzisketa",
+   "nombre": "Abaltzisketa",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/abaltzisketa"
+   ]
+  },
+  {
+   "id": "abanto-y-ciervana-abanto-zierbena",
+   "nombre": "Abanto y Ciérvana-Abanto Zierbena",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/abanto-y-ciervana-abanto-zierbena"
+   ]
+  },
+  {
+   "id": "aduna",
+   "nombre": "Aduna",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/aduna"
+   ]
+  },
+  {
+   "id": "aia",
+   "nombre": "Aia",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/aia"
+   ]
+  },
+  {
+   "id": "aizarnazabal",
+   "nombre": "Aizarnazabal",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/aizarnazabal"
+   ]
+  },
+  {
+   "id": "ajangiz",
+   "nombre": "Ajangiz",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/ajangiz"
+   ]
+  },
+  {
+   "id": "albiztur",
+   "nombre": "Albiztur",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/albiztur"
+   ]
+  },
+  {
+   "id": "alegia",
+   "nombre": "Alegia",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/alegia"
+   ]
+  },
+  {
+   "id": "alegria-dulantzi",
+   "nombre": "Alegría-Dulantzi",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/alegria-dulantzi"
+   ]
+  },
+  {
+   "id": "alkiza",
+   "nombre": "Alkiza",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/alkiza"
+   ]
+  },
+  {
+   "id": "alonsotegi",
+   "nombre": "Alonsotegi",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/alonsotegi"
+   ]
+  },
+  {
+   "id": "altzaga",
+   "nombre": "Altzaga",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/altzaga"
+   ]
+  },
+  {
+   "id": "altzo",
+   "nombre": "Altzo",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/altzo"
+   ]
+  },
+  {
+   "id": "amezketa",
+   "nombre": "Amezketa",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/amezketa"
+   ]
+  },
+  {
+   "id": "amorebieta-etxano",
+   "nombre": "Amorebieta-Etxano",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/amorebieta-etxano"
+   ]
+  },
+  {
+   "id": "amoroto",
+   "nombre": "Amoroto",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/amoroto"
+   ]
+  },
+  {
+   "id": "amurrio",
+   "nombre": "Amurrio",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": true,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/amurrio"
+   ]
+  },
+  {
+   "id": "anana",
+   "nombre": "Añana",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/anana"
+   ]
+  },
+  {
+   "id": "andoain",
+   "nombre": "Andoain",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/andoain"
+   ]
+  },
+  {
+   "id": "anoeta",
+   "nombre": "Anoeta",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/anoeta"
+   ]
+  },
+  {
+   "id": "antzuola",
+   "nombre": "Antzuola",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/antzuola"
+   ]
+  },
+  {
+   "id": "arakaldo",
+   "nombre": "Arakaldo",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/arakaldo"
+   ]
+  },
+  {
+   "id": "arama",
+   "nombre": "Arama",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/arama"
+   ]
+  },
+  {
+   "id": "aramaio",
+   "nombre": "Aramaio",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/aramaio"
+   ]
+  },
+  {
+   "id": "arantzazu",
+   "nombre": "Arantzazu",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/arantzazu"
+   ]
+  },
+  {
+   "id": "areatza",
+   "nombre": "Areatza",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/areatza"
+   ]
+  },
+  {
+   "id": "aretxabaleta",
+   "nombre": "Aretxabaleta",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/aretxabaleta"
+   ]
+  },
+  {
+   "id": "arminon",
+   "nombre": "Armiñón",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/arminon"
+   ]
+  },
+  {
+   "id": "arraia-maeztu",
+   "nombre": "Arraia-Maeztu",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/arraia-maeztu"
+   ]
+  },
+  {
+   "id": "arrankudiaga-zollo",
+   "nombre": "Arrankudiaga-Zollo",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/arrankudiaga-zollo"
+   ]
+  },
+  {
+   "id": "arratzu",
+   "nombre": "Arratzu",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/arratzu"
+   ]
+  },
+  {
+   "id": "arrazua-ubarrundia",
+   "nombre": "Arrazua-Ubarrundia",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/arrazua-ubarrundia"
+   ]
+  },
+  {
+   "id": "arrieta",
+   "nombre": "Arrieta",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/arrieta"
+   ]
+  },
+  {
+   "id": "arrigorriaga",
+   "nombre": "Arrigorriaga",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/arrigorriaga"
+   ]
+  },
+  {
+   "id": "artea",
+   "nombre": "Artea",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/artea"
+   ]
+  },
+  {
+   "id": "artzentales",
+   "nombre": "Artzentales",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/artzentales"
+   ]
+  },
+  {
+   "id": "artziniega",
+   "nombre": "Artziniega",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/artziniega"
+   ]
+  },
+  {
+   "id": "asparrena",
+   "nombre": "Asparrena",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/asparrena"
+   ]
+  },
+  {
+   "id": "asteasu",
+   "nombre": "Asteasu",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/asteasu"
+   ]
+  },
+  {
+   "id": "astigarraga",
+   "nombre": "Astigarraga",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/astigarraga"
+   ]
+  },
+  {
+   "id": "ataun",
+   "nombre": "Ataun",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/ataun"
+   ]
+  },
+  {
+   "id": "atxondo",
+   "nombre": "Atxondo",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/atxondo"
+   ]
+  },
+  {
+   "id": "aulesti",
+   "nombre": "Aulesti",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/aulesti"
+   ]
+  },
+  {
+   "id": "ayala-aginaga",
+   "nombre": "Ayala - Agiñaga",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/ayala-aginaga"
+   ]
+  },
+  {
+   "id": "ayala-anes",
+   "nombre": "Ayala - Añes",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/ayala-anes"
+   ]
+  },
+  {
+   "id": "ayala-beotegi",
+   "nombre": "Ayala - Beotegi",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/ayala-beotegi"
+   ]
+  },
+  {
+   "id": "ayala-costera",
+   "nombre": "Ayala - Costera",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/ayala-costera"
+   ]
+  },
+  {
+   "id": "ayala-erbi",
+   "nombre": "Ayala - Erbi",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/ayala-erbi"
+   ]
+  },
+  {
+   "id": "ayala-etxegoien",
+   "nombre": "Ayala - Etxegoien",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/ayala-etxegoien"
+   ]
+  },
+  {
+   "id": "ayala-izoria",
+   "nombre": "Ayala - Izoria",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/ayala-izoria"
+   ]
+  },
+  {
+   "id": "ayala-lejarzo",
+   "nombre": "Ayala - Lejarzo",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/ayala-lejarzo"
+   ]
+  },
+  {
+   "id": "ayala-llanteno",
+   "nombre": "Ayala - Llanteno",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/ayala-llanteno"
+   ]
+  },
+  {
+   "id": "ayala-luiaondo",
+   "nombre": "Ayala - Luiaondo",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/ayala-luiaondo"
+   ]
+  },
+  {
+   "id": "ayala-lujo",
+   "nombre": "Ayala - Lujo",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/ayala-lujo"
+   ]
+  },
+  {
+   "id": "ayala-madaria",
+   "nombre": "Ayala - Madaria",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/ayala-madaria"
+   ]
+  },
+  {
+   "id": "ayala-marono",
+   "nombre": "Ayala - Maroño",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/ayala-marono"
+   ]
+  },
+  {
+   "id": "ayala-menagarai",
+   "nombre": "Ayala - Menagarai",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/ayala-menagarai"
+   ]
+  },
+  {
+   "id": "ayala-menoio",
+   "nombre": "Ayala - Menoio",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/ayala-menoio"
+   ]
+  },
+  {
+   "id": "ayala-murga",
+   "nombre": "Ayala - Murga",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/ayala-murga"
+   ]
+  },
+  {
+   "id": "ayala-olabezar",
+   "nombre": "Ayala - Olabezar",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/ayala-olabezar"
+   ]
+  },
+  {
+   "id": "ayala-ozeka",
+   "nombre": "Ayala - Ozeka",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/ayala-ozeka"
+   ]
+  },
+  {
+   "id": "ayala-quejana",
+   "nombre": "Ayala - Quejana",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/ayala-quejana"
+   ]
+  },
+  {
+   "id": "ayala-respaldiza",
+   "nombre": "Ayala - Respaldiza",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/ayala-respaldiza"
+   ]
+  },
+  {
+   "id": "ayala-retes-de-llanteno",
+   "nombre": "Ayala - Retes de Llanteno",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/ayala-retes-de-llanteno"
+   ]
+  },
+  {
+   "id": "ayala-salmanton",
+   "nombre": "Ayala - Salmantón",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/ayala-salmanton"
+   ]
+  },
+  {
+   "id": "ayala-sojo",
+   "nombre": "Ayala - Sojo",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/ayala-sojo"
+   ]
+  },
+  {
+   "id": "ayala-zuaza",
+   "nombre": "Ayala - Zuaza",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/ayala-zuaza"
+   ]
+  },
+  {
+   "id": "azkoitia",
+   "nombre": "Azkoitia",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/azkoitia"
+   ]
+  },
+  {
+   "id": "azpeitia",
+   "nombre": "Azpeitia",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": true,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/azpeitia"
+   ]
+  },
+  {
+   "id": "bakio",
+   "nombre": "Bakio",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/bakio"
+   ]
+  },
+  {
+   "id": "baliarrain",
+   "nombre": "Baliarrain",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/baliarrain"
+   ]
+  },
+  {
+   "id": "balmaseda",
+   "nombre": "Balmaseda",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": true,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/balmaseda"
+   ]
+  },
+  {
+   "id": "banos-de-ebro",
+   "nombre": "Baños de Ebro",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/banos-de-ebro"
+   ]
+  },
+  {
+   "id": "barakaldo",
+   "nombre": "Barakaldo",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": true,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/barakaldo"
+   ]
+  },
+  {
+   "id": "barrika",
+   "nombre": "Barrika",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/barrika"
+   ]
+  },
+  {
+   "id": "barrundia",
+   "nombre": "Barrundia",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/barrundia"
+   ]
+  },
+  {
+   "id": "basauri",
+   "nombre": "Basauri",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/basauri"
+   ]
+  },
+  {
+   "id": "beasain",
+   "nombre": "Beasain",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/beasain"
+   ]
+  },
+  {
+   "id": "bedia",
+   "nombre": "Bedia",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/bedia"
+   ]
+  },
+  {
+   "id": "beizama",
+   "nombre": "Beizama",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/beizama"
+   ]
+  },
+  {
+   "id": "belaunza",
+   "nombre": "Belaunza",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/belaunza"
+   ]
+  },
+  {
+   "id": "berango",
+   "nombre": "Berango",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/berango"
+   ]
+  },
+  {
+   "id": "berantevilla",
+   "nombre": "Berantevilla",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/berantevilla"
+   ]
+  },
+  {
+   "id": "berastegi",
+   "nombre": "Berastegi",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/berastegi"
+   ]
+  },
+  {
+   "id": "bergara",
+   "nombre": "Bergara",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": true,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/bergara"
+   ]
+  },
+  {
+   "id": "bermeo",
+   "nombre": "Bermeo",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/bermeo"
+   ]
+  },
+  {
+   "id": "bernedo",
+   "nombre": "Bernedo",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/bernedo"
+   ]
+  },
+  {
+   "id": "berriatua",
+   "nombre": "Berriatua",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/berriatua"
+   ]
+  },
+  {
+   "id": "berriz",
+   "nombre": "Berriz",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/berriz"
+   ]
+  },
+  {
+   "id": "berrobi",
+   "nombre": "Berrobi",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/berrobi"
+   ]
+  },
+  {
+   "id": "bidania-goiatz-bidania",
+   "nombre": "Bidania-Goiatz  - Bidania",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/bidania-goiatz-bidania"
+   ]
+  },
+  {
+   "id": "bidania-goiatz-goiatz",
+   "nombre": "Bidania-Goiatz  - Goiatz",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/bidania-goiatz-goiatz"
+   ]
+  },
+  {
+   "id": "bilbao",
+   "nombre": "Bilbao",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": true,
+   "partido_judicial": true,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/bilbao"
+   ]
+  },
+  {
+   "id": "busturia",
+   "nombre": "Busturia",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/busturia"
+   ]
+  },
+  {
+   "id": "campezo",
+   "nombre": "Campezo",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/campezo"
+   ]
+  },
+  {
+   "id": "cripan",
+   "nombre": "Cripan",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/cripan"
+   ]
+  },
+  {
+   "id": "deba",
+   "nombre": "Deba",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/deba"
+   ]
+  },
+  {
+   "id": "derio",
+   "nombre": "Derio",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/derio"
+   ]
+  },
+  {
+   "id": "dima",
+   "nombre": "Dima",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/dima"
+   ]
+  },
+  {
+   "id": "donostia-san-sebastian",
+   "nombre": "Donostia-San Sebastian",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": true,
+   "partido_judicial": true,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/donostia-san-sebastian"
+   ]
+  },
+  {
+   "id": "durango",
+   "nombre": "Durango",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": true,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/durango"
+   ]
+  },
+  {
+   "id": "ea",
+   "nombre": "Ea",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/ea"
+   ]
+  },
+  {
+   "id": "eibar",
+   "nombre": "Eibar",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": true,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/eibar"
+   ]
+  },
+  {
+   "id": "elantxobe",
+   "nombre": "Elantxobe",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/elantxobe"
+   ]
+  },
+  {
+   "id": "elburgo",
+   "nombre": "Elburgo",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/elburgo"
+   ]
+  },
+  {
+   "id": "elciego",
+   "nombre": "Elciego",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/elciego"
+   ]
+  },
+  {
+   "id": "elduaien",
+   "nombre": "Elduaien",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/elduaien"
+   ]
+  },
+  {
+   "id": "elgeta",
+   "nombre": "Elgeta",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/elgeta"
+   ]
+  },
+  {
+   "id": "elgoibar",
+   "nombre": "Elgoibar",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/elgoibar"
+   ]
+  },
+  {
+   "id": "elorrio",
+   "nombre": "Elorrio",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/elorrio"
+   ]
+  },
+  {
+   "id": "elvillar",
+   "nombre": "Elvillar",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/elvillar"
+   ]
+  },
+  {
+   "id": "erandio",
+   "nombre": "Erandio",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/erandio"
+   ]
+  },
+  {
+   "id": "ereno",
+   "nombre": "Ereño",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/ereno"
+   ]
+  },
+  {
+   "id": "ermua",
+   "nombre": "Ermua",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/ermua"
+   ]
+  },
+  {
+   "id": "errenteria",
+   "nombre": "Errenteria",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/errenteria"
+   ]
+  },
+  {
+   "id": "errezil",
+   "nombre": "Errezil",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/errezil"
+   ]
+  },
+  {
+   "id": "errigoiti",
+   "nombre": "Errigoiti",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/errigoiti"
+   ]
+  },
+  {
+   "id": "eskoriatza",
+   "nombre": "Eskoriatza",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/eskoriatza"
+   ]
+  },
+  {
+   "id": "etxebarri",
+   "nombre": "Etxebarri",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/etxebarri"
+   ]
+  },
+  {
+   "id": "etxebarria",
+   "nombre": "Etxebarria",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/etxebarria"
+   ]
+  },
+  {
+   "id": "ezkio-itsaso-barrio-ezkio",
+   "nombre": "Ezkio-Itsaso - Barrio Ezkio",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/ezkio-itsaso-barrio-ezkio"
+   ]
+  },
+  {
+   "id": "ezkio-itsaso-barrio-itsaso-alegia",
+   "nombre": "Ezkio-Itsaso - Barrio Itsaso-Alegia",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/ezkio-itsaso-barrio-itsaso-alegia"
+   ]
+  },
+  {
+   "id": "ezkio-itsaso-barrio-santa-luzia-anduaga",
+   "nombre": "Ezkio-Itsaso - Barrio Santa Luzia-Anduaga",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/ezkio-itsaso-barrio-santa-luzia-anduaga"
+   ]
+  },
+  {
+   "id": "ezkio-itsaso-itsaso-centro",
+   "nombre": "Ezkio-Itsaso - Itsaso Centro",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/ezkio-itsaso-itsaso-centro"
+   ]
+  },
+  {
+   "id": "ezkio-itsaso-mendialdea",
+   "nombre": "Ezkio-Itsaso - Mendialdea",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/ezkio-itsaso-mendialdea"
+   ]
+  },
+  {
+   "id": "forua",
+   "nombre": "Forua",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/forua"
+   ]
+  },
+  {
+   "id": "fruiz",
+   "nombre": "Fruiz",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/fruiz"
+   ]
+  },
+  {
+   "id": "gabiria",
+   "nombre": "Gabiria",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/gabiria"
+   ]
+  },
+  {
+   "id": "gaintza",
+   "nombre": "Gaintza",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/gaintza"
+   ]
+  },
+  {
+   "id": "galdakao",
+   "nombre": "Galdakao",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/galdakao"
+   ]
+  },
+  {
+   "id": "galdames",
+   "nombre": "Galdames",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/galdames"
+   ]
+  },
+  {
+   "id": "gamiz-fika",
+   "nombre": "Gamiz-Fika",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/gamiz-fika"
+   ]
+  },
+  {
+   "id": "garai",
+   "nombre": "Garai",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/garai"
+   ]
+  },
+  {
+   "id": "gatika",
+   "nombre": "Gatika",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/gatika"
+   ]
+  },
+  {
+   "id": "gautegiz-arteaga",
+   "nombre": "Gautegiz Arteaga",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/gautegiz-arteaga"
+   ]
+  },
+  {
+   "id": "gaztelu",
+   "nombre": "Gaztelu",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/gaztelu"
+   ]
+  },
+  {
+   "id": "gernika-lumo",
+   "nombre": "Gernika-Lumo",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": true,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/gernika-lumo"
+   ]
+  },
+  {
+   "id": "getaria",
+   "nombre": "Getaria",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/getaria"
+   ]
+  },
+  {
+   "id": "getxo",
+   "nombre": "Getxo",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": true,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/getxo"
+   ]
+  },
+  {
+   "id": "gizaburuaga",
+   "nombre": "Gizaburuaga",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/gizaburuaga"
+   ]
+  },
+  {
+   "id": "gordexola",
+   "nombre": "Gordexola",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/gordexola"
+   ]
+  },
+  {
+   "id": "gorliz",
+   "nombre": "Gorliz",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/gorliz"
+   ]
+  },
+  {
+   "id": "guenes",
+   "nombre": "Güeñes",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/guenes"
+   ]
+  },
+  {
+   "id": "hernani",
+   "nombre": "Hernani",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/hernani"
+   ]
+  },
+  {
+   "id": "hernialde",
+   "nombre": "Hernialde",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/hernialde"
+   ]
+  },
+  {
+   "id": "hondarribia",
+   "nombre": "Hondarribia",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/hondarribia"
+   ]
+  },
+  {
+   "id": "ibarra",
+   "nombre": "Ibarra",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/ibarra"
+   ]
+  },
+  {
+   "id": "ibarrangelu",
+   "nombre": "Ibarrangelu",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/ibarrangelu"
+   ]
+  },
+  {
+   "id": "idiazabal",
+   "nombre": "Idiazabal",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/idiazabal"
+   ]
+  },
+  {
+   "id": "igorre",
+   "nombre": "Igorre",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/igorre"
+   ]
+  },
+  {
+   "id": "ikaztegieta",
+   "nombre": "Ikaztegieta",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/ikaztegieta"
+   ]
+  },
+  {
+   "id": "irun",
+   "nombre": "Irun",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": true,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/irun"
+   ]
+  },
+  {
+   "id": "iruna-de-oca-nanclares-de-la-oca",
+   "nombre": "Iruña de Oca - Nanclares de la Oca",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/iruna-de-oca-nanclares-de-la-oca"
+   ]
+  },
+  {
+   "id": "irura",
+   "nombre": "Irura",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/irura"
+   ]
+  },
+  {
+   "id": "iruraiz-gauna",
+   "nombre": "Iruraiz-Gauna",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/iruraiz-gauna"
+   ]
+  },
+  {
+   "id": "ispaster",
+   "nombre": "Ispaster",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/ispaster"
+   ]
+  },
+  {
+   "id": "itsasondo",
+   "nombre": "Itsasondo",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/itsasondo"
+   ]
+  },
+  {
+   "id": "iurreta",
+   "nombre": "Iurreta",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/iurreta"
+   ]
+  },
+  {
+   "id": "izurtza",
+   "nombre": "Izurtza",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/izurtza"
+   ]
+  },
+  {
+   "id": "kortezubi",
+   "nombre": "Kortezubi",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/kortezubi"
+   ]
+  },
+  {
+   "id": "kuartango",
+   "nombre": "Kuartango",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/kuartango"
+   ]
+  },
+  {
+   "id": "labastida",
+   "nombre": "Labastida",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/labastida"
+   ]
+  },
+  {
+   "id": "lagran",
+   "nombre": "Lagrán",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/lagran"
+   ]
+  },
+  {
+   "id": "laguardia",
+   "nombre": "Laguardia",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/laguardia"
+   ]
+  },
+  {
+   "id": "lanciego",
+   "nombre": "Lanciego",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/lanciego"
+   ]
+  },
+  {
+   "id": "lanestosa",
+   "nombre": "Lanestosa",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/lanestosa"
+   ]
+  },
+  {
+   "id": "lantaron",
+   "nombre": "Lantarón",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/lantaron"
+   ]
+  },
+  {
+   "id": "lapuebla-de-labarca",
+   "nombre": "Lapuebla de Labarca",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/lapuebla-de-labarca"
+   ]
+  },
+  {
+   "id": "larrabetzu",
+   "nombre": "Larrabetzu",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/larrabetzu"
+   ]
+  },
+  {
+   "id": "larraul",
+   "nombre": "Larraul",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/larraul"
+   ]
+  },
+  {
+   "id": "lasarte-oria",
+   "nombre": "Lasarte-Oria",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/lasarte-oria"
+   ]
+  },
+  {
+   "id": "laukiz",
+   "nombre": "Laukiz",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/laukiz"
+   ]
+  },
+  {
+   "id": "lazkao",
+   "nombre": "Lazkao",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/lazkao"
+   ]
+  },
+  {
+   "id": "leaburu-txarama",
+   "nombre": "Leaburu - Txarama",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/leaburu-txarama"
+   ]
+  },
+  {
+   "id": "legazpi",
+   "nombre": "Legazpi",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/legazpi"
+   ]
+  },
+  {
+   "id": "legorreta",
+   "nombre": "Legorreta",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/legorreta"
+   ]
+  },
+  {
+   "id": "legutio",
+   "nombre": "Legutio",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/legutio"
+   ]
+  },
+  {
+   "id": "leintz-gatzaga",
+   "nombre": "Leintz-Gatzaga",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/leintz-gatzaga"
+   ]
+  },
+  {
+   "id": "leioa",
+   "nombre": "Leioa",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/leioa"
+   ]
+  },
+  {
+   "id": "lekeitio",
+   "nombre": "Lekeitio",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/lekeitio"
+   ]
+  },
+  {
+   "id": "lemoa",
+   "nombre": "Lemoa",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/lemoa"
+   ]
+  },
+  {
+   "id": "lemoiz",
+   "nombre": "Lemoiz",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/lemoiz"
+   ]
+  },
+  {
+   "id": "leza",
+   "nombre": "Leza",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/leza"
+   ]
+  },
+  {
+   "id": "lezama",
+   "nombre": "Lezama",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/lezama"
+   ]
+  },
+  {
+   "id": "lezo",
+   "nombre": "Lezo",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/lezo"
+   ]
+  },
+  {
+   "id": "lizartza",
+   "nombre": "Lizartza",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/lizartza"
+   ]
+  },
+  {
+   "id": "llodio",
+   "nombre": "Llodio",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/llodio"
+   ]
+  },
+  {
+   "id": "loiu",
+   "nombre": "Loiu",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/loiu"
+   ]
+  },
+  {
+   "id": "mallabia",
+   "nombre": "Mallabia",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/mallabia"
+   ]
+  },
+  {
+   "id": "manaria",
+   "nombre": "Mañaria",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/manaria"
+   ]
+  },
+  {
+   "id": "markina-xemein",
+   "nombre": "Markina-Xemein",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/markina-xemein"
+   ]
+  },
+  {
+   "id": "maruri-jatabe",
+   "nombre": "Maruri-Jatabe",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/maruri-jatabe"
+   ]
+  },
+  {
+   "id": "menaka",
+   "nombre": "Meñaka",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/menaka"
+   ]
+  },
+  {
+   "id": "mendaro",
+   "nombre": "Mendaro",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/mendaro"
+   ]
+  },
+  {
+   "id": "mendata",
+   "nombre": "Mendata",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/mendata"
+   ]
+  },
+  {
+   "id": "mendexa",
+   "nombre": "Mendexa",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/mendexa"
+   ]
+  },
+  {
+   "id": "mondragon",
+   "nombre": "Mondragón",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/mondragon"
+   ]
+  },
+  {
+   "id": "moreda-de-alava",
+   "nombre": "Moreda de Álava",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/moreda-de-alava"
+   ]
+  },
+  {
+   "id": "morga",
+   "nombre": "Morga",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/morga"
+   ]
+  },
+  {
+   "id": "mundaka",
+   "nombre": "Mundaka",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/mundaka"
+   ]
+  },
+  {
+   "id": "mungia",
+   "nombre": "Mungia",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/mungia"
+   ]
+  },
+  {
+   "id": "munitibar-arbatzegi-gerrikaitz",
+   "nombre": "Munitibar-Arbatzegi Gerrikaitz",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/munitibar-arbatzegi-gerrikaitz"
+   ]
+  },
+  {
+   "id": "murueta",
+   "nombre": "Murueta",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/murueta"
+   ]
+  },
+  {
+   "id": "muskiz",
+   "nombre": "Muskiz",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/muskiz"
+   ]
+  },
+  {
+   "id": "mutiloa",
+   "nombre": "Mutiloa",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/mutiloa"
+   ]
+  },
+  {
+   "id": "mutriku",
+   "nombre": "Mutriku",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/mutriku"
+   ]
+  },
+  {
+   "id": "muxika",
+   "nombre": "Muxika",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/muxika"
+   ]
+  },
+  {
+   "id": "nabarniz",
+   "nombre": "Nabarniz",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/nabarniz"
+   ]
+  },
+  {
+   "id": "navaridas",
+   "nombre": "Navaridas",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/navaridas"
+   ]
+  },
+  {
+   "id": "oiartzun",
+   "nombre": "Oiartzun",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/oiartzun"
+   ]
+  },
+  {
+   "id": "okondo",
+   "nombre": "Okondo",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/okondo"
+   ]
+  },
+  {
+   "id": "olaberria",
+   "nombre": "Olaberria",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/olaberria"
+   ]
+  },
+  {
+   "id": "onati",
+   "nombre": "Oñati",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/onati"
+   ]
+  },
+  {
+   "id": "ondarroa",
+   "nombre": "Ondarroa",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/ondarroa"
+   ]
+  },
+  {
+   "id": "ordizia",
+   "nombre": "Ordizia",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/ordizia"
+   ]
+  },
+  {
+   "id": "orendain",
+   "nombre": "Orendain",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/orendain"
+   ]
+  },
+  {
+   "id": "orexa",
+   "nombre": "Orexa",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/orexa"
+   ]
+  },
+  {
+   "id": "orio",
+   "nombre": "Orio",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/orio"
+   ]
+  },
+  {
+   "id": "ormaiztegi",
+   "nombre": "Ormaiztegi",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/ormaiztegi"
+   ]
+  },
+  {
+   "id": "orozko",
+   "nombre": "Orozko",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/orozko"
+   ]
+  },
+  {
+   "id": "ortuella",
+   "nombre": "Ortuella",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/ortuella"
+   ]
+  },
+  {
+   "id": "otxandio",
+   "nombre": "Otxandio",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/otxandio"
+   ]
+  },
+  {
+   "id": "oyon-oion",
+   "nombre": "Oyón-Oion",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/oyon-oion"
+   ]
+  },
+  {
+   "id": "pasaia-p-antxo",
+   "nombre": "Pasaia - P. Antxo",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/pasaia-p-antxo"
+   ]
+  },
+  {
+   "id": "pasaia-p-donibane",
+   "nombre": "Pasaia - P. Donibane",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/pasaia-p-donibane"
+   ]
+  },
+  {
+   "id": "pasaia-p-san-pedro",
+   "nombre": "Pasaia - P. San Pedro",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/pasaia-p-san-pedro"
+   ]
+  },
+  {
+   "id": "pasaia-trintxerpe",
+   "nombre": "Pasaia - Trintxerpe",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/pasaia-trintxerpe"
+   ]
+  },
+  {
+   "id": "penacerrada-urizaharra",
+   "nombre": "Peñacerrada-Urizaharra",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/penacerrada-urizaharra"
+   ]
+  },
+  {
+   "id": "plentzia",
+   "nombre": "Plentzia",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/plentzia"
+   ]
+  },
+  {
+   "id": "portugalete",
+   "nombre": "Portugalete",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/portugalete"
+   ]
+  },
+  {
+   "id": "ribera-alta",
+   "nombre": "Ribera Alta",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/ribera-alta"
+   ]
+  },
+  {
+   "id": "ribera-baja",
+   "nombre": "Ribera Baja",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/ribera-baja"
+   ]
+  },
+  {
+   "id": "salvatierra",
+   "nombre": "Salvatierra",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/salvatierra"
+   ]
+  },
+  {
+   "id": "samaniego",
+   "nombre": "Samaniego",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/samaniego"
+   ]
+  },
+  {
+   "id": "san-millan",
+   "nombre": "San Millán",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/san-millan"
+   ]
+  },
+  {
+   "id": "santurtzi",
+   "nombre": "Santurtzi",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/santurtzi"
+   ]
+  },
+  {
+   "id": "segura",
+   "nombre": "Segura",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/segura"
+   ]
+  },
+  {
+   "id": "sestao",
+   "nombre": "Sestao",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/sestao"
+   ]
+  },
+  {
+   "id": "sondika",
+   "nombre": "Sondika",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/sondika"
+   ]
+  },
+  {
+   "id": "sopelana",
+   "nombre": "Sopelana",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/sopelana"
+   ]
+  },
+  {
+   "id": "sopuerta",
+   "nombre": "Sopuerta",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/sopuerta"
+   ]
+  },
+  {
+   "id": "soraluze-placencia-de-las-armas",
+   "nombre": "Soraluze-Placencia de las Armas",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/soraluze-placencia-de-las-armas"
+   ]
+  },
+  {
+   "id": "sukarrieta",
+   "nombre": "Sukarrieta",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/sukarrieta"
+   ]
+  },
+  {
+   "id": "tolosa",
+   "nombre": "Tolosa",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": true,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/tolosa"
+   ]
+  },
+  {
+   "id": "trucios-turtzioz",
+   "nombre": "Trucios-Turtzioz",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/trucios-turtzioz"
+   ]
+  },
+  {
+   "id": "ubide",
+   "nombre": "Ubide",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/ubide"
+   ]
+  },
+  {
+   "id": "ugao-miraballes",
+   "nombre": "Ugao-Miraballes",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/ugao-miraballes"
+   ]
+  },
+  {
+   "id": "urduliz",
+   "nombre": "Urduliz",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/urduliz"
+   ]
+  },
+  {
+   "id": "urduna-orduna",
+   "nombre": "Urduña-Orduña",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/urduna-orduna"
+   ]
+  },
+  {
+   "id": "urkabustaiz",
+   "nombre": "Urkabustaiz",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/urkabustaiz"
+   ]
+  },
+  {
+   "id": "urnieta",
+   "nombre": "Urnieta",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/urnieta"
+   ]
+  },
+  {
+   "id": "urretxu",
+   "nombre": "Urretxu",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/urretxu"
+   ]
+  },
+  {
+   "id": "usansolo",
+   "nombre": "Usansolo",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/usansolo"
+   ]
+  },
+  {
+   "id": "usurbil",
+   "nombre": "Usurbil",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/usurbil"
+   ]
+  },
+  {
+   "id": "valdegovia",
+   "nombre": "Valdegovía",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/valdegovia"
+   ]
+  },
+  {
+   "id": "valle-de-arana",
+   "nombre": "Valle de Arana",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/valle-de-arana"
+   ]
+  },
+  {
+   "id": "valle-de-carranza",
+   "nombre": "Valle de Carranza",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/valle-de-carranza"
+   ]
+  },
+  {
+   "id": "valle-de-trapaga-trapagaran",
+   "nombre": "Valle de Trápaga-Trapagaran",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/valle-de-trapaga-trapagaran"
+   ]
+  },
+  {
+   "id": "villabona",
+   "nombre": "Villabona",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/villabona"
+   ]
+  },
+  {
+   "id": "villabuena-de-alava",
+   "nombre": "Villabuena de Álava",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/villabuena-de-alava"
+   ]
+  },
+  {
+   "id": "vitoria-gasteiz",
+   "nombre": "Vitoria-Gasteiz",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": true,
+   "partido_judicial": true,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/vitoria-gasteiz"
+   ]
+  },
+  {
+   "id": "yecora",
+   "nombre": "Yécora",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/yecora"
+   ]
+  },
+  {
+   "id": "zaldibar",
+   "nombre": "Zaldibar",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/zaldibar"
+   ]
+  },
+  {
+   "id": "zaldibia",
+   "nombre": "Zaldibia",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/zaldibia"
+   ]
+  },
+  {
+   "id": "zalduondo",
+   "nombre": "Zalduondo",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/zalduondo"
+   ]
+  },
+  {
+   "id": "zalla",
+   "nombre": "Zalla",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/zalla"
+   ]
+  },
+  {
+   "id": "zambrana",
+   "nombre": "Zambrana",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/zambrana"
+   ]
+  },
+  {
+   "id": "zamudio",
+   "nombre": "Zamudio",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/zamudio"
+   ]
+  },
+  {
+   "id": "zaratamo",
+   "nombre": "Zaratamo",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/zaratamo"
+   ]
+  },
+  {
+   "id": "zarautz",
+   "nombre": "Zarautz",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/zarautz"
+   ]
+  },
+  {
+   "id": "zeanuri",
+   "nombre": "Zeanuri",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/zeanuri"
+   ]
+  },
+  {
+   "id": "zeberio",
+   "nombre": "Zeberio",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/zeberio"
+   ]
+  },
+  {
+   "id": "zegama",
+   "nombre": "Zegama",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/zegama"
+   ]
+  },
+  {
+   "id": "zerain",
+   "nombre": "Zerain",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/zerain"
+   ]
+  },
+  {
+   "id": "zestoa",
+   "nombre": "Zestoa",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/zestoa"
+   ]
+  },
+  {
+   "id": "zierbena",
+   "nombre": "Zierbena",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/zierbena"
+   ]
+  },
+  {
+   "id": "zigoitia",
+   "nombre": "Zigoitia",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/zigoitia"
+   ]
+  },
+  {
+   "id": "ziortza-bolibar",
+   "nombre": "Ziortza-Bolibar",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "bizkaia",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/bizkaia",
+    "local/ziortza-bolibar"
+   ]
+  },
+  {
+   "id": "zizurkil",
+   "nombre": "Zizurkil",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/zizurkil"
+   ]
+  },
+  {
+   "id": "zuia",
+   "nombre": "Zuia",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "araba",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/araba",
+    "local/zuia"
+   ]
+  },
+  {
+   "id": "zumaia",
+   "nombre": "Zumaia",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/zumaia"
+   ]
+  },
+  {
+   "id": "zumarraga",
+   "nombre": "Zumarraga",
+   "tipo": "municipio",
+   "ccaa": "pv",
+   "ccaa_nombre": "País Vasco",
+   "territorio": "gipuzkoa",
+   "capital": false,
+   "partido_judicial": false,
+   "capas": [
+    "nacional",
+    "ccaa/pv",
+    "territorial/gipuzkoa",
+    "local/zumarraga"
+   ]
+  }
+ ]
+}

@@ -1,10 +1,8 @@
 import streamlit as st
-import pandas as pd
-from datetime import date
-import plazos 
-import unicodedata
-import os
-# Pega esto debajo de los 'import'
+from datetime import date, timedelta
+import plazos
+import festivos
+
 DIAS_SEMANA = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
 
 # 1. CONFIGURACIÓN DE LA PÁGINA
@@ -14,86 +12,88 @@ st.set_page_config(
     layout="wide"
 )
 
-# --- MAPEO DE SEGURIDAD ---
-MAPEO_EXCEPCIONES = {
-    "Coruña, A": "a-coruna.csv",
-    "Araba/Álava": "araba_alava.csv",
-    "Ciudad Real": "ciudad-real.csv",
-    "Rioja, La": "la-rioja.csv",
-    "Palmas, Las": "las-palmas.csv",
-    "Santa Cruz de Tenerife": "tenerife.csv",
-    "Balears, Illes": "baleares.csv",
-    "Castellón/Castelló": "castellon.csv",
-    "Valencia/València": "valencia.csv"
-}
 
-def normalizar_nombre_fichero(nombre_provincia):
-    if nombre_provincia in MAPEO_EXCEPCIONES:
-        return MAPEO_EXCEPCIONES[nombre_provincia]
-    s = unicodedata.normalize('NFD', nombre_provincia)
-    s = s.encode('ascii', 'ignore').decode("utf-8")
-    return f"{s.lower().strip().replace(',', '').replace(' ', '-')}.csv"
-
+# --- LUGARES (modelo por capas: festivos/lugares.json) ---
 @st.cache_data(show_spinner=False)
-def obtener_lista_provincias():
-    fichero = "codprov.csv"
-    if os.path.exists(fichero):
-        try:
-            with open(fichero, 'r', encoding='utf-8-sig') as f:
-                lineas = [linea.strip() for linea in f.readlines() if linea.strip()]
-            lista_limpia = [l.replace('"', '') for l in lineas]
-            if lista_limpia:
-                return sorted(lista_limpia)
-        except:
-            pass
-    return None
+def obtener_lugares():
+    """Lista ordenada de (id, etiqueta) para el selector."""
+    opciones = []
+    for l in festivos.lugares():
+        tipo = l['tipo']
+        if tipo == 'provincia':
+            etiqueta = f"{l['nombre']} — provincia ({l['ccaa_nombre']})"
+        elif tipo == 'territorio':
+            etiqueta = f"{l['nombre']} — territorio histórico"
+        elif tipo == 'municipio':
+            terr = {'araba': 'Araba', 'bizkaia': 'Bizkaia', 'gipuzkoa': 'Gipuzkoa'}.get(l.get('territorio'), '')
+            marca = ' · partido judicial' if l.get('partido_judicial') else (' · capital' if l.get('capital') else '')
+            etiqueta = f"{l['nombre']} ({terr}){marca}"
+        else:
+            etiqueta = l['nombre']
+        opciones.append((l['id'], etiqueta, tipo, l.get('partido_judicial', False) or l.get('capital', False)))
+    # Orden: capitales y partidos judiciales primero, luego provincias, territorios, resto de municipios, España
+    peso = {'municipio': 2, 'provincia': 1, 'territorio': 3, 'nacional': 9}
+    opciones.sort(key=lambda o: (0 if o[3] else peso[o[2]], o[1].lower()))
+    return [(o[0], o[1]) for o in opciones]
+
 
 # --- BARRA LATERAL (DESCRIPCIÓN Y DISCLAIMER) ---
 with st.sidebar:
     st.header("Sobre esta Aplicación")
     st.markdown("""
-    Esta herramienta es un **calendario de plazos procesales y administrativos** diseñado para facilitar el cómputo de vencimientos. 
-    
+    Esta herramienta es un **calendario de plazos procesales y administrativos** diseñado para facilitar el cómputo de vencimientos.
+
     Aplica de forma automatizada las reglas de:
     * Días hábiles e inhábiles.
-    * Exclusión de festivos locales y nacionales.
+    * Exclusión de festivos estatales, autonómicos y locales del lugar elegido.
     * Periodos de inhabilidad (Agosto y Navidad) según la normativa vigente (Ley 39/2015, LEC y LJCA).
 
-    **Créditos:** Creado por **Esteban Umerez**, con la asistencia de **ChatGPT** (OpenAI) y **Gemini** (Google).
+    **Lugares:** las 52 provincias (con los festivos locales de su capital) y, en Euskadi, cada municipio,
+    con sus cabezas de partido judicial señaladas. El calendario correcto para un plazo procesal es el de la
+    localidad donde tiene su sede el órgano judicial (art. 182 LOPJ).
+
+    **Créditos:** Creado por **Esteban Umerez**, con la asistencia de **ChatGPT** (OpenAI), **Gemini** (Google) y **Claude** (Anthropic).
     """)
-    
+
     st.link_button("🌐 Visitar umerez.eu", "https://umerez.eu/2026/01/06/calculadora-de-plazos-procesales-y.html", use_container_width=True)
-    
+
     st.divider()
     st.caption("⚠️ **Aviso Legal:**")
     st.caption("""
     Esta aplicación se ofrece "tal cual" (*as is*), con fines orientativos. El autor no garantiza la ausencia de errores y **no se responsabiliza** de los resultados obtenidos ni de las decisiones legales adoptadas basadas en este cálculo. Se recomienda contrastar los resultados con los calendarios oficiales. [Más info](https://umerez.eu/2026/01/06/calculadora-de-plazos-procesales-y.html)
     """)
+
 # --- INTERFAZ PRINCIPAL ---
 st.title("⚖️ Calculadora de Plazos Legales")
 
-# 1. Fila de Configuración (Provincia y Tipo de Plazo)
-provincias = obtener_lista_provincias()
-if provincias is None:
-    st.error("🚨 Error cargando 'codprov.csv'")
-    provincias = ["Bizkaia", "Madrid", "Barcelona", "Gipuzkoa", "Araba/Álava"]
+# 1. Fila de Configuración (Lugar y Tipo de Plazo)
+lugares = obtener_lugares()
+ids = [l[0] for l in lugares]
+etiquetas = dict(lugares)
 
 c1, c2 = st.columns(2)
 
 with c1:
-    provincia_seleccionada = st.selectbox(
-        "Selecciona Provincia", 
-        options=provincias,
-        index=provincias.index("Bizkaia") if "Bizkaia" in provincias else 0
+    lugar_id = st.selectbox(
+        "Selecciona el lugar (provincia, capital, municipio o partido judicial)",
+        options=ids,
+        format_func=lambda i: etiquetas[i],
+        index=ids.index("bilbao") if "bilbao" in ids else 0,
+        help="Escribe para buscar. En Euskadi puedes elegir el municipio exacto de la sede del órgano.",
     )
-    # Carga de festivos y aviso inmediato debajo
-    nombre_csv = normalizar_nombre_fichero(provincia_seleccionada)
-    festivos = plazos.leer_festivos_csv(nombre_csv)
-    
-    if festivos:
-        st.success(f"Calendario de {provincia_seleccionada} cargado (archivo: {nombre_csv})", icon="✅")
+    lugar = festivos.lugar(lugar_id)
+    calendario = festivos.calendario(lugar_id)
+    festivos_set = set(calendario)
+    anios = festivos.anios_cubiertos(lugar_id)
+    anios_todos = sorted({a for v in anios.values() for a in v})
+    if festivos_set:
+        st.success(
+            f"Calendario de **{lugar['nombre']}** cargado: {len(festivos_set)} festivos "
+            f"({', '.join(c.split('/')[0] for c in lugar['capas'])}). Años: {anios_todos[0]}–{anios_todos[-1]}.",
+            icon="✅",
+        )
     else:
-        st.error(f"No se encontró el archivo: {nombre_csv}", icon="🚨")
+        st.error(f"No hay festivos cargados para {lugar['nombre']}", icon="🚨")
 
 with c2:
     modo_key = st.selectbox(
@@ -125,20 +125,35 @@ if st.button("Calcular Vencimiento", use_container_width=True, type="primary"):
     try:
         if unidad == "Días":
             if tipo_dia == "Hábiles":
-                vencimiento, logs = plazos.sumar_dias_habiles(fecha_inicio, duracion, festivos, config)
+                vencimiento, logs = plazos.sumar_dias_habiles(fecha_inicio, duracion, festivos_set, config)
             else:
-                vencimiento = fecha_inicio + plazos.timedelta(days=duracion)
+                vencimiento = fecha_inicio + timedelta(days=duracion)
                 logs = [f"Cómputo por días naturales: {duracion} días."]
         else:
-            vencimiento, logs = plazos.sumar_meses(fecha_inicio, duracion, festivos, config)
+            vencimiento, logs = plazos.sumar_meses(fecha_inicio, duracion, festivos_set, config)
 
-        # Localiza donde se muestra el resultado y sustituye por esto:
         nombre_dia = DIAS_SEMANA[vencimiento.weekday()]
         fecha_formateada = vencimiento.strftime('%d/%m/%Y')
 
         st.success(f"### Vencimiento: {fecha_formateada} ({nombre_dia})")
+
+        # Aviso de cobertura: alguna capa del lugar no tiene festivos del año del vencimiento
+        for anio in sorted({fecha_inicio.year, vencimiento.year}):
+            capas_sin = [c for c, a in anios.items() if anio not in a]
+            if capas_sin:
+                st.warning(
+                    f"Para {anio} faltan los festivos de: {', '.join(capas_sin)}. "
+                    f"El resultado puede variar en uno o varios días cuando se publiquen.",
+                    icon="⚠️",
+                )
+
         with st.expander("🔍 Ver detalle del cómputo paso a paso"):
             for linea in logs:
                 st.write(f"- {linea}")
+        with st.expander("📅 Festivos aplicados en este lugar"):
+            for d in sorted(calendario):
+                if fecha_inicio.year <= d.year <= vencimiento.year:
+                    nombre, capa, fuente = calendario[d]
+                    st.write(f"- {d.strftime('%d/%m/%Y')} — {nombre} *({capa})*")
     except Exception as e:
         st.error(f"Error en el cálculo: {e}")

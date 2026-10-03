@@ -19,11 +19,51 @@ En esta modalidad, la aplicación aplica la regla específica para el plazo de *
 
 ---
 
+## 🗂️ Calendarios de festivos: modelo por capas
+
+Desde octubre de 2026 los festivos viven en la carpeta `festivos/` y se **componen por capas**:
+
+```
+calendario(lugar) = nacional ∪ ccaa/<comunidad> ∪ territorial/<provincia> ∪ local/<municipio>
+```
+
+| Carpeta / fichero | Contenido | Fuente |
+|---|---|---|
+| `festivos/nacional.csv` | Festivos estatales (2025–2027) | Art. 37.2 ET; resolución anual del BOE |
+| `festivos/ccaa/pv.csv` | Festivos autonómicos de Euskadi | Decretos del Gobierno Vasco (BOPV) |
+| `festivos/territorial/{araba,bizkaia,gipuzkoa}.csv` | San Prudencio, San Ignacio | BOPV, BOB, BOG |
+| `festivos/local/<municipio>.csv` | Festivos locales de los ~280 municipios vascos | Open Data Euskadi (2026), BOB y BOG (2027) |
+| `festivos/provincia/<provincia>.csv` | Calendario plano heredado del resto de provincias (estatal + autonómico + locales de la capital) | calendarioslaborales.com |
+| `festivos/lugares.json` | Índice de lugares seleccionables y las capas de cada uno (provincias, territorios, municipios, cabezas de partido judicial) | — |
+| `festivos/fuentes/` | Documentos de origen (ICS de Open Data Euskadi, listas extraídas de los boletines) | — |
+
+Cada CSV tiene columnas `Fecha,Festividad,Fuente`. El módulo `festivos.py` resuelve nombres (`festivos.buscar("Donostia")`)
+y compone el calendario (`festivos.fechas("getxo")`). Los CSV planos de la raíz (`bizkaia.csv`, `madrid.csv`…) se mantienen
+por compatibilidad y, en el caso de Euskadi, se regeneran desde las capas con `herramientas/generar_planos.py`.
+
+**¿Por qué por municipio?** En los plazos procesales son inhábiles los festivos de la localidad donde tiene su sede el órgano
+judicial (art. 182 LOPJ), de modo que el calendario correcto es el de la cabeza de partido judicial, no el de la provincia.
+
+### Actualización anual
+
+```bash
+python3 herramientas/actualizar_festivos.py --anio 2027 --comprobar   # ¿hay calendario oficial publicado?
+python3 herramientas/actualizar_festivos.py --anio 2027               # descarga las 49 provincias no vascas
+python3 herramientas/migrar_a_capas.py                                # reconstruye festivos/ (Euskadi desde fuentes oficiales)
+python3 herramientas/generar_planos.py                                # regenera los CSV planos vascos
+python3 tests/test_plazos.py                                          # casos de referencia
+```
+
+Las páginas de calendarioslaborales.com marcadas «Calendario No Oficial» se rechazan. Euskadi no se scrapea: sus capas se
+cargan desde el BOPV (comunes), BOB/BOG/BOTHA (locales) y Open Data Euskadi.
+
+---
+
 ## 🛠️ Instrucciones de Uso Paso a Paso
 
 ### 1. Configuración del Calendario y Procedimiento
 
-* **Selecciona Provincia:** Elige la provincia correspondiente para cargar los festivos locales.
+* **Selecciona el lugar:** provincia (con los festivos de su capital), territorio histórico o, en Euskadi, el municipio concreto; las cabezas de partido judicial aparecen señaladas.
 * **Tipo de Procedimiento:**
 * *Administrativo:* Para trámites ante Ayuntamientos, Hacienda, etc.
 * *Procesal Contencioso:* Para plazos dentro de un juicio ya iniciado.
