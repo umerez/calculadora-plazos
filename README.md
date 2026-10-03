@@ -54,7 +54,7 @@ python3 plazo_cli.py --inicio 2026-10-03 --duracion 10 --unidad dias --tipo habi
 ```
 
 Imprime una línea `Vence: YYYY-MM-DD (día)` que los Atajos extraen con una expresión regular. El atajo «Plazos a Expedientes»
-pregunta la sede (por defecto Bilbao) y ejecuta este script desde un clon del repositorio en `/Users/umerez/Scripts/calculadora-plazos`;
+pregunta la sede (por defecto Bilbao) y ejecuta este script desde el clon del repositorio en `/Users/umerez/Proyectos/calculadora_plazos/repo` (enlazado también en `/Users/umerez/Scripts/calculadora-plazos`);
 actualizar los festivos del atajo es hacer `git pull` en esa carpeta.
 
 ### Actualización anual
