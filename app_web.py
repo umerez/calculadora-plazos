@@ -16,24 +16,16 @@ st.set_page_config(
 # --- LUGARES (modelo por capas: festivos/lugares.json) ---
 @st.cache_data(show_spinner=False)
 def obtener_lugares():
-    """Lista ordenada de (id, etiqueta) para el selector."""
+    """Lista ordenada de (id, etiqueta): capitales primero, luego el resto de cabeceras de partido judicial."""
     opciones = []
     for l in festivos.lugares():
-        tipo = l['tipo']
-        if tipo == 'provincia':
-            etiqueta = f"{l['nombre']} — provincia ({l['ccaa_nombre']})"
-        elif tipo == 'territorio':
-            etiqueta = f"{l['nombre']} — territorio histórico"
-        elif tipo == 'municipio':
-            terr = {'araba': 'Araba', 'bizkaia': 'Bizkaia', 'gipuzkoa': 'Gipuzkoa'}.get(l.get('territorio'), '')
-            marca = ' · partido judicial' if l.get('partido_judicial') else (' · capital' if l.get('capital') else '')
-            etiqueta = f"{l['nombre']} ({terr}){marca}"
-        else:
-            etiqueta = l['nombre']
-        opciones.append((l['id'], etiqueta, tipo, l.get('partido_judicial', False) or l.get('capital', False)))
-    # Orden: capitales y partidos judiciales primero, luego provincias, territorios, resto de municipios, España
-    peso = {'municipio': 2, 'provincia': 1, 'territorio': 3, 'nacional': 9}
-    opciones.sort(key=lambda o: (0 if o[3] else peso[o[2]], o[1].lower()))
+        etiqueta = l['nombre']
+        if l.get('provincia') and l['provincia'].lower() != l['nombre'].lower():
+            etiqueta += f" ({l['provincia']})"
+        if l.get('capital'):
+            etiqueta += " · capital"
+        opciones.append((l['id'], etiqueta, bool(l.get('capital'))))
+    opciones.sort(key=lambda o: (not o[2], o[1].lower()))
     return [(o[0], o[1]) for o in opciones]
 
 
@@ -48,9 +40,10 @@ with st.sidebar:
     * Exclusión de festivos estatales, autonómicos y locales del lugar elegido.
     * Periodos de inhabilidad (Agosto y Navidad) según la normativa vigente (Ley 39/2015, LEC y LJCA).
 
-    **Lugares:** las 52 provincias (con los festivos locales de su capital) y, en Euskadi, cada municipio,
-    con sus cabezas de partido judicial señaladas. El calendario correcto para un plazo procesal es el de la
-    localidad donde tiene su sede el órgano judicial (art. 182 LOPJ).
+    **Lugares:** las 433 cabeceras de partido judicial de España (incluidas las 52 capitales de provincia), según
+    el Censo Judicial del Ministerio de Justicia. El calendario correcto para un plazo procesal es el de la localidad
+    donde tiene su sede el órgano judicial (art. 182 LOPJ). En Euskadi cada cabecera lleva sus festivos locales
+    oficiales; en el resto, de momento, se aplican los de la capital de la provincia.
 
     **Créditos:** Creado por **Esteban Umerez**, con la asistencia de **ChatGPT** (OpenAI), **Gemini** (Google) y **Claude** (Anthropic).
     """)
@@ -75,11 +68,11 @@ c1, c2 = st.columns(2)
 
 with c1:
     lugar_id = st.selectbox(
-        "Selecciona el lugar (provincia, capital, municipio o partido judicial)",
+        "Sede del órgano (cabecera de partido judicial o capital de provincia)",
         options=ids,
         format_func=lambda i: etiquetas[i],
         index=ids.index("bilbao") if "bilbao" in ids else 0,
-        help="Escribe para buscar. En Euskadi puedes elegir el municipio exacto de la sede del órgano.",
+        help="Escribe para buscar. Son las 433 cabeceras de partido judicial de España.",
     )
     lugar = festivos.lugar(lugar_id)
     calendario = festivos.calendario(lugar_id)
@@ -94,6 +87,8 @@ with c1:
         )
     else:
         st.error(f"No hay festivos cargados para {lugar['nombre']}", icon="🚨")
+    if lugar.get('locales_pendientes'):
+        st.warning(lugar.get('nota') or f"Festivos locales de {lugar['nombre']} pendientes de cargar.", icon="📍")
 
 with c2:
     modo_key = st.selectbox(

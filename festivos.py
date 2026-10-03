@@ -64,12 +64,18 @@ def buscar(texto: str) -> dict | None:
         return None
     t = _normalizar(texto).replace(' ', '-')
     tn = _normalizar(texto)
+    # Sinónimos habituales → id de cabecera. Una provincia o territorio se resuelve a su capital.
     alias = {
-        'vizcaya': 'bizkaia', 'guipuzcoa': 'gipuzkoa', 'alava': 'araba', 'araba-alava': 'araba', 'araba/alava': 'araba',
+        'vizcaya': 'bilbao', 'bizkaia': 'bilbao', 'guipuzcoa': 'donostia-san-sebastian', 'gipuzkoa': 'donostia-san-sebastian',
+        'alava': 'vitoria-gasteiz', 'araba': 'vitoria-gasteiz', 'araba-alava': 'vitoria-gasteiz', 'araba_alava': 'vitoria-gasteiz',
         'san-sebastian': 'donostia-san-sebastian', 'donostia': 'donostia-san-sebastian', 'vitoria': 'vitoria-gasteiz',
-        'gasteiz': 'vitoria-gasteiz', 'mondragon': 'mondragon', 'arrasate': 'mondragon', 'la-coruna': 'a-coruna',
-        'coruna': 'a-coruna', 'santa-cruz-de-tenerife': 'tenerife', 'illes-balears': 'baleares', 'islas-baleares': 'baleares',
-        'palma': 'baleares', 'espana': 'espana', 'nacional': 'espana',
+        'gasteiz': 'vitoria-gasteiz', 'gernika': 'gernika-lumo', 'guernica': 'gernika-lumo', 'arrasate': 'arrasate-mondragon',
+        'mondragon': 'arrasate-mondragon', 'la-coruna': 'a-coruna', 'coruna': 'a-coruna', 'tenerife': 'santa-cruz-de-tenerife',
+        'baleares': 'palma', 'illes-balears': 'palma', 'islas-baleares': 'palma', 'palma-de-mallorca': 'palma',
+        'asturias': 'oviedo', 'cantabria': 'santander', 'navarra': 'pamplona', 'iruna': 'pamplona', 'pamplona-iruna': 'pamplona',
+        'la-rioja': 'logrono', 'rioja': 'logrono', 'las-palmas': 'las-palmas-de-gran-canaria', 'castellon': 'castello-de-la-plana',
+        'castellon-de-la-plana': 'castello-de-la-plana', 'alicante': 'alicante-alacant', 'alacant': 'alicante-alacant',
+        'elche': 'elche-elx', 'alcoy': 'alcoy-alcoi', 'espana': 'madrid', 'nacional': 'madrid',
     }
     todos = _indice()['lugares']
     por_id = {l['id']: l for l in todos}
@@ -80,11 +86,18 @@ def buscar(texto: str) -> dict | None:
     for l in todos:
         if _normalizar(l['nombre']) == tn:
             return l
+    # Nombre de provincia → su capital
+    for l in todos:
+        if l.get('capital') and _normalizar(l.get('provincia', '')) == tn:
+            return l
     for l in todos:
         if _normalizar(l['nombre']).startswith(tn):
             return l
     for l in todos:
         if tn in _normalizar(l['nombre']):
+            return l
+    for l in todos:
+        if l.get('capital') and tn in _normalizar(l.get('provincia', '')):
             return l
     return None
 

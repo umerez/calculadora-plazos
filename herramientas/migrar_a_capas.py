@@ -127,6 +127,40 @@ ALIAS = {
     'zierbena': 'zierbena', 'usansolo': 'usansolo', 'gueenes': 'guenes', 'guenes': 'guenes', 'donostia-san-sebastian': 'donostia-san-sebastian',
 }
 
+CPRO_A_SLUG = {
+    '01': 'araba_alava', '02': 'albacete', '03': 'alicante', '04': 'almeria', '05': 'avila', '06': 'badajoz',
+    '07': 'baleares', '08': 'barcelona', '09': 'burgos', '10': 'caceres', '11': 'cadiz', '12': 'castellon',
+    '13': 'ciudad-real', '14': 'cordoba', '15': 'a-coruna', '16': 'cuenca', '17': 'girona', '18': 'granada',
+    '19': 'guadalajara', '20': 'gipuzkoa', '21': 'huelva', '22': 'huesca', '23': 'jaen', '24': 'leon', '25': 'lleida',
+    '26': 'la-rioja', '27': 'lugo', '28': 'madrid', '29': 'malaga', '30': 'murcia', '31': 'navarra', '32': 'ourense',
+    '33': 'asturias', '34': 'palencia', '35': 'las-palmas', '36': 'pontevedra', '37': 'salamanca', '38': 'tenerife',
+    '39': 'cantabria', '40': 'segovia', '41': 'sevilla', '42': 'soria', '43': 'tarragona', '44': 'teruel', '45': 'toledo',
+    '46': 'valencia', '47': 'valladolid', '48': 'bizkaia', '49': 'zamora', '50': 'zaragoza', '51': 'ceuta', '52': 'melilla',
+}
+# Nombre de cabecera en el Censo Judicial → id usado en festivos/local/ (solo cuando el slug no coincide)
+ALIAS_CABECERAS = {}
+
+PALABRAS_MINUSCULA = {'de', 'del', 'la', 'las', 'los', 'el', 'y', 'e', 'i', 'o', 'a', 'd', 'da', 'das', 'do', 'dos', 'en', 'les', 'sa', 'ses', 'na', 'o'}
+
+
+def titulo(nombre: str) -> str:
+    """'DONOSTIA/SAN SEBASTIÁN' → 'Donostia/San Sebastián'; 'ALCALÁ DE HENARES' → 'Alcalá de Henares'."""
+    partes = re.split(r'(\s+|/|-|\(|\))', nombre.strip())
+    out = []
+    for i, p in enumerate(partes):
+        if not p or re.fullmatch(r'\s+|/|-|\(|\)', p):
+            out.append(p)
+            continue
+        pl = p.lower()
+        if pl in PALABRAS_MINUSCULA and i != 0 and out and not out[-1].endswith(('(', '/', '-')):
+            out.append(pl)
+        elif "'" in p:
+            out.append("'".join(x.capitalize() for x in pl.split("'")))
+        else:
+            out.append(pl.capitalize())
+    return ''.join(out)
+
+
 MESES = {'enero': 1, 'febrero': 2, 'marzo': 3, 'abril': 4, 'mayo': 5, 'junio': 6, 'julio': 7, 'agosto': 8,
          'septiembre': 9, 'octubre': 10, 'noviembre': 11, 'diciembre': 12}
 
@@ -257,37 +291,54 @@ def main():
         escribir_capa(os.path.join(FEST, 'provincia', f'{slug_prov}.csv'), filas)
     print("provincia/: 49 ficheros heredados")
 
-    # 6. Índice de lugares
+    # 6. Índice de lugares: SOLO cabeceras de partido judicial (incluyen las 52 capitales de provincia).
+    #    Fuente: Censo Judicial del Ministerio de Justicia (festivos/fuentes/partidos_judiciales_mjusticia.csv).
     lugares = []
-    lugares.append({'id': 'espana', 'nombre': 'España (solo festivos estatales)', 'tipo': 'nacional',
-                    'capas': ['nacional']})
-    for slug_prov, (nombre, ccaa) in PROVINCIAS.items():
+    sin_local = []
+    pv_terr = {'01': 'araba', '20': 'gipuzkoa', '48': 'bizkaia'}
+    with open(os.path.join(FUENTES, 'partidos_judiciales_mjusticia.csv'), newline='', encoding='utf-8') as f:
+        partidos = list(csv.DictReader(f))
+    for p in partidos:
+        slug_prov = CPRO_A_SLUG[p['cpro']]
+        nombre_prov, ccaa = PROVINCIAS[slug_prov]
+        s = slug(p['cabecera'])
+        s = ALIAS_CABECERAS.get(s, s)
+        es_capital = p['es_capital_provincia'] == 'si'
+        lugar_ = {
+            'id': s, 'nombre': titulo(p['cabecera']), 'tipo': 'partido_judicial',
+            'ine': p['ine_cabecera'], 'provincia': nombre_prov, 'provincia_slug': slug_prov, 'cpro': p['cpro'],
+            'ccaa': ccaa, 'ccaa_nombre': CCAA[ccaa], 'capital': es_capital, 'partido_judicial': True,
+            'n_municipios': int(p['n_municipios']), 'poblacion': int(p['poblacion']),
+        }
         if ccaa == 'pv':
-            continue
-        lugares.append({'id': slug_prov, 'nombre': nombre, 'tipo': 'provincia', 'ccaa': ccaa, 'ccaa_nombre': CCAA[ccaa],
-                        'capital_incluida': True, 'capas': [f'provincia/{slug_prov}']})
-    for terr, nombre in [('araba', 'Araba/Álava'), ('bizkaia', 'Bizkaia'), ('gipuzkoa', 'Gipuzkoa')]:
-        lugares.append({'id': terr, 'nombre': f'{nombre} (sin festivos locales)', 'tipo': 'territorio', 'ccaa': 'pv',
-                        'ccaa_nombre': 'País Vasco', 'capas': ['nacional', 'ccaa/pv', f'territorial/{terr}']})
-    pj = {s: t for t, ss in PARTIDOS_JUDICIALES.items() for s in ss}
-    for s in sorted(locales):
-        terr = territorio_de.get(s) or pj.get(s) or CAPITALES.get(s) or 'desconocido'
-        capas = ['nacional', 'ccaa/pv'] + ([f'territorial/{terr}'] if terr != 'desconocido' else []) + [f'local/{s}']
-        lugares.append({'id': s, 'nombre': nombres.get(s, s), 'tipo': 'municipio', 'ccaa': 'pv', 'ccaa_nombre': 'País Vasco',
-                        'territorio': terr, 'capital': s in CAPITALES, 'partido_judicial': s in pj, 'capas': capas})
-    faltan_pj = [s for s in pj if s not in locales]
-    if faltan_pj:
-        print(f"  ⚠️  Cabezas de partido judicial sin capa local: {faltan_pj}")
+            terr = pv_terr[p['cpro']]
+            lugar_['territorio'] = terr
+            lugar_['capas'] = ['nacional', 'ccaa/pv', f'territorial/{terr}', f'local/{s}']
+            lugar_['locales_pendientes'] = s not in locales
+            if s not in locales:
+                sin_local.append(s)
+        else:
+            # Capa plana heredada de la provincia (incluye los locales de la capital). Para una cabecera que no es
+            # capital, los festivos locales propios aún no están cargados: se avisa en la interfaz.
+            lugar_['capas'] = [f'provincia/{slug_prov}']
+            lugar_['locales_pendientes'] = not es_capital
+            if not es_capital:
+                lugar_['nota'] = f'Festivos locales de {titulo(p["cabecera"])} pendientes; se aplican los de {nombre_prov} capital.'
+        lugares.append(lugar_)
+    ids = [l['id'] for l in lugares]
+    dup = {i for i in ids if ids.count(i) > 1}
+    if dup:
+        print(f"  ⚠️  ids duplicados: {sorted(dup)}")
+    if sin_local:
+        print(f"  ⚠️  Cabeceras vascas sin capa local: {sin_local}")
+    lugares.sort(key=lambda l: (not l['capital'], l['nombre'].lower()))
     with open(os.path.join(FEST, 'lugares.json'), 'w', encoding='utf-8') as f:
-        json.dump({'version': date.today().isoformat(), 'lugares': lugares}, f, ensure_ascii=False, indent=1)
-    print(f"lugares.json: {len(lugares)} lugares")
-    por_terr = defaultdict(list)
-    for l in lugares:
-        if l['tipo'] == 'municipio':
-            por_terr[l['territorio']].append(l['id'])
-    for t, ids in sorted(por_terr.items()):
-        print(f"  {t}: {len(ids)} localidades")
-    print("  Asignadas a Araba por descarte (revisar):", sorted(s for s in locales if territorio_de[s] == 'araba' and s not in LOCALES_2025))
+        json.dump({'version': date.today().isoformat(),
+                   'fuente_partidos': 'Censo Judicial, Ministerio de Justicia (planta Ley 38/1988; nomenclátor 30/12/2025)',
+                   'lugares': lugares}, f, ensure_ascii=False, indent=1)
+    caps = sum(1 for l in lugares if l['capital'])
+    pend = sum(1 for l in lugares if l['locales_pendientes'])
+    print(f"lugares.json: {len(lugares)} cabeceras de partido judicial ({caps} capitales; {pend} con festivos locales pendientes)")
 
 
 if __name__ == '__main__':

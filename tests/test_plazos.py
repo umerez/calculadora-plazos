@@ -42,7 +42,7 @@ def main():
         fallos += 0 if ok else 1
         print(f"{'✅' if ok else '❌'} {desc}\n     → {venc}{'' if ok else f'  (esperado {esperado})'}")
     # Comprobaciones estructurales
-    for lid in ['bilbao', 'donostia-san-sebastian', 'vitoria-gasteiz', 'madrid', 'espana']:
+    for lid in ['bilbao', 'donostia-san-sebastian', 'vitoria-gasteiz', 'madrid', 'getxo', 'amurrio', 'alcala-de-henares', 'palma']:
         assert festivos.lugar(lid), f"falta el lugar {lid}"
     # Cobertura: 2026 y 2027 completos en Euskadi; 2025-2026 en el resto. (Bilbao 2025 no tiene local
     # verificado: no hay fuente oficial a mano del viernes de Aste Nagusia 2025.)
@@ -52,9 +52,14 @@ def main():
             if not festivos.cobertura_completa(lid, anio):
                 print(f"❌ cobertura incompleta {lid} {anio}: {festivos.anios_cubiertos(lid)}")
                 fallos += 1
-    assert festivos.buscar('vizcaya')['id'] == 'bizkaia'
+    assert festivos.buscar('vizcaya')['id'] == 'bilbao'
     assert festivos.buscar('San Sebastián')['id'] == 'donostia-san-sebastian'
     assert festivos.buscar('Madrid')['id'] == 'madrid'
+    assert festivos.buscar('Navarra')['id'] == 'pamplona', festivos.buscar('Navarra')
+    assert festivos.buscar('Gernika')['id'] == 'gernika-lumo'
+    assert festivos.buscar('Castellón')['id'] == 'castello-de-la-plana'
+    assert len(festivos.lugares()) == 432, len(festivos.lugares())
+    assert sum(1 for l in festivos.lugares() if l['capital']) == 52
     print(f"\n{'TODO CORRECTO' if not fallos else f'{fallos} FALLO(S)'}")
     sys.exit(1 if fallos else 0)
 
