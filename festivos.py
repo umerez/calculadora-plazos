@@ -99,6 +99,17 @@ def buscar(texto: str) -> dict | None:
     for l in todos:
         if l.get('capital') and tn in _normalizar(l.get('provincia', '')):
             return l
+    # «Juzgado de Getxo», «Tribunal de Instancia de Barakaldo», «Ayuntamiento de Leioa»: probar con los
+    # sufijos del texto (sin la primera palabra, luego sin las dos primeras…), evitando bucles.
+    palabras = tn.split()
+    if len(palabras) > 1:
+        for i in range(1, len(palabras)):
+            resto = ' '.join(palabras[i:])
+            if resto in ('de', 'del', 'la', 'las', 'los', 'el'):
+                continue
+            encontrado = buscar(resto)
+            if encontrado:
+                return encontrado
     return None
 
 
