@@ -124,3 +124,8 @@ Esta aplicación se ofrece bajo la modalidad **"as is" (tal cual)**, con una fin
 1. **Sin Responsabilidad:** El autor no se hace responsable de los posibles errores técnicos o de cálculo.
 2. **Uso bajo cuenta y riesgo:** El autor no se responsabiliza de las decisiones legales adoptadas basándose en este cálculo.
 3. **Contraste de datos:** Se recomienda contrastar los resultados con los calendarios oficiales de cada sede judicial o administrativa.
+
+
+---
+
+_Última actualización de los datos de festivos: 3 de octubre de 2026 (ver `festivos/COBERTURA.md`)._
