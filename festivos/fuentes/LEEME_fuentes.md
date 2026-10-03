@@ -7,4 +7,4 @@
 - `opendata_euskadi_calendario_laboral_2026.ics`: Open Data Euskadi, calendario laboral 2026 (CAE, territorios y municipios).
 - `bizkaia_municipios_2027.csv`: BOB núm. 181, 22/09/2026 (Resolución de 12/09/2026 de la Delegación Territorial de Trabajo).
 - `gipuzkoa_municipios_2027.csv`: BOG núm. 187, 01/10/2026 (Resolución de 21/09/2026).
-- `araba_municipios_2027.csv`: prensa (gasteizhoy.com); pendiente de BOTHA.
+- `araba_municipios_2027.csv`: Vitoria-Gasteiz 5-8-2027 según acta del Pleno de 24/07/2026 (Acta 10899) [ayuntamiento]; pendiente de BOTHA (revisado el 3-10-2026: no publicado).

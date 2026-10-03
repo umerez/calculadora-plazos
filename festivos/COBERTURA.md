@@ -96,6 +96,7 @@ Las fuentes de cada comunidad están en `festivos/fuentes/locales/INFORME_*.md`.
 ## País Vasco (14 cabeceras)
 - **2025 sin festivos locales (12):** Amurrio, Azpeitia, Balmaseda, Barakaldo, Bergara, Bilbao, Durango, Eibar, Gernika-Lumo, Getxo, Irun, Tolosa
 - **2027 sin festivos locales (1):** Amurrio
+- **2027 provisionales (fuente no oficial, 1):** Vitoria-Gasteiz
 
 ## Región de Murcia (11 cabeceras)
 - **2025 sin festivos locales (11):** Caravaca de la Cruz, Cartagena, Cieza, Jumilla, Lorca, Molina de Segura, Mula, Murcia, San Javier, Totana, Yecla
