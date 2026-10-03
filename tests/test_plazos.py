@@ -31,6 +31,8 @@ CASOS = [
     ("Vielha 2026: 1 día desde 16/06 salta la Festa d'Aran (17/06) → 18/06", 'vielha-e-mijaran', 'administrativo', date(2026, 6, 16), 1, None, date(2026, 6, 18)),
     ("Barcelona 2026: mismo caso, la Festa d'Aran no aplica → 17/06", 'barcelona', 'administrativo', date(2026, 6, 16), 1, None, date(2026, 6, 17)),
     ("Alcalá de Henares 2026: 1 día desde 08/10 salta el local 09/10 → lunes 12/10 es festivo → 13/10", 'alcala-de-henares', 'administrativo', date(2026, 10, 8), 1, None, date(2026, 10, 13)),
+    ("Bilbao 2026: el viernes de Aste Nagusia es el 28/08 (BOB 06/08/2025), no el 21: 1 día desde 27/08 → lunes 31/08", 'bilbao', 'administrativo', date(2026, 8, 27), 1, None, date(2026, 8, 31)),
+    ("Bilbao 2026: el 21/08 ya no es festivo: 1 día desde 20/08 → 21/08", 'bilbao', 'administrativo', date(2026, 8, 20), 1, None, date(2026, 8, 21)),
 ]
 
 

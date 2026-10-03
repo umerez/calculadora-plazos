@@ -124,6 +124,9 @@ ALIAS = {
     'bidania-goiatz-bidania': 'bidania-goiatz-bidania', 'bidania-goiatz-goiatz': 'bidania-goiatz-goiatz',
     'pasaia-donibane': 'pasaia-p-donibane', 'pasaia-san-pedro': 'pasaia-p-san-pedro', 'pasaia-antxo': 'pasaia-p-antxo',
     'pasaia-trintxerpe': 'pasaia-trintxerpe', 'villabona': 'villabona', 'elduain': 'elduaien', 'belauntza': 'belaunza',
+    'san-sebastian': 'donostia-san-sebastian', 'leaburu': 'leaburu-txarama', 'placencia-de': 'soraluze-placencia-de-las-armas',
+    'soraluze': 'soraluze-placencia-de-las-armas', 'arratzua-ubarrundia': 'arrazua-ubarrundia',
+    'iruna-de-oca': 'iruna-de-oca-nanclares-de-la-oca',
     'zierbena': 'zierbena', 'usansolo': 'usansolo', 'gueenes': 'guenes', 'guenes': 'guenes', 'donostia-san-sebastian': 'donostia-san-sebastian',
 }
 
@@ -160,6 +163,11 @@ def titulo(nombre: str) -> str:
             out.append(pl.capitalize())
     return ''.join(out)
 
+
+# Concejos del municipio de Ayala/Aiara: el BOTHA los lista sueltos; el ICS como «Ayala - <concejo>»
+CONCEJOS_AYALA = {'aginaga', 'anes', 'beotegi', 'costera', 'erbi', 'etxegoien', 'izoria', 'lejarzo', 'lujo', 'luiaondo',
+                  'llanteno', 'madaria', 'marono', 'menagarai', 'menoio', 'murga', 'olabezar', 'ozeka', 'quejana',
+                  'respaldiza', 'retes-de-llanteno', 'salmanton', 'sojo', 'zuaza'}
 
 MESES = {'enero': 1, 'febrero': 2, 'marzo': 3, 'abril': 4, 'mayo': 5, 'junio': 6, 'julio': 7, 'agosto': 8,
          'septiembre': 9, 'octubre': 10, 'noviembre': 11, 'diciembre': 12}
@@ -398,20 +406,33 @@ def main():
         locales[s].append((fecha, resumen, 'Open Data Euskadi, calendario laboral 2026'))
     print(f"ICS 2026: {len(locales)} localidades")
 
+    # Boletines oficiales por territorio y año (bizkaia|gipuzkoa|araba)_municipios_<año>.csv. Para un municipio
+    # y año presentes en el boletín, el boletín SUSTITUYE lo que dijera el ICS de Open Data Euskadi de ese año
+    # (el ICS no recoge las modificaciones posteriores: p. ej. Bilbao 2026 pasó del 21 al 28 de agosto).
     sin_match = []
-    for terr, fichero in [('bizkaia', 'bizkaia_municipios_2027.csv'), ('gipuzkoa', 'gipuzkoa_municipios_2027.csv'),
-                          ('araba', 'araba_municipios_2027.csv')]:
+    ficheros_oficiales = sorted(f for f in os.listdir(FUENTES) if re.match(r'(bizkaia|gipuzkoa|araba)_municipios_\d{4}\.csv$', f))
+    sustituidos = set()
+    for fichero in ficheros_oficiales:
+        terr = fichero.split('_')[0]
         with open(os.path.join(FUENTES, fichero), newline='', encoding='utf-8') as f:
             for r in csv.DictReader(f):
-                if r['Municipio'].startswith('('):
+                if r['Municipio'].startswith('(') or not r['Fecha'][:4].isdigit():
                     continue
                 s0 = slug(r['Municipio'])
                 s = ALIAS.get(s0, s0)
+                if s in CONCEJOS_AYALA:
+                    s = 'ayala-' + s
+                anio = r['Fecha'][:4]
                 if s not in locales and s not in nombres:
                     sin_match.append((terr, r['Municipio'], s))
                     nombres[s] = r['Municipio']
+                if (s, anio) not in sustituidos:
+                    locales[s] = [fila for fila in locales[s]
+                                  if not (fila[0].startswith(anio) and fila[2].startswith('Open Data Euskadi'))]
+                    sustituidos.add((s, anio))
                 territorio_de[s] = terr
                 locales[s].append((r['Fecha'], r['Festividad'] or 'Fiesta local', r['Fuente']))
+    print(f"boletines oficiales aplicados: {ficheros_oficiales} ({len(sustituidos)} municipio-año sustituyen al ICS)")
     for s, filas in LOCALES_2025.items():
         locales[s].extend(filas)
 
