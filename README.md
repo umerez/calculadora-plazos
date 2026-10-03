@@ -45,6 +45,18 @@ por compatibilidad y, en el caso de Euskadi, se regeneran desde las capas con `h
 **¿Por qué por municipio?** En los plazos procesales son inhábiles los festivos de la localidad donde tiene su sede el órgano
 judicial (art. 182 LOPJ), de modo que el calendario correcto es el de la cabeza de partido judicial, no el de la provincia.
 
+### Línea de comandos y Atajos de macOS
+
+`plazo_cli.py` calcula un plazo desde la terminal o desde un Atajo, con la sede del órgano como parámetro:
+
+```bash
+python3 plazo_cli.py --inicio 2026-10-03 --duracion 10 --unidad dias --tipo habil --agosto-inhabil --navidad-inhabil --sede "Juzgado de Getxo"
+```
+
+Imprime una línea `Vence: YYYY-MM-DD (día)` que los Atajos extraen con una expresión regular. El atajo «Plazos a Expedientes»
+pregunta la sede (por defecto Bilbao) y ejecuta este script desde un clon del repositorio en `/Users/umerez/Scripts/calculadora-plazos`;
+actualizar los festivos del atajo es hacer `git pull` en esa carpeta.
+
 ### Actualización anual
 
 ```bash
