@@ -40,13 +40,9 @@ with st.sidebar:
     * Exclusión de festivos estatales, autonómicos y locales del lugar elegido.
     * Periodos de inhabilidad (Agosto y Navidad) según la normativa vigente (Ley 39/2015, LEC y LJCA).
 
-    **Lugares:** las 431 cabeceras de partido judicial de España (incluidas las 52 capitales de provincia), según
-    el Censo Judicial del Ministerio de Justicia. El calendario correcto para un plazo procesal es el de la localidad
-    donde tiene su sede el órgano judicial (art. 182 LOPJ). Cada cabecera lleva sus festivos estatales, autonómicos
-    (e insulares en Canarias) y locales, tomados de los boletines oficiales y portales de datos de cada comunidad; cuando
-    falta algún año la aplicación lo avisa.
+    **Actualización v1.1**: Ahora puedes elegir entre las 431 cabeceras de partido judicial de España, para plazos procesales (el calendario aplicable es el de la localidad donde tiene su sede el órgano judicial, art. 182 LOPJ), y también entre las 52 capitales de provincia, que es donde normalmente tienen su sede los órganos administrativos. Cada lugar incluye sus festivos estatales, autonómicos (e insulares en Canarias) y locales; si falta algún año, la aplicación lo avisa.
 
-    **Créditos:** Creado por **Esteban Umerez**, con la asistencia de **ChatGPT** (OpenAI), **Gemini** (Google) y **Claude** (Anthropic).
+    Creada por **Esteban Umerez** con la asistencia de **ChatGPT** (OpenAI) y **Gemini** (Google) en la versión 1.0, y de **Claude** (Anthropic) en la versión 1.1.
     """)
 
     st.link_button("🌐 Visitar umerez.eu", "https://umerez.eu/2026/01/06/calculadora-de-plazos-procesales-y.html", use_container_width=True)
