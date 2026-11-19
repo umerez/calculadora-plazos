@@ -70,7 +70,7 @@ def main():
     sin_local = [l['id'] for l in festivos.lugares() if not any(c.startswith('local/') for c in l['capas'])]
     assert not sin_local, sin_local
     sin_2026 = sorted(l['id'] for l in festivos.lugares() if 2026 not in festivos.anios_cubiertos(l['id'])[[c for c in l['capas'] if c.startswith('local/')][0]])
-    assert sin_2026 == ['cerdanyola-del-valles', 'haro', 'sahagun'], sin_2026
+    assert sin_2026 == ['cerdanyola-del-valles', 'haro'], sin_2026
     for l in festivos.lugares():
         assert 2027 in festivos.anios_cubiertos(l['id'])['nacional']
         capa_ccaa = next((c for c in l['capas'] if c.startswith('ccaa/')), None)
